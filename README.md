@@ -1,19 +1,19 @@
-# cleannatty
+# Training
+
+It´s a project for training my skills in VueJS and Tailwind CSS.
+With this application i´m improve my code, my skills in this frameworks and more able to a job.
+
+## What is this project?
+is a simple application where I base myself on graphic designs from the Headless UI website "https://headlessui.com/" and create it using VueJS and Tailwind CSS.
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Congratulate for you who is seeing this work of art :D

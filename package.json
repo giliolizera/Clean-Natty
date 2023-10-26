@@ -1,5 +1,5 @@
 {
-  "name": "cleannatty",
+  "name": "train",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,10 +7,20 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "^3.2.13"
+    "@headlessui/vue": "^1.7.14",
+    "@heroicons/vue": "^2.0.18",
+    "@truffle/hdwallet-provider": "^1.0.41-1",
+    "@vueuse/core": "^10.3.0",
+    "maska": "^1.5.0",
+    "v-mask": "^2.3.0",
+    "vue": "^3.2.26",
+    "vue-router": "4.0.12"
   },
   "devDependencies": {
-    "@vue/cli-service": "~5.0.0"
+    "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.25",
+    "tailwindcss": "^3.3.2"
   },
   "browserslist": [
     "> 1%",
