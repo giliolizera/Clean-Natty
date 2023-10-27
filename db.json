@@ -1,0 +1,24 @@
+{
+    "funcionarios": [
+        {
+            "id": 1,
+            "nome":"João",
+            "email": "joaoruphnet@gmail.com",
+            "telefone": "54999749301",
+            "cpf": "02868532196",
+            "endereco": "Av. Das Flores, 923",
+            "gestor": ["Matheus", "Ronaldo"],
+            "observacoes": "Funcionário muito bom, mas tem que melhorar em algumas coisas"
+        },
+        {
+            "id": 2,
+            "nome":"Ricardo Richards Bregalds",
+            "email": "ricardofaxina@gmail.com",
+            "telefone": "54998949301",
+            "cpf": "02798414755",
+            "endereco": "Rua Marechal Floriano, 615",
+            "gestor": ["Matheus"],
+            "observacoes": "Funcionário muito playboy, mas é pontual e executa com perfeição suas tarefas"
+        }
+    ]
+}
