@@ -63,7 +63,7 @@
 </script>
 
 <script setup>
-   document.title = "Cadastro - Training"
+   document.title = "Cadastro de Funcionário - Clean Natty"
 </script>
                      
 <template>
@@ -84,8 +84,8 @@
       </div>
       <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
-            <div class="bg-gray-100 dark:bg-slate-800">
-               <div class="divide-y max-w-md bg-gray-100 dark:bg-slate-800">
+            <div class="bg-white dark:bg-slate-800">
+               <div class="divide-y max-w-md bg-white dark:bg-slate-800">
                   <p class="font-medium text-xl pb-1">Cadastro de Funcionário</p>
                   <p class="text-base font-thin py-2">Insira os dados do funcionário como nome, cpf, email, número do telefone...</p>
                </div>
