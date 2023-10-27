@@ -6,56 +6,53 @@
    export default {
       data: () => ({
          form: {
-            nome: 'Guilherme',
-            email: 'guilhermegilioli@gmail.com',
-            telefone: '54 999741188',
-            cpf: '85657895236',
-            curso: 'Ciências da Computação',
-            senha: 'segredo123',
-            cidade: 'Passo Fundo',
-            endereco: 'Rua Alfredo Chaves, 365',
-            observation: 'Qual é o motivo da gente estar vivo?',
+            nome: '',
+            email: '',
+            telefone: '',
+            cpf: '',
+            curso: '',
+            senha: '',
+            cidade: '',
+            endereco: '',
+            observation: '',
          },
          avançar: false,
          exibir: false,
          typePassword: true,
-         // 365 1380 i5 3470
-         // 385 1480 i5 3570 0.2ghz more than i5 3470
-         // 380 1785 i5 8265u
       }),
       methods: {
-         validar() {
-            if (this.form.nome != '' && this.form.email.length > 10 && this.form.telefone.length > 13 && this.form.cpf.length > 13 && this.form.senha.length > 5) {
-               this.avançar = true
-            }
-            else {
-               this.avançar = false
-            }
-         },
+         // validar() {
+         //    if (this.form.nome != '' && this.form.email.length > 10 && this.form.telefone.length > 13 && this.form.cpf.length > 13 && this.form.senha.length > 5) {
+         //       this.avançar = true
+         //    }
+         //    else {
+         //       this.avançar = false
+         //    }
+         // },
          trocarRota() {
-            if (this.avançar) {
+            // if (this.avançar) {
                this.$router.push('/radio')
-            }
-            else {
-               if (this.form.nome === '' && this.form.email.length < 10 && this.form.telefone.length < 13 && this.form.cpf.length < 13 && this.form.senha.length < 5) {
-                  alert('Preencha todos os campos')
-               }
-               else if (this.form.nome === '') {
-                  alert('Preencha o campo nome')
-               }
-               else if (this.form.email.length < 10) {
-                  alert('Preencha o campo e-mail corretamente')
-               }
-               else if (this.form.telefone.length < 13) {
-                  alert('Preencha o campo telefone corretamente')
-               }
-               else if (this.form.cpf.length < 13) {
-                  alert('Preencha o campo cpf corretamente')
-               }
-               else if (this.form.senha.length < 5) {
-                  alert('A senha deve conter no mínimo 6 caracteres')
-               }
-            }
+            // }
+            // else {
+            //    if (this.form.nome === '' && this.form.email.length < 10 && this.form.telefone.length < 13 && this.form.cpf.length < 13 && this.form.senha.length < 5) {
+            //       alert('Preencha todos os campos')
+            //    }
+            //    else if (this.form.nome === '') {
+            //       alert('Preencha o campo nome')
+            //    }
+            //    else if (this.form.email.length < 10) {
+            //       alert('Preencha o campo e-mail corretamente')
+            //    }
+            //    else if (this.form.telefone.length < 13) {
+            //       alert('Preencha o campo telefone corretamente')
+            //    }
+            //    else if (this.form.cpf.length < 13) {
+            //       alert('Preencha o campo cpf corretamente')
+            //    }
+            //    else if (this.form.senha.length < 5) {
+            //       alert('A senha deve conter no mínimo 6 caracteres')
+            //    }
+            // }
          },
       },
       components: {
@@ -74,7 +71,7 @@
       <div class="flex justify-between bg-gray-200 dark:bg-slate-900">
          <router-link to="/">
             <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
-               Training WebSite
+               Clean Natty
             </button>
          </router-link>
          <button @click="exibir = !exibir">
@@ -85,9 +82,14 @@
          <p>Dark Mode</p>
          <Switch class="mt-1" />
       </div>
-      <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 text-center lg:grid-cols-3 md:grid-cols-3">
+      <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
          <div class="col-span-1 mt-4 text-lg font-medium">
-            Junte-se conosco e descubra as vantagens em utilizar o Traning para gerenciar seus negócios!
+            <div class="bg-gray-100 dark:bg-slate-800">
+               <div class="divide-y max-w-md bg-gray-100 dark:bg-slate-800">
+                  <p class="font-medium text-xl pb-1">Cadastro de Funcionários</p>
+                  <p class="text-base py-2">Lorem ispum.</p>
+               </div>
+            </div>
          </div>
          <form class="col-span-2 grid lg:grid-cols-2 gap-4 pr-6 pl-6">
             <div>
@@ -170,7 +172,7 @@
             </div>
             <div class="flex justify-end lg:col-span-2">
                <div>
-                  <button @click="validar(), trocarRota()"
+                  <button @click="trocarRota()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENTRAR
                   </button>

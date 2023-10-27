@@ -3,7 +3,7 @@
       <div class="flex justify-between p-4 bg-gray-300 dark:bg-slate-900">
          <router-link to="/">
             <button class="text-blue-600 bg-gray-300 dark:bg-slate-900 font-medium text-2xl justify-start">
-               Training WebSite
+               Clean Natty
             </button>
          </router-link>
          <button @click.stop="exibir = true">

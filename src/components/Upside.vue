@@ -4,7 +4,7 @@
          <div class="lg:inline-flex justify-start">
             <router-link to="/">
                <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
-                  Training WebSite
+                  Clean Natty
                </button>
             </router-link>
          </div>
