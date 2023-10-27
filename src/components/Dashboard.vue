@@ -6,7 +6,8 @@
     <UpSideMenu />
   </div>
   <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-    <p class="mt-80 text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p>
+      <p class="text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p>
+      <img src="../assets/Screenshot_1.png" class="w-screen h-screen">
   </div>
 </template>
 
