@@ -11,8 +11,12 @@ const routes = [
       component: () => import('./components/Site.vue')
    },
    {
-      path: '/cadastro',
-      component: () => import('./components/Cadastro.vue')
+      path: '/cadastro-funcionario',
+      component: () => import('./components/create/CreateWorker.vue')
+   },
+   {
+      path: '/cadastro-ambiente',
+      component: () => import('./components/create/CreateEnvironment.vue')
    },
    {
       path: '/dashboard',

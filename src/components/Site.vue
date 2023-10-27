@@ -24,7 +24,7 @@
             Para entrar anonimamente, <br />
             clique no botão abaixo
           </div> -->
-          <div class="flex justify-center mt-2">
+          <div class="flex justify-center mt-10">
             <router-link to="/dashboard">
               <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-7 rounded">
                 ENTRAR
@@ -35,10 +35,15 @@
             Para cadastrar-se no sistema, <br />
             clique no botão abaixo
           </div> -->
-          <div class="flex justify-center mt-2">
-            <router-link to="/cadastro">
+          <div class="flex justify-center mt-10 space-x-4">
+            <router-link to="/cadastro-funcionario">
               <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded">
-                CADASTRAR
+                CADASTRO FAXINERO
+              </button>
+            </router-link>
+            <router-link to="/cadastro-ambiente">
+              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded">
+                CADASTRO AMBIENTE
               </button>
             </router-link>
           </div>
