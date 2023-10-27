@@ -22,7 +22,7 @@
                   <XMarkIcon class="h-4 w-4 text-gray-500" />
                </button>
             </div>
-            <router-link to="/select">
+            <!-- <router-link to="/select">
                Select
             </router-link>
             <router-link to="/disclosure">
@@ -42,7 +42,7 @@
             </router-link>
             <router-link to="/dialog">
                Dialog
-            </router-link>
+            </router-link> -->
             <div class="inline-flex">
                Switch Theme
                <Switch class="mt-1 ml-4" />

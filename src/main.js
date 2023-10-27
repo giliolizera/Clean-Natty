@@ -5,65 +5,19 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Maska from 'maska'
 // import VueMask from 'v-mask'
 
-// routes
-import Site from './components/Site.vue'
-import Combobox from './components/Combobox.vue'
-import Dialog from './components/Dialog.vue'
-import Disclosure from './components/Disclosure.vue'
-import Menu from './components/Menu.vue'
-import Popover from './components/Popover.vue'
-import Radio from './components/Radio.vue'
-import Select from './components/Select.vue'
-import Tabs from './components/Tabs.vue'
-import Cadastro from './components/Cadastro.vue'
-import Gpu from './components/Gpu.vue'
-
-
 const routes = [
    {
       path: '/',
-      component: Site,
+      component: () => import('./components/Site.vue')
    },
    {
       path: '/cadastro',
-      component: Cadastro
+      component: () => import('./components/Cadastro.vue')
    },
    {
-      path: '/combobox',
-      component: Combobox
-   },
-   {
-      path: '/dialog',
-      component: Dialog
-   },
-   {
-      path: '/disclosure',
-      component: Disclosure
-   },
-   {
-      path: '/menu',
-      component: Menu
-   },
-   {
-      path: '/popover',
-      component: Popover
-   },
-   {
-      path: '/radio',
-      component: Radio,
-   },
-   {
-      path: '/gpu',
-      component: Gpu
-   },
-   {
-      path: '/select',
-      component: Select
-   },
-   {
-      path: '/tabs',
-      component: Tabs
-   },
+      path: '/dashboard',
+      component: () => import('./components/Dashboard.vue')
+   }
 ]
 
 const router = createRouter({

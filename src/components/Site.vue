@@ -25,7 +25,7 @@
             clique no botão abaixo
           </div> -->
           <div class="flex justify-center mt-2">
-            <router-link to="/radio">
+            <router-link to="/dashboard">
               <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-7 rounded">
                 ENTRAR
               </button>
