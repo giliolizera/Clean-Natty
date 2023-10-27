@@ -6,6 +6,7 @@
     <UpSideMenu />
   </div>
   <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
+    <p class="mt-80 text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p>
   </div>
 </template>
 
@@ -24,5 +25,5 @@ export default {
 <script setup>
 import Upside from "./Upside.vue";
 import UpSideMenu from "./UpSideMenu.vue";
-document.title = "Popover - Training";
+document.title = "Dashboard - Clean Natty";
 </script>

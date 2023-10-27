@@ -70,7 +70,7 @@ export default {
 
 <!-- SÓ PARA O TITULO -->
 <script setup>
-document.title = "Home - Training";
+document.title = "Home - Clean Natty";
 </script>
 
 <!-- SCROLLBAR  -->

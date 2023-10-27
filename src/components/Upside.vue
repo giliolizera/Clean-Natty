@@ -49,7 +49,7 @@
                   Dialog
                </button>
             </router-link> -->
-            <div class="ml-2 mt-5">
+            <div class="ml-2 mt-6">
                <Switch />
             </div>
          </div>
