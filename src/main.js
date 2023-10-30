@@ -12,15 +12,27 @@ const routes = [
    },
    {
       path: '/cadastro-funcionario',
-      component: () => import('./components/create/CreateWorker.vue')
+      component: () => import('./components/create/CreateFuncionario.vue')
    },
    {
       path: '/cadastro-ambiente',
-      component: () => import('./components/create/CreateEnvironment.vue')
+      component: () => import('./components/create/CreateAmbiente.vue')
+   },
+   {
+      path: '/cadastro-produto',
+      component: () => import('./components/create/CreateProduto.vue')
+   },
+   {
+      path: '/compra-produto',
+      component: () => import('./components/CompraProduto.vue')
    },
    {
       path: '/dashboard',
       component: () => import('./components/Dashboard.vue')
+   },
+   {
+      path: '/estoque',
+      component: () => import('./components/Estoque.vue')
    }
 ]
 
