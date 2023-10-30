@@ -9,6 +9,11 @@
             </router-link>
          </div>
          <div class="justify-end inline-flex">
+            <router-link to="dashboard" class="mt-3">
+               <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
+                  Agenda
+               </button>
+            </router-link>
             <router-link to="cadastro-funcionario" class="mt-3">
                <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
                   Funcionário
