@@ -1,6 +1,6 @@
 <script>
    import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline"
-   import Switch from '../Switch.vue'
+   import Switch from '@/components/usables/Switch.vue'
    import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline"
 
    export default {
@@ -8,11 +8,12 @@
          form: {
             id: '',
             nome: '',
-            estabelecimento: '',
-            andar: '',
-            tipo: '',
+            email: '',
+            telefone: '',
+            cpf: '',
             cidade: '',
             endereco: '',
+            gestor: '',
             observation: '',
          },
          avançar: false,
@@ -30,7 +31,7 @@
          // },
          trocarRota() {
             // if (this.avançar) {
-               this.$router.push('/dashboard')
+            this.$router.push('/dashboard')
             // }
             // else {
             //    if (this.form.nome === '' && this.form.email.length < 10 && this.form.telefone.length < 13 && this.form.cpf.length < 13 && this.form.senha.length < 5) {
@@ -62,7 +63,7 @@
 </script>
 
 <script setup>
-   document.title = "Cadastro de Ambiente - Clean Natty"
+   document.title = "Cadastro de Funcionário - Clean Natty"
 </script>
                      
 <template>
@@ -79,14 +80,14 @@
       </div>
       <div class="flex justify-end bg-gray-200  dark:bg-slate-900 space-x-2" v-if="exibir">
          <p>Dark Mode</p>
-         <Switch class="mt-1 ml-4"/>
+         <Switch class="mt-1" />
       </div>
       <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">
                <div class="divide-y max-w-md bg-white dark:bg-slate-800">
-                  <p class="font-medium text-xl pb-1">Cadastro de Ambiente</p>
-                  <p class="text-base font-thin py-2">Insira aqui a descrição do ambiente, como nome, tipo de estabelecimento, andar...</p>
+                  <p class="font-medium text-xl pb-1">Cadastro de Funcionário</p>
+                  <p class="text-base font-thin py-2">Insira os dados do funcionário como nome, cpf, email, número do telefone...</p>
                </div>
             </div>
          </div>
@@ -101,27 +102,27 @@
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Estabelecimento</p><p class="flex text-red-600">*</p>
+                  <p>Email</p><p class="flex text-red-600">*</p>
                </div>
-               <input type="text"
+               <input type="email"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.estabelecimento">
+                  v-model="form.email">
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Andar</p><p class="flex text-red-600">*</p>
+                  <p>Telefone</p><p class="flex text-red-600">*</p>
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.andar" v-maska="'(##) #####-####'">
+                  v-model="form.telefone" v-maska="'(##) #####-####'">
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Tipo</p><p class="flex text-red-600">*</p>
+                  <p>CPF</p><p class="flex text-red-600">*</p>
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.tipo" v-maska="'###.###.###-##'">
+                  v-model="form.cpf" v-maska="'###.###.###-##'">
             </div>
             <div>
                <div class="text-sm font-medium flex pl-1 mt-2">
@@ -139,8 +140,8 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.endereco">
             </div>
-            <!-- TODO: Possibilidade de interligar um gestor e funcionarios ao ambiente... 
-            <div>
+            <!-- TODO: CHECKBOX NO GESTOR -->
+            <!-- <div>
                <div class="text-sm font-medium flex pl-1 mt-2">
                   Gestor
                </div>
@@ -148,6 +149,20 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.gestor">
             </div> -->
+            <div>
+               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
+                  <p>Gestor</p><p class="flex text-red-600">*</p>
+               </div>
+               <select
+                  placeholder="Selecione o gestor"
+                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
+                  v-model="form.gestor"
+               >
+                  <option disabled>Selecione</option>
+                  <option :value="1">Rodrigo</option>
+                  <option :value="2">Matheus</option>
+               </select>
+            </div>
 
             <!-- <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">

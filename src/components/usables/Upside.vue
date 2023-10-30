@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import Switch from './Switch.vue'
+import Switch from '@/components/usables/Switch.vue'
 export default {
    components: {
       Switch

@@ -1,6 +1,6 @@
 <script>
    import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline"
-   import Switch from '../Switch.vue'
+   import Switch from '@/components/usables/Switch.vue'
    import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline"
 
    export default {
@@ -8,12 +8,11 @@
          form: {
             id: '',
             nome: '',
-            email: '',
-            telefone: '',
-            cpf: '',
+            estabelecimento: '',
+            andar: '',
+            tipo: '',
             cidade: '',
             endereco: '',
-            gestor: '',
             observation: '',
          },
          avançar: false,
@@ -63,7 +62,7 @@
 </script>
 
 <script setup>
-   document.title = "Cadastro de Funcionário - Clean Natty"
+   document.title = "Cadastro de Ambiente - Clean Natty"
 </script>
                      
 <template>
@@ -80,14 +79,14 @@
       </div>
       <div class="flex justify-end bg-gray-200  dark:bg-slate-900 space-x-2" v-if="exibir">
          <p>Dark Mode</p>
-         <Switch class="mt-1" />
+         <Switch class="mt-1 ml-4"/>
       </div>
       <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">
                <div class="divide-y max-w-md bg-white dark:bg-slate-800">
-                  <p class="font-medium text-xl pb-1">Cadastro de Funcionário</p>
-                  <p class="text-base font-thin py-2">Insira os dados do funcionário como nome, cpf, email, número do telefone...</p>
+                  <p class="font-medium text-xl pb-1">Cadastro de Produto</p>
+                  <p class="text-base font-thin py-2">Insira aqui a descrição do produto, como nome...</p>
                </div>
             </div>
          </div>
@@ -102,27 +101,27 @@
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Email</p><p class="flex text-red-600">*</p>
+                  <p>Estabelecimento</p><p class="flex text-red-600">*</p>
                </div>
-               <input type="email"
+               <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.email">
+                  v-model="form.estabelecimento">
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Telefone</p><p class="flex text-red-600">*</p>
+                  <p>Andar</p><p class="flex text-red-600">*</p>
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.telefone" v-maska="'(##) #####-####'">
+                  v-model="form.andar" v-maska="'(##) #####-####'">
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>CPF</p><p class="flex text-red-600">*</p>
+                  <p>Tipo</p><p class="flex text-red-600">*</p>
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.cpf" v-maska="'###.###.###-##'">
+                  v-model="form.tipo" v-maska="'###.###.###-##'">
             </div>
             <div>
                <div class="text-sm font-medium flex pl-1 mt-2">
@@ -140,30 +139,6 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.endereco">
             </div>
-            <!-- TODO: CHECKBOX NO GESTOR -->
-            <div>
-               <div class="text-sm font-medium flex pl-1 mt-2">
-                  Gestor
-               </div>
-               <input type="text"
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.gestor">
-            </div>
-
-            <!-- <div>
-               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Senha</p><p class="flex text-red-600">*</p>
-               </div>
-               <div class="relative w-full">
-                  <input :type="typePassword ? 'password' : 'text'"
-                     class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                     v-model="form.senha">
-                  <button class="absolute inset-y-0 right-0 pt-1 pr-3" @click.prevent.stop="typePassword = !typePassword">
-                     <EyeIcon v-if="typePassword" class="h-5 w-5 text-neutral-500" />
-                     <EyeSlashIcon v-if="!typePassword" class="h-5 w-5 text-neutral-500" />
-                  </button>
-               </div>
-            </div> -->
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   Observação

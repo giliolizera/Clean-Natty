@@ -55,7 +55,7 @@
 <script>
 import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline";
 import { XMarkIcon } from "@heroicons/vue/24/outline";
-import Switch from './Switch.vue'
+import Switch from '@/components/usables/Switch.vue'
 
 export default {
    data: () => ({
