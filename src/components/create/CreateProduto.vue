@@ -60,7 +60,7 @@
 </script>
 
 <script setup>
-   document.title = "Cadastro de Ambiente - Clean Natty"
+   document.title = "Cadastro de Produto - Clean Natty"
 </script>
                      
 <template>

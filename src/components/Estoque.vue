@@ -6,7 +6,7 @@
       <UpSideMenu />
     </div>
     <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-        <p>Estoque</p>
+        <!-- <p>Estoque</p> -->
     </div>
   </template>
   
