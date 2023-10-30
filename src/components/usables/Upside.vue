@@ -9,46 +9,31 @@
             </router-link>
          </div>
          <div class="justify-end inline-flex">
-            <!-- <router-link to="/radio" class="mt-3">
+            <router-link to="cadastro-funcionario" class="mt-3">
                <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Radio
+                  Funcionário
                </button>
             </router-link>
-            <router-link to="/select" class="mt-3">
+            <router-link to="cadastro-ambiente" class="mt-3">
                <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Select
+                  Ambiente
                </button>
             </router-link>
-            <router-link to="/disclosure" class="mt-3">
+            <router-link to="cadastro-produto" class="mt-3">
                <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Disclosure
+                  Produto
                </button>
             </router-link>
-            <router-link to="/menu" class="mt-3">
+            <router-link to="/estoque" class="mt-3">
                <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Menu
+                  Estoque
                </button>
             </router-link>
-            <router-link to="/combobox" class="mt-3">
+            <router-link to="/compra-produto" class="mt-3">
                <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Combobox
+                  Compra Produto
                </button>
             </router-link>
-            <router-link to="/tabs" class="mt-3">
-               <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Tabs
-               </button>
-            </router-link>
-            <router-link to="/popover" class="mt-3">
-               <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Popover
-               </button>
-            </router-link>
-            <router-link to="/dialog" class="mt-3">
-               <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
-                  Dialog
-               </button>
-            </router-link> -->
             <div class="ml-2 mt-6">
                <Switch />
             </div>

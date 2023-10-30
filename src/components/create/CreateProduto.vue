@@ -8,11 +8,9 @@
          form: {
             id: '',
             nome: '',
-            estabelecimento: '',
-            andar: '',
+            codigo: '',
             tipo: '',
-            cidade: '',
-            endereco: '',
+            medida: '',
             observation: '',
          },
          avançar: false,
@@ -86,7 +84,7 @@
             <div class="bg-white dark:bg-slate-800">
                <div class="divide-y max-w-md bg-white dark:bg-slate-800">
                   <p class="font-medium text-xl pb-1">Cadastro de Produto</p>
-                  <p class="text-base font-thin py-2">Insira aqui a descrição do produto, como nome...</p>
+                  <p class="text-base font-thin py-2">Insira aqui a descrição do produto, como nome, código, medida...</p>
                </div>
             </div>
          </div>
@@ -101,19 +99,11 @@
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Estabelecimento</p><p class="flex text-red-600">*</p>
+                  <p>Código</p><p class="flex text-red-600">*</p>
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.estabelecimento">
-            </div>
-            <div>
-               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Andar</p><p class="flex text-red-600">*</p>
-               </div>
-               <input type="text"
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.andar" v-maska="'(##) #####-####'">
+                  v-model="form.codigo">
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
@@ -121,23 +111,15 @@
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.tipo" v-maska="'###.###.###-##'">
+                  v-model="form.tipo" v-maska="'(##) #####-####'">
             </div>
             <div>
-               <div class="text-sm font-medium flex pl-1 mt-2">
-                  Cidade
+               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
+                  <p>Medida</p><p class="flex text-red-600">*</p>
                </div>
                <input type="text"
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.cidade">
-            </div>
-            <div>
-               <div class="text-sm font-medium flex pl-1 mt-2">
-                  Endereço
-               </div>
-               <input type="text"
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.endereco">
+                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
+                  v-model="form.medida" v-maska="'###.###.###-##'">
             </div>
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">

@@ -15,34 +15,25 @@
             class="fixed top-4 right-4 grid rounded-md w-56 h-max  bg-white text-black font-medium p-4 space-y-3 mr-4 z-50 transform overflow-hidden"
             v-if="exibir">
             <div class="inline-flex justify-between">
-               <router-link to="/radio">
-                  <p class="space-x-6">Radio</p>
+               <router-link to="cadastro-funcionario">
+                  <p class="space-x-6">Funcionário</p>
                </router-link>
                <button class="pl-24" @click="exibir = false">
                   <XMarkIcon class="h-4 w-4 text-gray-500" />
                </button>
             </div>
-            <!-- <router-link to="/select">
-               Select
+            <router-link to="cadastro-ambiente">
+               Ambiente
             </router-link>
-            <router-link to="/disclosure">
-               Disclosure
+            <router-link to="cadastro-produto">
+               Produto
             </router-link>
-            <router-link to="/menu">
-               Menu
+            <router-link to="/estoque">
+               Estoque
             </router-link>
-            <router-link to="/combobox">
-               Combobox
+            <router-link to="/compra-produto">
+               Compra Produto
             </router-link>
-            <router-link to="/tabs">
-               Tabs
-            </router-link>
-            <router-link to="/popover">
-               Popover
-            </router-link>
-            <router-link to="/dialog">
-               Dialog
-            </router-link> -->
             <div class="inline-flex">
                Switch Theme
                <Switch class="mt-1 ml-4" />

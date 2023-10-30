@@ -133,12 +133,18 @@
             </div>
             <!-- TODO: Criar um componente de select para o tipo de produto -->
             <div>
-               <div class="text-sm font-medium flex pl-1 mt-2">
-                  Produtos
+               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
+                  <p>Lista de Produtos</p><p class="flex text-red-600">*</p>
                </div>
-               <input type="text"
+               <select
+                  placeholder="Selecione os produtos"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.endereco">
+                  v-model="form.produtos"
+               >
+                  <option disabled>Selecione</option>
+                  <option :value="1">Desinfetante</option>
+                  <option :value="2">Mr. Músculo</option>
+               </select>
             </div>
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
