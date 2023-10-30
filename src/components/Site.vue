@@ -12,13 +12,13 @@
     </div>
     <div v-if="exibir" class="flex justify-end bg-gray-200 dark:bg-slate-900 space-x-2">
       <p>Dark Mode</p>
-      <Switch class="mt-1" />
+      <Switch class="mt-1"/>
     </div>
     <div class="text-center justify-center max-w-md mx-auto">
       <div class="inline-flex text-center justify-center p-10 py-4">
         <div class="">
           <div class="text-center font-medium text-xl mt-6">
-            Sistema de agendamentos de limpezas.
+            Sistema de agendamentos de limpezas
           </div>
           <!-- <div class="text-center font-medium mt-10">
             Para entrar anonimamente, <br />

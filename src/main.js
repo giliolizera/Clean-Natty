@@ -3,6 +3,8 @@ import App from './App.vue'
 import './assets/main.css'
 import { createRouter, createWebHistory } from 'vue-router'
 import Maska from 'maska'
+import VCalendar from 'v-calendar';
+import 'v-calendar/style.css';
 // import VueMask from 'v-mask'
 
 const routes = [
@@ -44,5 +46,6 @@ const router = createRouter({
 const Vue = createApp(App)
 Vue.use(router)
 Vue.use(Maska)
+Vue.use(VCalendar, {})
 // Vue.use(VueMask)
 Vue.mount('#app')

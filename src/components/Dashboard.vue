@@ -8,6 +8,7 @@
   <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
       <!-- <p class="text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p> -->
       <!-- <img src="../assets/Screenshot_1.png" class="w-screen h-screen"> -->
+      <Calendar/>
   </div>
 </template>
 
@@ -26,5 +27,6 @@ export default {
 <script setup>
 import Upside from "./usables/Upside.vue";
 import UpSideMenu from "./usables/UpSideMenu.vue";
+import Calendar from "@/components/Calendar.vue";
 document.title = "Dashboard - Clean Natty";
 </script>
