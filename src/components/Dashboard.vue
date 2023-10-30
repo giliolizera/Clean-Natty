@@ -6,8 +6,8 @@
     <UpSideMenu />
   </div>
   <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-      <p class="text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p>
-      <img src="../assets/Screenshot_1.png" class="w-screen h-screen">
+      <!-- <p class="text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p> -->
+      <!-- <img src="../assets/Screenshot_1.png" class="w-screen h-screen"> -->
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <script setup>
-import Upside from "./Upside.vue";
-import UpSideMenu from "./UpSideMenu.vue";
+import Upside from "./usables/Upside.vue";
+import UpSideMenu from "./usables/UpSideMenu.vue";
 document.title = "Dashboard - Clean Natty";
 </script>

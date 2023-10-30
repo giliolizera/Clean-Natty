@@ -26,7 +26,7 @@
           </div> -->
           <div class="flex justify-center mt-10">
             <router-link to="/dashboard">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-7 rounded">
+              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-7 rounded-md">
                 ENTRAR
               </button>
             </router-link>
@@ -37,16 +37,34 @@
           </div> -->
           <div class="flex justify-center mt-10 space-x-4">
             <router-link to="/cadastro-funcionario">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded">
-                CADASTRO FAXINERO
+              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md">
+                CADASTRO FAXINEIRO
               </button>
             </router-link>
             <router-link to="/cadastro-ambiente">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded">
+              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md">
                 CADASTRO AMBIENTE
               </button>
             </router-link>
+            <router-link to="/cadastro-produto">
+              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md">
+                CADASTRO PRODUTO
+              </button>
+            </router-link>
           </div>
+          <div class="flex justify-center space-x-4">
+            <router-link to="/estoque">
+              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md mt-10">
+                ESTOQUE
+              </button>
+            </router-link>
+            <router-link to="/compra-produto">
+              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md mt-10">
+                COMPRA PRODUTO
+              </button>
+            </router-link>
+          </div>
+
         </div>
       </div>
     </div>
@@ -55,7 +73,7 @@
 </template>
 
 <script>
-import Switch from "./Switch.vue";
+import Switch from '@/components/usables/Switch.vue'
 import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline";
 export default {
   components: {
