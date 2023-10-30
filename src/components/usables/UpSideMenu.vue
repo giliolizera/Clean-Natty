@@ -16,12 +16,15 @@
             v-if="exibir">
             <div class="inline-flex justify-between">
                <router-link to="cadastro-funcionario">
-                  <p class="space-x-6">Funcionário</p>
+                  <p class="space-x-6">Agenda</p>
                </router-link>
                <button class="pl-24" @click="exibir = false">
                   <XMarkIcon class="h-4 w-4 text-gray-500" />
                </button>
             </div>
+            <router-link to="cadastro-ambiente">
+               Funcionário
+            </router-link>
             <router-link to="cadastro-ambiente">
                Ambiente
             </router-link>
