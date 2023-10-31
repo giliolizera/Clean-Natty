@@ -117,6 +117,24 @@ export default {
         medida: "UN",
         quantidade: "24",
         observation: "Biscoito de 90g"
+      },
+      {
+        id: "4",
+        name: "Coca-Cola",
+        codigo: "004",
+        tipo: "Bebida",
+        medida: "ML",
+        quantidade: "12",
+        observation: "Refrigerante de 2L"
+      },
+      {
+        id: "5",
+        name: "Bisnaguinha Pullman",
+        codigo: "005",
+        tipo: "Pão",
+        medida: "UN",
+        quantidade: "20",
+        observation: "Pão de 300g"
       }
     ]
   }),
