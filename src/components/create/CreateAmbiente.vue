@@ -113,7 +113,7 @@
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.andar" v-maska="'(##) #####-####'">
+                  v-model="form.andar">
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
@@ -121,7 +121,7 @@
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.tipo" v-maska="'###.###.###-##'">
+                  v-model="form.tipo">
             </div>
             <div>
                <div class="text-sm font-medium flex pl-1 mt-2">

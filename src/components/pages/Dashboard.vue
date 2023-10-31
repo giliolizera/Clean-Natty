@@ -6,8 +6,8 @@
     <UpSideMenu />
   </div>
   <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-      <!-- <p class="text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p> -->
-      <!-- <img src="../assets/Screenshot_1.png" class="w-screen h-screen"> -->
+      <p class="text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p>
+      <img src="@/assets/Screenshot_1.png" class="absolute mt-12 top-96 inset-0 w-full h-max max-w-md transform overflow-hidden text-left shadow-xl p-4 space-y-2 items-center mx-auto z-50">
       <Calendar/>
   </div>
 </template>

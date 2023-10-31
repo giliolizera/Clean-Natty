@@ -111,7 +111,7 @@
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.tipo" v-maska="'(##) #####-####'">
+                  v-model="form.tipo">
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
@@ -119,7 +119,15 @@
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                  v-model="form.medida" v-maska="'###.###.###-##'">
+                  v-model="form.medida">
+            </div>
+            <div>
+               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
+                  <p>Quantidade</p><p class="flex text-red-600">*</p>
+               </div>
+               <input type="text"
+                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
+                  v-model="form.quantidade">
             </div>
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
