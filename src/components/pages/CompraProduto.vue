@@ -29,8 +29,8 @@
          //    }
          // },
          trocarRota() {
-            // if (this.avançar) {
             this.$router.push('/estoque')
+            // if (this.avançar) {
             // }
             // else {
             //    if (this.form.nome === '' && this.form.email.length < 10 && this.form.telefone.length < 13 && this.form.cpf.length < 13 && this.form.senha.length < 5) {
@@ -68,7 +68,7 @@
 <template>
    <div class=" text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
       <div class="flex justify-between bg-gray-200 dark:bg-slate-900">
-         <router-link to="/">
+         <router-link to="/dashboard">
             <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
                Clean Natty
             </button>
@@ -160,10 +160,10 @@
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENTRAR
                   </button>
-                  <Switch class="absolute bottom-0 hidden" />
                </div>
             </div>
          </form>
       </div>
    </div>
+   <Switch class="absolute bottom-0 hidden" />
 </template>
