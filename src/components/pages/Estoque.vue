@@ -102,39 +102,39 @@ export default {
       },
       {
         id: "2",
-        name: "Fruki Laranja",
+        name: "Mr. Músculo",
         codigo: "002",
-        tipo: "Bebida",
+        tipo: "Desingrachante",
         medida: "ML",
         quantidade: "6",
-        observation: "Refrigerante de 350ml"
+        observation: "Embalagem de 500ml"
       },
       {
         id: "3",
-        name: "Trakinas Morango",
+        name: "Desinfetante Pinho",
         codigo: "003",
-        tipo: "Biscoito",
+        tipo: "Desinfetante",
         medida: "UN",
         quantidade: "24",
-        observation: "Biscoito de 90g"
+        observation: "Embalagem de 2L"
       },
       {
         id: "4",
-        name: "Coca-Cola",
+        name: "Bucha Bombril",
         codigo: "004",
-        tipo: "Bebida",
-        medida: "ML",
+        tipo: "Esponja de aço",
+        medida: "UN",
         quantidade: "12",
-        observation: "Refrigerante de 2L"
+        observation: "Caixa com 3 unidades"
       },
       {
         id: "5",
-        name: "Bisnaguinha Pullman",
+        name: "Vassoura Condor",
         codigo: "005",
-        tipo: "Pão",
+        tipo: "Vassoura",
         medida: "UN",
         quantidade: "20",
-        observation: "Pão de 300g"
+        observation: "Vassouras de 60cm"
       }
     ]
   }),
