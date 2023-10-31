@@ -1,6 +1,6 @@
 <template>
     <div class="flex space-x-4 m-10 justify-center">
-        <VCalendar />
+        <!-- <VCalendar /> -->
         <VDatePicker />
     </div>
 </template>

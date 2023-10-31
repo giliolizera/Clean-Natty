@@ -68,7 +68,7 @@
 <template>
    <div class=" text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
       <div class="flex justify-between bg-gray-200 dark:bg-slate-900">
-         <router-link to="/">
+         <router-link to="dashboard">
             <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
                Clean Natty
             </button>
