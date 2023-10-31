@@ -6,7 +6,9 @@
     <UpSideMenu />
   </div>
   <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-    <!-- TODO: Fazer uma tabela com todos os produtos existentes e ter como alterar quantidade.   -->
+      <!-- <p class="text-3xl text-center font-semibold">Rodrigo Goes >>>> CBUM</p> -->
+      <!-- <img src="../assets/Screenshot_1.png" class="w-screen h-screen"> -->
+      <Calendar/>
   </div>
 </template>
 
@@ -23,7 +25,8 @@ export default {
 </script>
 
 <script setup>
-import Upside from "./usables/Upside.vue";
-import UpSideMenu from "./usables/UpSideMenu.vue";
-document.title = "Estoque - Clean Natty";
+import Upside from "../usables/Upside.vue";
+import UpSideMenu from "../usables/UpSideMenu.vue";
+import Calendar from "@/components/usables/Calendar.vue";
+document.title = "Dashboard - Clean Natty";
 </script>

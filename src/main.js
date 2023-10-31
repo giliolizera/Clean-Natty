@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from './components/views/App.vue'
 import './assets/main.css'
 import { createRouter, createWebHistory } from 'vue-router'
 import Maska from 'maska'
@@ -10,7 +10,7 @@ import 'v-calendar/style.css';
 const routes = [
    {
       path: '/',
-      component: () => import('./components/Site.vue')
+      component: () => import('./components/views/Site.vue')
    },
    {
       path: '/cadastro-funcionario',
@@ -26,15 +26,15 @@ const routes = [
    },
    {
       path: '/compra-produto',
-      component: () => import('./components/CompraProduto.vue')
+      component: () => import('./components/pages/CompraProduto.vue')
    },
    {
       path: '/dashboard',
-      component: () => import('./components/Dashboard.vue')
+      component: () => import('./components/pages/Dashboard.vue')
    },
    {
       path: '/estoque',
-      component: () => import('./components/Estoque.vue')
+      component: () => import('./components/pages/Estoque.vue')
    }
 ]
 
