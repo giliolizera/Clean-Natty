@@ -2,7 +2,7 @@
    <div class="">
       <div class="lg:flex bg-gray-200 dark:bg-slate-900">
          <div class="lg:inline-flex justify-start">
-            <router-link to="/">
+            <router-link to="dashboard">
                <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
                   Clean Natty
                </button>
@@ -10,6 +10,11 @@
          </div>
          <div class="justify-end inline-flex">
             <router-link to="dashboard" class="mt-3">
+               <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
+                  Dashboard
+               </button>
+            </router-link>
+            <router-link to="agenda" class="mt-3">
                <button class="dark:bg-slate-900 bg:gray-200 dark:text-gray-100 font-medium py-2 px-5 mb-2 rounded-xl">
                   Agenda
                </button>

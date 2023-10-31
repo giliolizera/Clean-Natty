@@ -15,14 +15,17 @@
             class="fixed top-4 right-4 grid rounded-md w-56 h-max  bg-white text-black font-medium p-4 space-y-3 mr-4 z-50 transform overflow-hidden"
             v-if="exibir">
             <div class="inline-flex justify-between">
-               <router-link to="cadastro-funcionario">
-                  <p class="space-x-6">Agenda</p>
+               <router-link to="dashboard">
+                  <p class="space-x-6">Dashboard</p>
                </router-link>
                <button class="pl-24" @click="exibir = false">
                   <XMarkIcon class="h-4 w-4 text-gray-500" />
                </button>
             </div>
-            <router-link to="cadastro-ambiente">
+            <router-link to="agenda">
+               Agenda
+            </router-link>
+            <router-link to="cadastro-funcionario">
                Funcionário
             </router-link>
             <router-link to="cadastro-ambiente">

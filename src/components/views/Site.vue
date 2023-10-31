@@ -1,18 +1,27 @@
 <template>
-  <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
+  <div
+    class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white"
+  >
     <div class="flex justify-between bg-gray-200 dark:bg-slate-900">
       <router-link to="/">
-        <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
+        <button
+          class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start"
+        >
           Clean Natty
         </button>
       </router-link>
-      <button @click="exibir = !exibir">
-        <EllipsisVerticalIcon class="h-6 w-6 mr-2" />
-      </button>
+      <div class="inline-flex">
+        <button class="p-2 pr-5 mt-1 font-medium">Home</button>
+        <button class="p-2 pr-5 mt-1 font-medium">About Us</button>
+        <button class="p-2 pr-5 mt-1 font-medium">Contact</button>
+        <button @click="exibir = !exibir">
+          <EllipsisVerticalIcon class="h-6 w-6 mr-2" />
+        </button>
+      </div>
     </div>
     <div v-if="exibir" class="flex justify-end bg-gray-200 dark:bg-slate-900 space-x-2">
       <p>Dark Mode</p>
-      <Switch class="mt-1"/>
+      <Switch class="mt-1" />
     </div>
     <div class="text-center justify-center max-w-md mx-auto">
       <div class="inline-flex text-center justify-center p-10 py-4">
@@ -20,51 +29,17 @@
           <div class="text-center font-medium text-xl mt-6">
             Sistema de agendamentos de limpezas
           </div>
-          <!-- <div class="text-center font-medium mt-10">
+          <div class="text-center font-medium mt-10">
             Para entrar anonimamente, <br />
             clique no botão abaixo
-          </div> -->
-          <div class="flex justify-center mt-10">
+          </div>
+          <div class="flex justify-center mt-4">
             <router-link to="/dashboard">
               <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-7 rounded-md">
                 ENTRAR
               </button>
             </router-link>
           </div>
-          <!-- <div class="text-center font-medium mt-6">
-            Para cadastrar-se no sistema, <br />
-            clique no botão abaixo
-          </div> -->
-          <div class="flex justify-center mt-10 space-x-4">
-            <router-link to="/cadastro-funcionario">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md">
-                CADASTRO FAXINEIRO
-              </button>
-            </router-link>
-            <router-link to="/cadastro-ambiente">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md">
-                CADASTRO AMBIENTE
-              </button>
-            </router-link>
-            <router-link to="/cadastro-produto">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md">
-                CADASTRO PRODUTO
-              </button>
-            </router-link>
-          </div>
-          <div class="flex justify-center space-x-4">
-            <router-link to="/estoque">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md mt-10">
-                ESTOQUE
-              </button>
-            </router-link>
-            <router-link to="/compra-produto">
-              <button class="dark:bg-gray-200 dark:hover:bg-gray-300 hover:bg-sky-600 bg-sky-600 text-white dark:text-gray-900 text-sm font-medium py-2 px-5 rounded-md mt-10">
-                COMPRA PRODUTO
-              </button>
-            </router-link>
-          </div>
-
         </div>
       </div>
     </div>
@@ -73,13 +48,13 @@
 </template>
 
 <script>
-import Switch from '@/components/usables/Switch.vue'
+import Switch from "@/components/usables/Switch.vue";
 import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline";
 export default {
   components: {
     Switch,
     EllipsisVerticalIcon,
-   },
+  },
   data: () => ({
     exibir: false,
   }),
@@ -94,16 +69,16 @@ document.title = "Home - Clean Natty";
 <!-- SCROLLBAR  -->
 <style>
 ::-webkit-scrollbar {
-   width: 8px;
-   height: 2px;
+  width: 8px;
+  height: 2px;
 }
 
 ::-webkit-scrollbar-track {
-   background: #000;
-   padding: 2px;
+  background: #000;
+  padding: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: #393939;
+  background-color: #393939;
 }
 </style>
