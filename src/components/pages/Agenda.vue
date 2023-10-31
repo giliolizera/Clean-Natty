@@ -1,0 +1,31 @@
+<template>
+    <div class="hidden lg:block">
+      <Upside />
+    </div>
+    <div class="lg:hidden">
+      <UpSideMenu />
+    </div>
+    <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
+      <Calendar/> 
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    data: () => ({
+      exibir: true,
+      components: {
+        Upside,
+        UpSideMenu,
+      },
+    }),
+  };
+  </script>
+  
+  <script setup>
+  import Upside from "../usables/Upside.vue";
+  import UpSideMenu from "../usables/UpSideMenu.vue";
+  import Calendar from "@/components/usables/Calendar.vue";
+  document.title = "Agenda - Clean Natty";
+  </script>
+  

@@ -33,6 +33,10 @@ const routes = [
       component: () => import('./components/pages/Dashboard.vue')
    },
    {
+      path: '/agenda',
+      component: () => import('./components/pages/Agenda.vue')
+   },
+   {
       path: '/estoque',
       component: () => import('./components/pages/Estoque.vue')
    }
