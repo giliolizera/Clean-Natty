@@ -19,7 +19,7 @@
         </span>
       </span>
     </div>
-    <img src="@/assets/Screenshot_1.png" class="absolute mt-12 top-32 inset-0 w-full h-max max-w-xl transform overflow-hidden text-left shadow-xl p-4 space-y-2 items-center mx-auto z-50"> 
+    <!-- <img src="@/assets/Screenshot_1.png" class="absolute mt-12 top-32 inset-0 w-full h-max max-w-xl transform overflow-hidden text-left shadow-xl p-4 space-y-2 items-center mx-auto z-50">  -->
   </div>
 </template>
 

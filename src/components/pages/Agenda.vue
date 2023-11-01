@@ -12,6 +12,7 @@
       </div>
       <div class="flex justify-start">
         <Calendar/> 
+        <!-- <Kalendar /> -->
       </div>
     </div>
   </template>
@@ -32,6 +33,8 @@
   import Upside from "../usables/Upside.vue";
   import UpSideMenu from "../usables/UpSideMenu.vue";
   import Calendar from "@/components/usables/Calendar.vue";
+  // import Kalendar from 'kalendar-vue';
+  // import 'kalendar-vue/dist/KalendarVue.css';
   document.title = "Agenda - Clean Natty";
   </script>
   

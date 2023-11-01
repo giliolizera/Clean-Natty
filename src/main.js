@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Maska from 'maska'
 import VCalendar from 'v-calendar';
 import 'v-calendar/style.css';
+// import PortalVue from "kalendar-vue";
 // import VueMask from 'v-mask'
 
 const routes = [
@@ -52,4 +53,5 @@ Vue.use(router)
 Vue.use(Maska)
 Vue.use(VCalendar, {})
 // Vue.use(VueMask)
+// Vue.use(PortalVue)
 Vue.mount('#app')
