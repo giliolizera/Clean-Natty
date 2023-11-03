@@ -5,6 +5,7 @@
     <div class="lg:hidden">
       <UpSideMenu />
     </div>
+    <!-- TODO: TENTAR IMPORTAR UM SISTEMA DE AGENDAMENTOS -->
     <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
       <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-5">
         <p class="font-medium text-xl pb-1">Sistema de Agendamentos</p>
