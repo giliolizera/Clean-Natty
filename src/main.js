@@ -14,12 +14,24 @@ const routes = [
       component: () => import('./components/views/Site.vue')
    },
    {
+      path:'/funcionarios',
+      component: () => import('./components/index/FuncionarioIndex.vue')
+   },
+   {
       path: '/cadastro-funcionario',
       component: () => import('./components/create/CreateFuncionario.vue')
    },
    {
+      path: '/ambientes',
+      component: () => import('./components/index/AmbienteIndex.vue')
+   },
+   {
       path: '/cadastro-ambiente',
       component: () => import('./components/create/CreateAmbiente.vue')
+   },
+   {
+      path: '/produtos',
+      component: () => import('./components/index/ProdutoIndex.vue')
    },
    {
       path: '/cadastro-produto',
