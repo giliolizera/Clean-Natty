@@ -16,7 +16,7 @@
             <div class="p-6">
               <router-link to="cadastro-ambiente">
                   <button class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
-                    Cadastrar novo ambiente
+                    Cadastrar novo Ambiente
                   </button>
               </router-link>
             </div>
@@ -113,14 +113,24 @@
       },
       ambientes: [
       { 
-        id: "1",
-        name: "Cerveja Heineken",
-        estabelecimento: "001",
-        andar: "Bebida",
-        tipo: "ML",
-        cidade: "12",
-        endereco: "Rua 1",
-        observation: "Cerveja de 473ml"
+        id: 1,
+        name: "Gilioli Contabilidade",
+        estabelecimento: "Prédio Comercial",
+        andar: "2º",
+        tipo: "Escritório",
+        endereco: "Av. Júlio de Castilhos, 974",
+        cidade: "Caxias do Sul",
+        observation: "Não precisa levar produtos de limpeza, pois já tem no local"
+      },
+      {
+        id: 2,
+        name: "Tregnago Informática",
+        estabelecimento: "Sala comercial",
+        andar: "1º",
+        tipo: "Sala comercial",
+        endereco: "Av. Osvaldo Aranha, 215",
+        cidade: "Caxias do Sul",
+        observation: "SALA 102, não precisa levar panos, pois já tem no local"
       },
     ],
     }),

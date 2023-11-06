@@ -11,9 +11,6 @@
         </button>
       </router-link>
       <div class="inline-flex">
-        <button class="p-2 pr-5 mt-1 font-medium">Home</button>
-        <button class="p-2 pr-5 mt-1 font-medium">About Us</button>
-        <button class="p-2 pr-5 mt-1 font-medium">Contact</button>
         <button @click="exibir = !exibir">
           <EllipsisVerticalIcon class="h-6 w-6 mr-2" />
         </button>
