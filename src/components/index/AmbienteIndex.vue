@@ -49,7 +49,7 @@
                   class="max-w-[10rem] truncate py-3 pr-5 font-semibold dark:text-white sm:max-w-xs sm:pr-8"
                 >
                   <button>
-                    {{ ambiente.name }}
+                    {{ ambiente.nome }}
                   </button>
                 </td>
                 <td
@@ -106,34 +106,25 @@
   <script>
   export default {
     data: () => ({
+      ambientes: {},
       exibir: true,
       components: {
         Upside,
         UpSideMenu,
       },
-      ambientes: [
-      { 
-        id: 1,
-        name: "Gilioli Contabilidade",
-        estabelecimento: "Prédio Comercial",
-        andar: "2º",
-        tipo: "Escritório",
-        endereco: "Av. Júlio de Castilhos, 974",
-        cidade: "Caxias do Sul",
-        observation: "Não precisa levar produtos de limpeza, pois já tem no local"
-      },
-      {
-        id: 2,
-        name: "Tregnago Informática",
-        estabelecimento: "Sala comercial",
-        andar: "1º",
-        tipo: "Sala comercial",
-        endereco: "Av. Osvaldo Aranha, 215",
-        cidade: "Caxias do Sul",
-        observation: "SALA 102, não precisa levar panos, pois já tem no local"
-      },
-    ],
     }),
+    methods: {
+      getDados(){
+        fetch('http://localhost:3000/ambientes')
+          .then(response => response.json())
+          .then(response => {
+            this.ambientes = response
+          })    
+      }
+    },
+    created(){
+      this.getDados()
+    }
   };
   </script>
   

@@ -114,36 +114,25 @@
   <script>
   export default {
     data: () => ({
+      funcionarios: {},
       exibir: true,
       components: {
         Upside,
         UpSideMenu,
       },
-      funcionarios: [
-      {
-            id: 1,
-            nome:"João",
-            email: "joaoruphnet@gmail.com",
-            telefone: "54999749301",
-            cpf: "02868532196",
-            cidade: "Caxias do Sul",
-            endereco: "Av. Das Flores, 923",
-            gestor: ["Matheus", "Ronaldo"],
-            observation: "Funcionário muito bom, mas tem que melhorar em algumas coisas"
-        },
-        {
-            id: 2,
-            nome:"Richards Bregalds",
-            email: "ricardofaxina@gmail.com",
-            telefone: "54998949301",
-            cpf: "02798414755",
-            cidade: "Barão do Triunfo",
-            endereco: "Rua Marechal Floriano, 615",
-            gestor: ["Matheus"],
-            observation: "Funcionário muito playboy, mas é pontual e executa com perfeição suas tarefas"
-        }
-    ],
     }),
+    methods: {
+      getDados(){
+        fetch('http://localhost:3000/funcionarios')
+          .then(response => response.json())
+          .then(response => {
+            this.funcionarios = response
+          })    
+      }
+    },
+    created(){
+      this.getDados()
+    }
   };
   </script>
   

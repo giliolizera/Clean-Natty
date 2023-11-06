@@ -34,12 +34,12 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-neutral-300 dark:divide-neutral-500">
-          <tr v-if="products.id === 0">
+          <tr v-if="produtos.id === 0">
             <td class="py-5 text-center" colspan="100%">
               Não há produtos cadastrados!
             </td>
           </tr>
-          <tr v-for="(product, index) in products" :key="index">
+          <tr v-for="(product, index) in produtos" :key="index">
             <td class="truncate py-3 pr-5 sm:pr-8">{{ product.id }}</td>
             <td
               class="max-w-[10rem] truncate py-3 pr-5 font-semibold dark:text-white sm:max-w-xs sm:pr-8"
@@ -92,62 +92,28 @@
   import Upside from "../usables/Upside.vue";
   import UpSideMenu from "../usables/UpSideMenu.vue";
   import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
-export default {
-  data: () => ({
-    exibir: true,
-    components: {
-      Upside,
-      UpSideMenu,
-    },
-    products: [
-      { 
-        id: "1",
-        name: "Cerveja Heineken",
-        codigo: "001",
-        tipo: "Bebida",
-        medida: "ML",
-        quantidade: "12",
-        observation: "Cerveja de 473ml"
+  export default {
+    data: () => ({
+      produtos: {},
+      exibir: true,
+      components: {
+        Upside,
+        UpSideMenu,
       },
-      {
-        id: "2",
-        name: "Mr. Músculo",
-        codigo: "002",
-        tipo: "Desingrachante",
-        medida: "ML",
-        quantidade: "6",
-        observation: "Embalagem de 500ml"
-      },
-      {
-        id: "3",
-        name: "Desinfetante Pinho",
-        codigo: "003",
-        tipo: "Desinfetante",
-        medida: "UN",
-        quantidade: "24",
-        observation: "Embalagem de 2L"
-      },
-      {
-        id: "4",
-        name: "Bucha Bombril",
-        codigo: "004",
-        tipo: "Esponja de aço",
-        medida: "UN",
-        quantidade: "12",
-        observation: "Caixa com 3 unidades"
-      },
-      {
-        id: "5",
-        name: "Vassoura Condor",
-        codigo: "005",
-        tipo: "Vassoura",
-        medida: "UN",
-        quantidade: "20",
-        observation: "Vassouras de 60cm"
+    }),
+    methods: {
+      getDados(){
+        fetch('http://localhost:3000/produtos')
+          .then(response => response.json())
+          .then(response => {
+            this.produtos = response
+          })    
       }
-    ]
-  }),
-};
+    },
+    created(){
+      this.getDados()
+    }
+  };
 </script>
 
 <script setup>

@@ -13,7 +13,7 @@
         },
         {
             "id": 2,
-            "nome":"Richards Bregalds",
+            "nome":"Rich Bregalds",
             "email": "ricardofaxina@gmail.com",
             "telefone": "54998949301",
             "cpf": "02798414755",
@@ -47,7 +47,49 @@
     ],
     "produtos": [
         {
-            
+            "id": "1",
+            "name": "Cerveja Heineken",
+            "codigo": "001",
+            "tipo": "Bebida",
+            "medida": "ML",
+            "quantidade": "12",
+            "observation": "Cerveja de 473ml"
+        },
+        {
+            "id": "2",
+            "name": "Mr. Músculo",
+            "codigo": "002",
+            "tipo": "Desingrachante",
+            "medida": "ML",
+            "quantidade": "6",
+            "observation": "Embalagem de 500ml"
+        },
+        {
+            "id": "3",
+            "name": "Desinfetante Pinho",
+            "codigo": "003",
+            "tipo": "Desinfetante",
+            "medida": "UN",
+            "quantidade": "24",
+            "observation": "Embalagem de 2L"
+        },
+        {
+            "id": "4",
+            "name": "Bucha Bombril",
+            "codigo": "004",
+            "tipo": "Esponja de aço",
+            "medida": "UN",
+            "quantidade": "12",
+            "observation": "Caixa com 3 unidades"
+        },
+        {
+            "id": "5",
+            "name": "Vassoura Condor",
+            "codigo": "005",
+            "tipo": "Vassoura",
+            "medida": "UN",
+            "quantidade": "20",
+            "observation": "Vassouras de 60cm"
         }
     ]
 
