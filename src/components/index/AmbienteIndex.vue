@@ -40,7 +40,7 @@
               <tbody class="divide-y divide-neutral-300 dark:divide-neutral-500">
               <tr v-if=" ambientes.id === 0">
                 <td class="py-5 text-center" colspan="100%">
-                  Não há produtos cadastrados!
+                  Não há ambientes cadastrados!
                 </td>
               </tr>
               <tr v-for="(ambiente, index) in ambientes" :key="index">

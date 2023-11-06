@@ -23,7 +23,7 @@
             "observation": "Funcionário muito playboy, mas é pontual e executa com perfeição suas tarefas"
         }
     ],
-    "ambiente": [
+    "ambientes": [
         {
             "id": 1,
             "nome": "Gilioli Contabilidade",
@@ -43,6 +43,11 @@
             "endereco": "Av. Osvaldo Aranha, 215",
             "cidade": "Caxias do Sul",
             "observation": "SALA 102, não precisa levar panos, pois já tem no local"
+        }
+    ],
+    "produtos": [
+        {
+            
         }
     ]
 

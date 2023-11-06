@@ -30,16 +30,12 @@ const routes = [
       component: () => import('./components/create/CreateAmbiente.vue')
    },
    {
-      path: '/produtos',
-      component: () => import('./components/index/ProdutoIndex.vue')
-   },
-   {
       path: '/cadastro-produto',
       component: () => import('./components/create/CreateProduto.vue')
    },
    {
       path: '/compra-produto',
-      component: () => import('./components/pages/CompraProduto.vue')
+      component: () => import('./components/pages/CompraProdutos.vue')
    },
    {
       path: '/dashboard',
@@ -51,7 +47,7 @@ const routes = [
    },
    {
       path: '/estoque',
-      component: () => import('./components/pages/Estoque.vue')
+      component: () => import('./components/index/Estoque.vue')
    }
 ]
 

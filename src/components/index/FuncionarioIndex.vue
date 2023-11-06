@@ -42,7 +42,7 @@
               <tbody class="divide-y divide-neutral-300 dark:divide-neutral-500">
               <tr v-if=" funcionarios.id === 0">
                 <td class="py-5 text-center" colspan="100%">
-                  Não há produtos cadastrados!
+                  Não há funcionários cadastrados!
                 </td>
               </tr>
               <tr v-for="(funcionario, index) in funcionarios" :key="index">
