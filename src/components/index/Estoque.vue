@@ -7,7 +7,7 @@
   </div>
   <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
     <div class="flex justify-between">
-      <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-4">
+      <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
         <p class="font-medium text-xl pb-1">Estoque de Produtos</p>
         <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os produtos em estoque.</p>
       </div>
