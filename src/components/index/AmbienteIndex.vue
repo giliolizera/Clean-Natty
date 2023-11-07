@@ -16,7 +16,7 @@
             <div class="p-6">
               <router-link to="cadastro-ambiente">
                   <button class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
-                    Cadastrar novo ambiente
+                    Cadastrar novo Ambiente
                   </button>
               </router-link>
             </div>
@@ -40,7 +40,7 @@
               <tbody class="divide-y divide-neutral-300 dark:divide-neutral-500">
               <tr v-if=" ambientes.id === 0">
                 <td class="py-5 text-center" colspan="100%">
-                  Não há produtos cadastrados!
+                  Não há ambientes cadastrados!
                 </td>
               </tr>
               <tr v-for="(ambiente, index) in ambientes" :key="index">
@@ -49,7 +49,7 @@
                   class="max-w-[10rem] truncate py-3 pr-5 font-semibold dark:text-white sm:max-w-xs sm:pr-8"
                 >
                   <button>
-                    {{ ambiente.name }}
+                    {{ ambiente.nome }}
                   </button>
                 </td>
                 <td
@@ -106,24 +106,25 @@
   <script>
   export default {
     data: () => ({
+      ambientes: {},
       exibir: true,
       components: {
         Upside,
         UpSideMenu,
       },
-      ambientes: [
-      { 
-        id: "1",
-        name: "Cerveja Heineken",
-        estabelecimento: "001",
-        andar: "Bebida",
-        tipo: "ML",
-        cidade: "12",
-        endereco: "Rua 1",
-        observation: "Cerveja de 473ml"
-      },
-    ],
     }),
+    methods: {
+      getDados(){
+        fetch('http://localhost:3000/ambientes')
+          .then(response => response.json())
+          .then(response => {
+            this.ambientes = response
+          })    
+      }
+    },
+    created(){
+      this.getDados()
+    }
   };
   </script>
   

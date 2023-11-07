@@ -31,14 +31,11 @@
             <router-link to="cadastro-ambiente">
                Ambiente
             </router-link>
-            <router-link to="cadastro-produto">
-               Produto
-            </router-link>
             <router-link to="/estoque">
                Estoque
             </router-link>
             <router-link to="/compra-produto">
-               Compra Produto
+               Compra Produtos
             </router-link>
             <div class="inline-flex">
                Switch Theme

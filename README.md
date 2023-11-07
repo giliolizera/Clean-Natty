@@ -3,9 +3,9 @@
 Para vocês meus caros amigos oBrigaldo, tregnano e iagão. 
 
 -- Temos que ver se vamos fazer usuários, para assim ter login e etc. 
--- A minha ideia até agora é fazer o agendamento e etc na dashboard, aonde vai ter uma "agenda" com os horários disponíveis e etc. ( TEM QUE IMPORTAR UM MODELO PRONTO... )
--- Falta um banco de dados para comecarmos a brincadeira :v
--- Menu lateral ou continuar do jeito que ta? ( nunca fiz lateral, não sei como faz mas acho q ia fica mais top )
+-- IMPORTAR AGENDA DE EVENTOS 
+-- VER DO COMPRA PRODUTO
+-- VER DO USUARIO PARA CONTROLE DOS PRODUTOS E FUNCIONARIOS OU NAO, DEPENDE DO LOGIN  
 
 ## Project setup
 ```

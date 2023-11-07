@@ -9,50 +9,27 @@ import 'v-calendar/style.css';
 // import VueMask from 'v-mask'
 
 const routes = [
-   {
-      path: '/',
-      component: () => import('./components/views/Site.vue')
-   },
-   {
-      path:'/funcionarios',
-      component: () => import('./components/index/FuncionarioIndex.vue')
-   },
-   {
-      path: '/cadastro-funcionario',
-      component: () => import('./components/create/CreateFuncionario.vue')
-   },
-   {
-      path: '/ambientes',
-      component: () => import('./components/index/AmbienteIndex.vue')
-   },
-   {
-      path: '/cadastro-ambiente',
-      component: () => import('./components/create/CreateAmbiente.vue')
-   },
-   {
-      path: '/produtos',
-      component: () => import('./components/index/ProdutoIndex.vue')
-   },
-   {
-      path: '/cadastro-produto',
-      component: () => import('./components/create/CreateProduto.vue')
-   },
-   {
-      path: '/compra-produto',
-      component: () => import('./components/pages/CompraProduto.vue')
-   },
-   {
-      path: '/dashboard',
-      component: () => import('./components/pages/Dashboard.vue')
-   },
-   {
-      path: '/agenda',
-      component: () => import('./components/pages/Agenda.vue')
-   },
-   {
-      path: '/estoque',
-      component: () => import('./components/pages/Estoque.vue')
-   }
+   { path: '/', component: () => import('./components/views/Site.vue')},
+
+   { path:'/funcionarios', component: () => import('./components/index/FuncionarioIndex.vue')},
+
+   { path: '/funcionario/editar/:id', component: () => import('./components/pages/Edit.vue')},
+
+   { path: '/cadastro-funcionario', component: () => import('./components/create/CreateFuncionario.vue')},
+
+   { path: '/ambientes', component: () => import('./components/index/AmbienteIndex.vue')},
+
+   { path: '/cadastro-ambiente', component: () => import('./components/create/CreateAmbiente.vue')},
+
+   { path: '/cadastro-produto', component: () => import('./components/create/CreateProduto.vue')},
+
+   { path: '/compra-produto', component: () => import('./components/pages/CompraProdutos.vue')},
+
+   { path: '/dashboard', component: () => import('./components/pages/Dashboard.vue')},
+
+   {path: '/agenda', component: () => import('./components/pages/Agenda.vue')},
+
+   { path: '/estoque', component: () => import('./components/index/Estoque.vue')}
 ]
 
 const router = createRouter({
