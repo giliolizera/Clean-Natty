@@ -92,13 +92,13 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                  <button
-                  >
+                <router-link :to="`funcionario/editar/${funcionario.id}`">
+                  <button>
                     <PencilSquareIcon class="w-5" />
                   </button>
-                  <button
-                  >
-                    <TrashIcon class="w-5 text-rose-600" />
+                </router-link>
+                  <button>
+                    <TrashIcon class="w-5 text-rose-600 mb-1" />
                   </button>
                 </td>
               </tr>
@@ -128,7 +128,7 @@
           .then(response => {
             this.funcionarios = response
           })    
-      }
+      },
     },
     created(){
       this.getDados()
