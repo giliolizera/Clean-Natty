@@ -21,39 +21,13 @@
          typePassword: true,
       }),
       methods: {
-         // validar() {
-         //    if (this.form.nome != '' && this.form.email.length > 10 && this.form.telefone.length > 13 && this.form.cpf.length > 13 && this.form.senha.length > 5) {
-         //       this.avançar = true
-         //    }
-         //    else {
-         //       this.avançar = false
-         //    }
-         // },
          trocarRota() {
-            // if (this.avançar) {
             this.$router.push('/dashboard')
-            // }
-            // else {
-            //    if (this.form.nome === '' && this.form.email.length < 10 && this.form.telefone.length < 13 && this.form.cpf.length < 13 && this.form.senha.length < 5) {
-            //       alert('Preencha todos os campos')
-            //    }
-            //    else if (this.form.nome === '') {
-            //       alert('Preencha o campo nome')
-            //    }
-            //    else if (this.form.email.length < 10) {
-            //       alert('Preencha o campo e-mail corretamente')
-            //    }
-            //    else if (this.form.telefone.length < 13) {
-            //       alert('Preencha o campo telefone corretamente')
-            //    }
-            //    else if (this.form.cpf.length < 13) {
-            //       alert('Preencha o campo cpf corretamente')
-            //    }
-            //    else if (this.form.senha.length < 5) {
-            //       alert('A senha deve conter no mínimo 6 caracteres')
-            //    }
-            // }
          },
+         salvar(event) {
+            this.$emit('criar', this.form)
+            this.form = {}
+         }
       },
       components: {
          Switch, EllipsisVerticalIcon, EyeIcon, EyeSlashIcon
@@ -91,7 +65,7 @@
                </div>
             </div>
          </div>
-         <form class="col-span-2 grid lg:grid-cols-2 gap-4 pr-6 pl-6 mt-8">
+         <form @submit.prevent="salvar" class="col-span-2 grid lg:grid-cols-2 gap-4 pr-6 pl-6 mt-8">
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   <p>Nome</p><p class="flex text-red-600">*</p>

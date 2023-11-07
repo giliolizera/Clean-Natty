@@ -92,6 +92,9 @@
   import Upside from "../usables/Upside.vue";
   import UpSideMenu from "../usables/UpSideMenu.vue";
   import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
+  import config from "@/components/config/config";
+  import axios from "axios";
+
   export default {
     data: () => ({
       produtos: {},
@@ -101,17 +104,11 @@
         UpSideMenu,
       },
     }),
-    methods: {
-      getDados(){
-        fetch('http://localhost:3000/produtos')
-          .then(response => response.json())
-          .then(response => {
-            this.produtos = response
-          })    
-      }
-    },
     created(){
-      this.getDados()
+      axios.get(`${config.API_URL}/produtos`)
+      .then((response) => {
+        this.produtos = response.data;
+      })
     }
   };
 </script>
