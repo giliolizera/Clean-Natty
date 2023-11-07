@@ -25,14 +25,14 @@
             <router-link to="agenda">
                Agenda
             </router-link>
-            <router-link to="cadastro-funcionario">
+            <router-link to="funcionarios">
                Funcionário
             </router-link>
-            <router-link to="cadastro-ambiente">
+            <router-link to="ambientes">
                Ambiente
             </router-link>
             <router-link to="/estoque">
-               Estoque
+               Produtos
             </router-link>
             <router-link to="/compra-produto">
                Compra Produtos

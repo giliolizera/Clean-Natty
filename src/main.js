@@ -13,13 +13,19 @@ const routes = [
 
    { path:'/funcionarios', component: () => import('./components/index/FuncionarioIndex.vue')},
 
-   { path: '/funcionario/editar/:id', component: () => import('./components/pages/Edit.vue')},
+   { path: '/funcionario/editar/:id', component: () => import('./components/pages/EditFunc.vue')},
 
    { path: '/cadastro-funcionario', component: () => import('./components/create/CreateFuncionario.vue')},
 
    { path: '/ambientes', component: () => import('./components/index/AmbienteIndex.vue')},
 
+   { path: '/ambiente/editar/:id', component: () => import('./components/pages/EditAmbi.vue')},
+
    { path: '/cadastro-ambiente', component: () => import('./components/create/CreateAmbiente.vue')},
+   
+   { path: '/estoque', component: () => import('./components/index/Estoque.vue')},
+
+   { path: '/produto/editar/:id', component: () => import('./components/pages/EditProd.vue')},
 
    { path: '/cadastro-produto', component: () => import('./components/create/CreateProduto.vue')},
 
@@ -29,7 +35,6 @@ const routes = [
 
    {path: '/agenda', component: () => import('./components/pages/Agenda.vue')},
 
-   { path: '/estoque', component: () => import('./components/index/Estoque.vue')}
 ]
 
 const router = createRouter({

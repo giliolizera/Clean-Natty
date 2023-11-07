@@ -104,6 +104,9 @@
   </template>
   
   <script>
+  import config from "@/components/config/config";
+  import axios from "axios";
+  
   export default {
     data: () => ({
       ambientes: {},
@@ -113,17 +116,11 @@
         UpSideMenu,
       },
     }),
-    methods: {
-      getDados(){
-        fetch('http://localhost:3000/ambientes')
-          .then(response => response.json())
-          .then(response => {
-            this.ambientes = response
-          })    
-      }
-    },
     created(){
-      this.getDados()
+      axios.get(`${config.API_URL}/ambientes`)
+      .then((response) => {
+        this.ambientes = response.data;
+      })
     }
   };
   </script>

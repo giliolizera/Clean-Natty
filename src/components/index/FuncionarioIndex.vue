@@ -40,7 +40,7 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-neutral-300 dark:divide-neutral-500">
-              <tr v-if=" funcionarios.id === 0">
+              <tr v-if=" funcionarios === ''">
                 <td class="py-5 text-center" colspan="100%">
                   Não há funcionários cadastrados!
                 </td>
@@ -92,7 +92,7 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                <router-link :to="`funcionario/editar/${funcionario.id}`">
+                <router-link :to="`/funcionario/editar/${funcionario.id}`">
                   <button>
                     <PencilSquareIcon class="w-5" />
                   </button>
@@ -112,6 +112,9 @@
   </template>
   
   <script>
+  import config from "@/components/config/config";
+  import axios from "axios";
+
   export default {
     data: () => ({
       funcionarios: {},
@@ -121,17 +124,19 @@
         UpSideMenu,
       },
     }),
-    methods: {
-      getDados(){
-        fetch('http://localhost:3000/funcionarios')
-          .then(response => response.json())
-          .then(response => {
-            this.funcionarios = response
-          })    
-      },
-    },
     created(){
-      this.getDados()
+      axios.get(`${config.API_URL}/funcionarios`)
+      .then((response) => {
+        this.funcionarios = response.data;
+      })
+    },
+    methods: {
+      criarFuncionario(funcionario) {
+        axios.post(`${config.API_URL}/funcionarios`, funcionario)
+        .then((response) => {
+          this.funcionarios.push(response.data);
+        })
+      }
     }
   };
   </script>
