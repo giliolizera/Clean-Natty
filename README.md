@@ -1,11 +1,10 @@
 # Clean Natty  
 
-Para vocês meus caros amigos oBrigaldo, tregnano e iagão. 
-
--- Temos que ver se vamos fazer usuários, para assim ter login e etc. 
--- IMPORTAR AGENDA DE EVENTOS 
--- VER DO COMPRA PRODUTO
--- VER DO USUARIO PARA CONTROLE DOS PRODUTOS E FUNCIONARIOS OU NAO, DEPENDE DO LOGIN  
+### IMPORTAR AGENDA DE EVENTOS 
+### VER DO COMPRA PRODUTO
+### VER DO USUARIO PARA CONTROLE DOS PRODUTOS E FUNCIONARIOS OU NAO, DEPENDE DO LOGIN  
+### FAZER DASHBOARD
+### FAZER EDIT E DELETE 
 
 ## Project setup
 ```
