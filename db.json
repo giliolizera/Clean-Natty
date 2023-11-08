@@ -51,8 +51,8 @@
   ],
   "produtos": [
     {
-      "id": "1",
-      "name": "Cerveja Heineken",
+      "id": 1,
+      "nome": "Cerveja Heineken",
       "codigo": "001",
       "tipo": "Bebida",
       "medida": "ML",
@@ -60,8 +60,8 @@
       "observation": "Cerveja de 473ml"
     },
     {
-      "id": "2",
-      "name": "Mr. Músculo",
+      "id": 2,
+      "nome": "Mr. Músculo",
       "codigo": "002",
       "tipo": "Desingrachante",
       "medida": "ML",
@@ -69,8 +69,8 @@
       "observation": "Embalagem de 500ml"
     },
     {
-      "id": "3",
-      "name": "Desinfetante Pinho",
+      "id": 3,
+      "nome": "Desinfetante Pinho",
       "codigo": "003",
       "tipo": "Desinfetante",
       "medida": "UN",
@@ -78,8 +78,8 @@
       "observation": "Embalagem de 2L"
     },
     {
-      "id": "4",
-      "name": "Bucha Bombril",
+      "id": 4,
+      "nome": "Bucha Bombril",
       "codigo": "004",
       "tipo": "Esponja de aço",
       "medida": "UN",
@@ -87,8 +87,8 @@
       "observation": "Caixa com 3 unidades"
     },
     {
-      "id": "5",
-      "name": "Vassoura Condor",
+      "id": 5,
+      "nome": "Vassoura Condor",
       "codigo": "005",
       "tipo": "Vassoura",
       "medida": "UN",
