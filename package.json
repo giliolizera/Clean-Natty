@@ -17,7 +17,8 @@
     "v-calendar": "^3.1.2",
     "v-mask": "^2.3.0",
     "vue": "^3.2.26",
-    "vue-router": "4.0.12"
+    "vue-router": "4.0.12",
+    "vue-simple-calendar": "^6.3.1"
   },
   "devDependencies": {
     "@vue/cli-service": "~5.0.0",

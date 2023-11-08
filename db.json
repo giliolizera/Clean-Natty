@@ -21,6 +21,17 @@
       "endereco": "Rua Marechal Floriano, 615",
       "gestor": "Matheus",
       "observation": "Funcionário muito playboy, mas é pontual"
+    },
+    {
+      "id": 3,
+      "nome": "Flávio Medeiros",
+      "email": "flavinhopneus@gmail.com",
+      "telefone": "(54) 99847-9833",
+      "cpf": "578.428.734-11",
+      "cidade": "Fagundes Varela",
+      "endereco": "Av. Diniz Guimarães",
+      "gestor": "Rodrigo",
+      "observation": "Apenas ligações, não possui whatsapp."
     }
   ],
   "ambientes": [

@@ -94,11 +94,11 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                  <button @click="$emit('editar', funcionario)">
+                  <button>
                     <PencilSquareIcon class="w-5" />
                   </button>
-                  <button @click="$emit('deletar', funcionario)">
-                    <TrashIcon class="w-5 text-rose-600 mb-1" />
+                  <button>
+                    <TrashIcon class="w-5 text-rose-600" />
                   </button>
                 </td>
               </tr>
@@ -143,27 +143,6 @@
           this.funcionarios.push(response.data);
         })
       },
-      deletarFuncionario(funcionario) {
-        axios.delete(`${config.API_URL}/funcionarios/${funcionario.id}`)
-        .then((response) => {
-          const indice = this.funcionarios.findIndex((f) => f.id === funcionario.id);
-          this.funcionarios.splice(indice, 1);
-        })
-        },
-        editarTarefa(tarefa) {
-            console.log('Editar: ', tarefa)
-            axios.put(`/tarefas/${tarefa.id}`, tarefa)
-                .then(response => {
-                    console.log(`PUT /tarefas/${tarefa.id}`, response)
-                    const indice = this.tarefas.findIndex(t => t.id === tarefa.id)
-                    this.tarefas.splice(indice, 1, tarefa)
-                    this.resetar()
-                })
-        },
-        selecionarFuncionario(funcionario) {
-            this.funcionarioSelecionada = funcionario
-            this.exibirFormulario = true
-        }
     }
   };
   </script>
