@@ -6,22 +6,24 @@
       <UpSideMenu />
     </div>
     <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-    <!-- TODO: FAZER UM INDEX MAIS CAPRICHADO, ESSE É SO UM TESTE -->
-    <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
         <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-          <div class="flex justify-between">
+          <div v-if="!exibirCreate" class="flex justify-between">
             <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
               <p class="font-medium text-xl pb-1">Funcionários</p>
               <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os funcionários já cadastrados.</p>
             </div>
             <div class="p-6">
-              <router-link to="cadastro-funcionario">
-                  <button class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
+              <!-- <router-link to="cadastro-funcionario"> -->
+                  <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
                     Cadastrar novo Funcionário
                   </button>
-              </router-link>
+              <!-- </router-link> -->
             </div>
-        </div>
+          </div>
+            <CreateFuncionario 
+              v-if="exibirCreate"
+              @criar="criarFuncionario"
+            />
         <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
           <div class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
             <table class="min-w-full divide-y divide-neutral-300" >
@@ -92,12 +94,10 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                <router-link :to="`/funcionario/editar/${funcionario.id}`">
-                  <button>
+                  <button @click="$emit('editar', funcionario)">
                     <PencilSquareIcon class="w-5" />
                   </button>
-                </router-link>
-                  <button>
+                  <button @click="$emit('deletar', funcionario)">
                     <TrashIcon class="w-5 text-rose-600 mb-1" />
                   </button>
                 </td>
@@ -108,17 +108,23 @@
       </div>
       </div>
     </div>
-    </div>
   </template>
   
   <script>
   import config from "@/components/config/config";
   import axios from "axios";
-
+  
   export default {
+    props: {
+        funcionario: {
+            type: Object,
+            default: undefined
+        }
+    },
     data: () => ({
       funcionarios: {},
       exibir: true,
+      exibirCreate: false,
       components: {
         Upside,
         UpSideMenu,
@@ -136,13 +142,35 @@
         .then((response) => {
           this.funcionarios.push(response.data);
         })
-      }
+      },
+      deletarFuncionario(funcionario) {
+        axios.delete(`${config.API_URL}/funcionarios/${funcionario.id}`)
+        .then((response) => {
+          const indice = this.funcionarios.findIndex((f) => f.id === funcionario.id);
+          this.funcionarios.splice(indice, 1);
+        })
+        },
+        editarTarefa(tarefa) {
+            console.log('Editar: ', tarefa)
+            axios.put(`/tarefas/${tarefa.id}`, tarefa)
+                .then(response => {
+                    console.log(`PUT /tarefas/${tarefa.id}`, response)
+                    const indice = this.tarefas.findIndex(t => t.id === tarefa.id)
+                    this.tarefas.splice(indice, 1, tarefa)
+                    this.resetar()
+                })
+        },
+        selecionarFuncionario(funcionario) {
+            this.funcionarioSelecionada = funcionario
+            this.exibirFormulario = true
+        }
     }
   };
   </script>
   
   <script setup>
     import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
+    import CreateFuncionario from "../create/CreateFuncionario.vue";
     import Upside from "../usables/Upside.vue";
     import UpSideMenu from "../usables/UpSideMenu.vue";
     document.title = "Funcionários - Clean Natty";
