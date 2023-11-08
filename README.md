@@ -6,17 +6,23 @@
 ### FAZER DASHBOARD
 ### FAZER EDIT E DELETE 
 
-## Project setup
+## Requisitos Iniciais
 ```
-npm install
+Ter instalado Node.JS na máquina
 ```
 
-## Compiles and hot-reloads for development
+## Rodar no terminal para iniciar o Projeto
+```
+npm install
+npm install -g json-server
+```
+
+## Compilar na localhost:8080
 ```
 npm run serve
 ```
 
-## Run Json Server
+## Compilar Json Server na localhost:3000
 ```
 json-server --watch db.json
 ``` 
