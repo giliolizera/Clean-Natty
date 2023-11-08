@@ -48,7 +48,7 @@
 </script>
                      
 <template>
-   <div v-if="exibirCreate" class=" text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
+   <div class=" text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
       <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">

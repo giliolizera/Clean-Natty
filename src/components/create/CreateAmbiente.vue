@@ -17,7 +17,6 @@
          },
          avançar: false,
          exibir: false,
-         typePassword: true,
       }),
       methods: {
          trocarRota() {
@@ -41,20 +40,6 @@
                      
 <template>
    <div class=" text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-      <div class="flex justify-between bg-gray-200 dark:bg-slate-900">
-         <router-link to="dashboard">
-            <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
-               Clean Natty
-            </button>
-         </router-link>
-         <button @click="exibir = !exibir">
-            <EllipsisVerticalIcon class="h-6 w-6 mr-2" />
-         </button>
-      </div>
-      <div class="flex justify-end bg-gray-200  dark:bg-slate-900 space-x-2" v-if="exibir">
-         <p>Dark Mode</p>
-         <Switch class="mt-1 ml-4"/>
-      </div>
       <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">
