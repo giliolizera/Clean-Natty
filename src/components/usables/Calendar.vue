@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<div id="app">
 		<h1>My Calendar</h1>
 		<calendar-view
@@ -42,4 +42,4 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-</style>
+</style> -->
