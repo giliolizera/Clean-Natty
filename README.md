@@ -1,23 +1,28 @@
 # Clean Natty  
 
-Para vocês meus caros amigos oBrigaldo, tregnano e iagão. 
+### IMPORTAR AGENDA DE EVENTOS 
+### VER DO COMPRA PRODUTO
+### VER DO USUARIO PARA CONTROLE DOS PRODUTOS E FUNCIONARIOS OU NAO, DEPENDE DO LOGIN  
+### FAZER DASHBOARD
+### FAZER EDIT E DELETE 
 
--- Temos que ver se vamos fazer usuários, para assim ter login e etc. 
--- IMPORTAR AGENDA DE EVENTOS 
--- VER DO COMPRA PRODUTO
--- VER DO USUARIO PARA CONTROLE DOS PRODUTOS E FUNCIONARIOS OU NAO, DEPENDE DO LOGIN  
+## Requisitos Iniciais
+```
+Ter instalado Node.JS na máquina
+```
 
-## Project setup
+## Rodar no terminal para iniciar o Projeto
 ```
 npm install
+npm install -g json-server
 ```
 
-## Compiles and hot-reloads for development
+## Compilar na localhost:8080
 ```
 npm run serve
 ```
 
-## Run Json Server
+## Compilar Json Server na localhost:3000
 ```
 json-server --watch db.json
 ``` 
