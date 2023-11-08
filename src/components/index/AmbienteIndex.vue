@@ -8,19 +8,21 @@
     <!-- TODO: FAZER UM INDEX MAIS CAPRICHADO, ESSE É SO UM TESTE -->
     <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
         <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-          <div class="flex justify-between">
+          <div v-if="!exibirCreate" class="flex justify-between">
             <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
               <p class="font-medium text-xl pb-1">Ambientes</p>
               <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os ambientes já cadastrados.</p>
             </div>
             <div class="p-6">
-              <router-link to="cadastro-ambiente">
-                  <button class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
-                    Cadastrar novo Ambiente
-                  </button>
-              </router-link>
+                <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
+                  Cadastrar novo Ambiente
+                </button>
             </div>
         </div>
+        <CreateAmbiente 
+          v-if="exibirCreate"
+          @criar="criarAmbiente"
+        />
         <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
           <div class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
             <table class="min-w-full divide-y divide-neutral-300" >
@@ -111,6 +113,7 @@
     data: () => ({
       ambientes: {},
       exibir: true,
+      exibirCreate: false,
       components: {
         Upside,
         UpSideMenu,
@@ -121,12 +124,21 @@
       .then((response) => {
         this.ambientes = response.data;
       })
+    },
+    methods: {
+      criarAmbiente(ambiente) {
+        axios.post(`${config.API_URL}/ambientes`, ambiente)
+        .then((response) => {
+          this.ambientes.push(response.data);
+        })
+      },
     }
   };
   </script>
   
   <script setup>
     import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
+    import CreateAmbiente from "../create/CreateAmbiente.vue";
     import Upside from "../usables/Upside.vue";
     import UpSideMenu from "../usables/UpSideMenu.vue";
     document.title = "Ambientes - Clean Natty";

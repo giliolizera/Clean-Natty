@@ -31,7 +31,7 @@
             <router-link to="ambientes">
                Ambiente
             </router-link>
-            <router-link to="/estoque">
+            <router-link to="/produtos">
                Produtos
             </router-link>
             <router-link to="/compra-produto">

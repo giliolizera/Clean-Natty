@@ -29,7 +29,7 @@
          //    }
          // },
          trocarRota() {
-            this.$router.push('/estoque')
+            this.$router.push('/produtos')
             // if (this.avançar) {
             // }
             // else {

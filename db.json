@@ -1,96 +1,99 @@
 {
-    "funcionarios": [
-        {
-            "id": 1,
-            "nome":"João",
-            "email": "joaoruphnet@gmail.com",
-            "telefone": "54999749301",
-            "cpf": "02868532196",
-            "cidade": "Caxias do Sul",
-            "endereco": "Av. Das Flores, 923",
-            "gestor": ["Matheus", "Ronaldo"],
-            "observation": "Funcionário muito bom, mas tem que melhorar em algumas coisas"
-        },
-        {
-            "id": 2,
-            "nome":"Rich Bregalds",
-            "email": "ricardofaxina@gmail.com",
-            "telefone": "54998949301",
-            "cpf": "02798414755",
-            "cidade": "Barão do Triunfo",
-            "endereco": "Rua Marechal Floriano, 615",
-            "gestor": ["Matheus"],
-            "observation": "Funcionário muito playboy, mas é pontual e executa com perfeição suas tarefas"
-        }
-    ],
-    "ambientes": [
-        {
-            "id": 1,
-            "nome": "Gilioli Contabilidade",
-            "estabelecimento": "Prédio Comercial",
-            "andar": "2º",
-            "tipo": "Escritório",
-            "endereco": "Av. Júlio de Castilhos, 974",
-            "cidade": "Caxias do Sul",
-            "observation": "Não precisa levar produtos de limpeza, pois já tem no local"
-        },
-        {
-            "id": 2,
-            "nome": "Tregnago Informática",
-            "estabelecimento": "Casa",
-            "andar": "1º",
-            "tipo": "Sala comercial",
-            "endereco": "Av. Osvaldo Aranha, 215",
-            "cidade": "Caxias do Sul",
-            "observation": "SALA 102, não precisa levar panos, pois já tem no local"
-        }
-    ],
-    "produtos": [
-        {
-            "id": "1",
-            "name": "Cerveja Heineken",
-            "codigo": "001",
-            "tipo": "Bebida",
-            "medida": "ML",
-            "quantidade": "12",
-            "observation": "Cerveja de 473ml"
-        },
-        {
-            "id": "2",
-            "name": "Mr. Músculo",
-            "codigo": "002",
-            "tipo": "Desingrachante",
-            "medida": "ML",
-            "quantidade": "6",
-            "observation": "Embalagem de 500ml"
-        },
-        {
-            "id": "3",
-            "name": "Desinfetante Pinho",
-            "codigo": "003",
-            "tipo": "Desinfetante",
-            "medida": "UN",
-            "quantidade": "24",
-            "observation": "Embalagem de 2L"
-        },
-        {
-            "id": "4",
-            "name": "Bucha Bombril",
-            "codigo": "004",
-            "tipo": "Esponja de aço",
-            "medida": "UN",
-            "quantidade": "12",
-            "observation": "Caixa com 3 unidades"
-        },
-        {
-            "id": "5",
-            "name": "Vassoura Condor",
-            "codigo": "005",
-            "tipo": "Vassoura",
-            "medida": "UN",
-            "quantidade": "20",
-            "observation": "Vassouras de 60cm"
-        }
-    ]
-
-} 
+  "funcionarios": [
+    {
+      "id": 1,
+      "nome": "Douglas Augusto",
+      "email": "dougservicosindustriais@gmail.com",
+      "telefone": "54999749301",
+      "cpf": "02868532196",
+      "cidade": "Caxias do Sul",
+      "endereco": "Av. Das Flores, 923",
+      "gestor": [
+        "Ricardo"
+      ],
+      "observation": "Funcionário bom, mas tem que melhorar em algumas coisas"
+    },
+    {
+      "id": 2,
+      "nome": "Rich Bregalds",
+      "email": "ricardofaxina@gmail.com",
+      "telefone": "54998949301",
+      "cpf": "02798414755",
+      "cidade": "Barão do Triunfo",
+      "endereco": "Rua Marechal Floriano, 615",
+      "gestor": [
+        "Matheus"
+      ],
+      "observation": "Funcionário muito playboy, mas é pontual"
+    }
+  ],
+  "ambientes": [
+    {
+      "id": 1,
+      "nome": "Gilioli Contabilidade",
+      "estabelecimento": "Prédio Comercial",
+      "andar": "2º",
+      "tipo": "Escritório",
+      "endereco": "Av. Júlio de Castilhos, 974",
+      "cidade": "Caxias do Sul",
+      "observation": "Não precisa levar produtos de limpeza, pois já tem no local"
+    },
+    {
+      "id": 2,
+      "nome": "Tregnago Informática",
+      "estabelecimento": "Casa",
+      "andar": "1º",
+      "tipo": "Sala comercial",
+      "endereco": "Av. Osvaldo Aranha, 215",
+      "cidade": "Caxias do Sul",
+      "observation": "SALA 102, não precisa levar panos, pois já tem no local"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Cerveja Heineken",
+      "codigo": "001",
+      "tipo": "Bebida",
+      "medida": "ML",
+      "quantidade": "12",
+      "observation": "Cerveja de 473ml"
+    },
+    {
+      "id": 2,
+      "nome": "Mr. Músculo",
+      "codigo": "002",
+      "tipo": "Desingrachante",
+      "medida": "ML",
+      "quantidade": "6",
+      "observation": "Embalagem de 500ml"
+    },
+    {
+      "id": 3,
+      "nome": "Desinfetante Pinho",
+      "codigo": "003",
+      "tipo": "Desinfetante",
+      "medida": "UN",
+      "quantidade": "24",
+      "observation": "Embalagem de 2L"
+    },
+    {
+      "id": 4,
+      "nome": "Bucha Bombril",
+      "codigo": "004",
+      "tipo": "Esponja de aço",
+      "medida": "UN",
+      "quantidade": "12",
+      "observation": "Caixa com 3 unidades"
+    },
+    {
+      "id": 5,
+      "nome": "Vassoura Condor",
+      "codigo": "005",
+      "tipo": "Vassoura",
+      "medida": "UN",
+      "quantidade": "20",
+      "observation": "Vassouras de 60cm"
+    }
+  ]
+}

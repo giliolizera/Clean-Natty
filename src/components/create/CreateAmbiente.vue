@@ -17,42 +17,15 @@
          },
          avançar: false,
          exibir: false,
-         typePassword: true,
       }),
       methods: {
-         // validar() {
-         //    if (this.form.nome != '' && this.form.email.length > 10 && this.form.telefone.length > 13 && this.form.cpf.length > 13 && this.form.senha.length > 5) {
-         //       this.avançar = true
-         //    }
-         //    else {
-         //       this.avançar = false
-         //    }
-         // },
          trocarRota() {
-            // if (this.avançar) {
                this.$router.push('/dashboard')
-            // }
-            // else {
-            //    if (this.form.nome === '' && this.form.email.length < 10 && this.form.telefone.length < 13 && this.form.cpf.length < 13 && this.form.senha.length < 5) {
-            //       alert('Preencha todos os campos')
-            //    }
-            //    else if (this.form.nome === '') {
-            //       alert('Preencha o campo nome')
-            //    }
-            //    else if (this.form.email.length < 10) {
-            //       alert('Preencha o campo e-mail corretamente')
-            //    }
-            //    else if (this.form.telefone.length < 13) {
-            //       alert('Preencha o campo telefone corretamente')
-            //    }
-            //    else if (this.form.cpf.length < 13) {
-            //       alert('Preencha o campo cpf corretamente')
-            //    }
-            //    else if (this.form.senha.length < 5) {
-            //       alert('A senha deve conter no mínimo 6 caracteres')
-            //    }
-            // }
          },
+         salvar(event) {
+            this.$emit('criar', this.form)
+            this.form = {}
+         }
       },
       components: {
          Switch, EllipsisVerticalIcon, EyeIcon, EyeSlashIcon
@@ -67,20 +40,6 @@
                      
 <template>
    <div class=" text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-      <div class="flex justify-between bg-gray-200 dark:bg-slate-900">
-         <router-link to="dashboard">
-            <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
-               Clean Natty
-            </button>
-         </router-link>
-         <button @click="exibir = !exibir">
-            <EllipsisVerticalIcon class="h-6 w-6 mr-2" />
-         </button>
-      </div>
-      <div class="flex justify-end bg-gray-200  dark:bg-slate-900 space-x-2" v-if="exibir">
-         <p>Dark Mode</p>
-         <Switch class="mt-1 ml-4"/>
-      </div>
       <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">
@@ -90,7 +49,7 @@
                </div>
             </div>
          </div>
-         <form class="col-span-2 grid lg:grid-cols-2 gap-4 pr-6 pl-6 mt-8">
+         <form @submit.prevent="salvar" class="col-span-2 grid lg:grid-cols-2 gap-4 pr-6 pl-6 mt-8">
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   <p>Nome</p><p class="flex text-red-600">*</p>
@@ -171,9 +130,15 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
                   v-model="form.observation"></textarea>
             </div>
-            <div class="flex justify-end lg:col-span-2">
+            <div class="flex justify-between lg:col-span-2">
                <div>
-                  <button @click="trocarRota()"
+                  <button @click.prevent="trocarRota()"
+                     class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
+                     CANCELAR
+                  </button>
+               </div>
+               <div>
+                  <button @click.prevent="salvar()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>
