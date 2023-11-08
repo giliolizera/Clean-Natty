@@ -8,9 +8,7 @@
       "cpf": "02868532196",
       "cidade": "Caxias do Sul",
       "endereco": "Av. Das Flores, 923",
-      "gestor": [
-        "Ricardo"
-      ],
+      "gestor": "Ricardo",
       "observation": "Funcionário bom, mas tem que melhorar em algumas coisas"
     },
     {
@@ -21,9 +19,7 @@
       "cpf": "02798414755",
       "cidade": "Barão do Triunfo",
       "endereco": "Rua Marechal Floriano, 615",
-      "gestor": [
-        "Matheus"
-      ],
+      "gestor": "Matheus",
       "observation": "Funcionário muito playboy, mas é pontual"
     }
   ],

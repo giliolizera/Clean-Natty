@@ -112,13 +112,12 @@
                   <p>Gestor</p><p class="flex text-red-600">*</p>
                </div>
                <select
-                  placeholder="Selecione o gestor"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.gestor"
                >
                   <option disabled>Selecione</option>
-                  <option :value="1">Rodrigo</option>
-                  <option :value="2">Matheus</option>
+                  <option>Rodrigo</option>
+                  <option>Matheus</option>
                </select>
             </div>
             <div class="lg:col-span-2">
@@ -148,3 +147,4 @@
       </div>
    </div>
 </template>
+
