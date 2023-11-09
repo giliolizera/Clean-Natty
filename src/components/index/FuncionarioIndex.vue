@@ -104,7 +104,7 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                  <button @click="editarFuncionario(funcionario), selecionado(funcionario), editar = !editar">
+                  <button @click="selecionado(funcionario), editar = !editar">
                     <PencilSquareIcon class="w-5 text-blue-600" />
                   </button>
                   <button @click="deletarFuncionario(funcionario)">
@@ -171,12 +171,12 @@
       },
       editarFuncionario(funcionario){
         console.log(funcionario)
-        // axios.put(`${config.API_URL}/funcionarios/${funcionario.id}`, funcionario)
-        //     .then(response => {
-        //         const indice = this.funcionarios.findIndex(f => f.id === funcionario.id)
-        //         this.funcionarios.splice(indice, 1, funcionario)
-        //         this.exibirCreate = false
-        //     })
+        axios.put(`${config.API_URL}/funcionarios/${funcionario.id}`, funcionario)
+            .then(response => {
+                const indice = this.funcionarios.findIndex(f => f.id === funcionario.id)
+                this.funcionarios.splice(indice, 1, funcionario)
+                this.exibirCreate = false
+            })
       },
       selecionado(funcionario){
         this.funcionarioSelecionado = funcionario.id -1
