@@ -24,6 +24,11 @@
               v-if="exibirCreate"
               @criar="criarFuncionario"
             />
+            <Edit 
+              :funcionario="funcionario"
+              v-if="editar"
+              @editar="editarFuncionario"
+            ></Edit>  
         <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
           <div class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
             <table class="min-w-full divide-y divide-neutral-300" >
@@ -94,10 +99,10 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                  <button>
+                  <button @click="editarFuncionario(funcionario), editar = !editar">
                     <PencilSquareIcon class="w-5" />
                   </button>
-                  <button>
+                  <button @click="deletarFuncionario(funcionario)">
                     <TrashIcon class="w-5 text-rose-600" />
                   </button>
                 </td>
@@ -124,7 +129,9 @@
     data: () => ({
       funcionarios: {},
       exibir: true,
+      editar: false,
       exibirCreate: false,
+      funcionarioSelecionado: undefined,
       components: {
         Upside,
         UpSideMenu,
@@ -141,15 +148,34 @@
         axios.post(`${config.API_URL}/funcionarios`, funcionario)
         .then((response) => {
           this.funcionarios.push(response.data);
+          this.exibirCreate = false
         })
       },
-    }
+      deletarFuncionario(funcionario) {
+        console.log(funcionario.id)
+        axios.delete(`${config.API_URL}/funcionarios/${funcionario.id}`)
+            .then(response => {
+                const indice = this.funcionarios.findIndex(f => f.id === funcionario.id)
+                this.funcionarios.splice(indice, 1)
+            })
+      },
+      editarFuncionario(funcionario){
+        console.log(funcionario)
+        // axios.put(`${config.API_URL}/funcionarios/${funcionario.id}`, funcionario)
+        //     .then(response => {
+        //         const indice = this.funcionarios.findIndex(f => f.id === funcionario.id)
+        //         this.funcionarios.splice(indice, 1, funcionario)
+        //         this.exibirCreate = false
+        //     })
+      },
+      }
   };
   </script>
   
   <script setup>
     import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
     import CreateFuncionario from "../create/CreateFuncionario.vue";
+    import Edit from "../create/Edit.vue";
     import Upside from "../usables/Upside.vue";
     import UpSideMenu from "../usables/UpSideMenu.vue";
     document.title = "Funcionários - Clean Natty";

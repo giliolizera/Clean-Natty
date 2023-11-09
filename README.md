@@ -15,6 +15,7 @@ Ter instalado Node.JS na máquina
 ```
 npm install
 npm install -g json-server
+npm install axios
 ```
 
 ## Compilar na localhost:8080
