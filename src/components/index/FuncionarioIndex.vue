@@ -23,6 +23,7 @@
             <CreateFuncionario 
               v-if="exibirCreate"
               @criar="criarFuncionario"
+              @trocarRota="exibirCreate = !exibirCreate"
             />
             <Edit 
               :funcionario="funcionario"

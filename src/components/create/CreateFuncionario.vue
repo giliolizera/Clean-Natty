@@ -29,7 +29,8 @@
       }),
       methods: {
          trocarRota() {
-            this.$router.push('/dashboard')
+            this.$emit('trocar-rota', this.form)
+            this.form = {}
          },
          salvar(event) {
             this.$emit('criar', this.form)
@@ -58,7 +59,7 @@
                </div>
             </div>
          </div>
-         <form @submit.prevent="salvar" class="col-span-2 grid lg:grid-cols-2 gap-4 pr-6 pl-6 mt-8">
+         <form @submit.prevent="salvar" class="col-span-3 grid lg:grid-cols-4 gap-4 pr-6 pl-6 mt-2">
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   <p>Nome</p><p class="flex text-red-600">*</p>
@@ -112,7 +113,7 @@
                   <p>Gestor</p><p class="flex text-red-600">*</p>
                </div>
                <select
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
+                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
                   v-model="form.gestor"
                >
                   <option disabled>Selecione</option>
@@ -120,7 +121,7 @@
                   <option>Matheus</option>
                </select>
             </div>
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-4">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   Observação
                </div>
@@ -128,7 +129,7 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
                   v-model="form.observation"></textarea>
             </div>
-            <div class="flex justify-between lg:col-span-2">
+            <div class="flex justify-between lg:col-span-4">
                <div>
                   <button @click.prevent="trocarRota()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">

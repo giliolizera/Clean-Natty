@@ -4,8 +4,8 @@
       "id": 1,
       "nome": "Douglas Augusto",
       "email": "dougservicosindustriais@gmail.com",
-      "telefone": "54999749301",
-      "cpf": "02868532196",
+      "telefone": "(54) 99974-9301",
+      "cpf": "029.664.795-20",
       "cidade": "Caxias do Sul",
       "endereco": "Av. Das Flores, 923",
       "gestor": "Ricardo",
@@ -13,25 +13,14 @@
     },
     {
       "id": 2,
-      "nome": "Rich Bregalds",
-      "email": "ricardofaxina@gmail.com",
-      "telefone": "54998949301",
-      "cpf": "02798414755",
-      "cidade": "Barão do Triunfo",
-      "endereco": "Rua Marechal Floriano, 615",
+      "nome": "Ronaldo Bonjovi",
+      "email": "ronaldodelegacia@gmail. com",
+      "telefone": "(54) 99329-2234",
+      "cpf": "042.375.785-40",
+      "cidade": "Paraí",
+      "endereco": "Rua Taliotto Figueiredo, 214",
       "gestor": "Matheus",
-      "observation": "Funcionário muito playboy, mas é pontual"
-    },
-    {
-      "id": 3,
-      "nome": "Flávio Medeiros",
-      "email": "flavinhopneus@gmail.com",
-      "telefone": "(54) 99847-9833",
-      "cpf": "578.428.734-11",
-      "cidade": "Fagundes Varela",
-      "endereco": "Av. Diniz Guimarães",
-      "gestor": "Rodrigo",
-      "observation": "Apenas ligações, não possui whatsapp."
+      "observation": "Apenas chamadas de voz, ele não tem whatsapp."
     }
   ],
   "ambientes": [
