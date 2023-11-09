@@ -7,13 +7,15 @@
       props: {
         funcionario: {
             type: Object,
-            default: undefined
+        },
+        id: {
+            type: Object,
         }
       },
       data: () => ({
          form: {
             id: '',
-            nome: props.funcionario.nome,
+            nome: '',
             email: '',
             telefone: '',
             cpf: '',
@@ -27,9 +29,14 @@
          exibirCreate: true,
          typePassword: true,
       }),
+      created(){
+         console.log(this.funcionario[this.id])
+         this.form = this.funcionario[this.id]
+      },
       methods: {
          trocarRota() {
-            this.$router.push('/dashboard')
+            this.$emit('trocar-rota', this.form)
+            this.form = {}
          },
          salvar(event) {
             this.$emit('editar', this.form)
@@ -44,7 +51,7 @@
 </script>
 
 <script setup>
-   document.title = "Cadastro de Funcionário - Clean Natty"
+   document.title = "Editar Funcionário - Clean Natty"
 </script>
                      
 <template>
@@ -53,8 +60,8 @@
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">
                <div class="divide-y max-w-md bg-white dark:bg-slate-800">
-                  <p class="font-medium text-xl pb-1">Cadastro de Funcionário</p>
-                  <p class="text-base font-thin py-2">Insira os dados do funcionário como nome, cpf, email, número do telefone...</p>
+                  <p class="font-medium text-xl pb-1">Edição de Funcionário</p>
+                  <p class="text-base font-thin py-2">Altere os dados do funcionário como nome, cpf, email, número do telefone...</p>
                </div>
             </div>
          </div>

@@ -7,17 +7,19 @@
     </div>
     <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
         <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-          <div v-if="!exibirCreate" class="flex justify-between">
-            <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
-              <p class="font-medium text-xl pb-1">Funcionários</p>
+          <div v-if="!editar">
+            <div v-if="!exibirCreate" class="flex justify-between">
+              <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
+                <p class="font-medium text-xl pb-1">Funcionários</p>
               <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os funcionários já cadastrados.</p>
             </div>
             <div class="p-6">
               <!-- <router-link to="cadastro-funcionario"> -->
-                  <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
-                    Cadastrar novo Funcionário
-                  </button>
-              <!-- </router-link> -->
+                <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
+                  Cadastrar novo Funcionário
+                </button>
+                <!-- </router-link> -->
+              </div>
             </div>
           </div>
             <CreateFuncionario 
@@ -26,9 +28,11 @@
               @trocarRota="exibirCreate = !exibirCreate"
             />
             <Edit 
-              :funcionario="funcionario"
+              :funcionario="funcionarios"
+              :id="funcionarioSelecionado"
               v-if="editar"
               @editar="editarFuncionario"
+              @trocarRota="editar = !editar"
             ></Edit>  
         <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
           <div class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
@@ -100,8 +104,8 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                  <button @click="editarFuncionario(funcionario), editar = !editar">
-                    <PencilSquareIcon class="w-5" />
+                  <button @click="editarFuncionario(funcionario), selecionado(funcionario), editar = !editar">
+                    <PencilSquareIcon class="w-5 text-blue-600" />
                   </button>
                   <button @click="deletarFuncionario(funcionario)">
                     <TrashIcon class="w-5 text-rose-600" />
@@ -125,10 +129,14 @@
         funcionario: {
             type: Object,
             default: undefined
+        },
+        id: {
+            type: Object,
+            default: undefined
         }
     },
     data: () => ({
-      funcionarios: {},
+      funcionarios: [],
       exibir: true,
       editar: false,
       exibirCreate: false,
@@ -153,6 +161,7 @@
         })
       },
       deletarFuncionario(funcionario) {
+        // TODO: CONFIRMAR DELETE
         console.log(funcionario.id)
         axios.delete(`${config.API_URL}/funcionarios/${funcionario.id}`)
             .then(response => {
@@ -169,7 +178,11 @@
         //         this.exibirCreate = false
         //     })
       },
+      selecionado(funcionario){
+        this.funcionarioSelecionado = funcionario.id -1
+        console.log(this.funcionarioSelecionado)
       }
+    },
   };
   </script>
   
