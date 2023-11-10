@@ -2,7 +2,7 @@
   "funcionarios": [
     {
       "id": 1,
-      "nome": "suarez",
+      "nome": "Luis Suarez",
       "email": "dougservicos@gmail.com",
       "telefone": "(54) 99974-9301",
       "cpf": "029.664.795-20",
@@ -21,17 +21,6 @@
       "endereco": "Rua Taliotto Figueiredo, 214",
       "gestor": "Matheus",
       "observation": "Apenas chamadas de voz, ele não tem whatsapp."
-    },
-    {
-      "id": 3,
-      "nome": "tiquinho soares",
-      "email": "",
-      "telefone": "",
-      "cpf": "",
-      "cidade": "",
-      "endereco": "",
-      "gestor": "",
-      "observation": ""
     }
   ],
   "ambientes": [

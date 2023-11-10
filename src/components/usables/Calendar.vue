@@ -13,9 +13,9 @@
 	</div>
 </template>
 <script>
-	import { CalendarView, CalendarViewHeader } from "vue-simple-calendar"
+	import { CalendarView, CalendarViewHeader } from "vue-simple-calendar" 
 
-	// import "..relative-path-to-node_modules/vue-simple-calendar/dist/style.css" 
+	// import "..relative-path-to-node_modules/vue-simple-calendar/dist/style.css"
 
 	export default {
 		name: 'app',
