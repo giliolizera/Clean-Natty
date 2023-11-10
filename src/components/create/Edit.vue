@@ -143,7 +143,7 @@
                   </button>
                </div>
                <div>
-                  <button @click.prevent="salvar()"
+                  <button @click.prevent="salvar(), trocarRota()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>
