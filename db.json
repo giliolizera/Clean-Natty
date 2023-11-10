@@ -2,14 +2,14 @@
   "funcionarios": [
     {
       "id": 1,
-      "nome": "Douglas Augusto",
+      "nome": "suarez",
       "email": "dougservicos@gmail.com",
       "telefone": "(54) 99974-9301",
       "cpf": "029.664.795-20",
       "cidade": "Caxias do Sul",
       "endereco": "Av. Das Flores, 923",
-      "gestor": "Ricardo",
-      "observation": "Funcionário bom, mas tem que melhorar em algumas coisas"
+      "gestor": "Rodrigo",
+      "observation": "Funcionário bom, mas tem que melhorar..."
     },
     {
       "id": 2,
@@ -21,6 +21,17 @@
       "endereco": "Rua Taliotto Figueiredo, 214",
       "gestor": "Matheus",
       "observation": "Apenas chamadas de voz, ele não tem whatsapp."
+    },
+    {
+      "id": 3,
+      "nome": "tiquinho soares",
+      "email": "",
+      "telefone": "",
+      "cpf": "",
+      "cidade": "",
+      "endereco": "",
+      "gestor": "",
+      "observation": ""
     }
   ],
   "ambientes": [
