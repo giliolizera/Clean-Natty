@@ -3,7 +3,7 @@ import App from './components/views/App.vue'
 import './assets/main.css'
 import { createRouter, createWebHistory } from 'vue-router'
 import Maska from 'maska'
-import Calendar from 'vue-simple-calendar'
+// import Calendar from 'vue-simple-calendar'
 
 const routes = [
    { path: '/', component: () => import('./components/views/Site.vue')},
@@ -36,5 +36,5 @@ const router = createRouter({
 const Vue = createApp(App)
 Vue.use(router)
 Vue.use(Maska)
-Vue.use(Calendar)
+// Vue.use(Calendar)
 Vue.mount('#app')

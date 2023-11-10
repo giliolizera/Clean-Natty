@@ -196,7 +196,7 @@
   <script setup>
     import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
     import CreateFuncionario from "../create/CreateFuncionario.vue";
-    import Edit from "../create/Edit.vue";
+    import Edit from "../edit/EditFuncionario.vue";
     import Upside from "../usables/Upside.vue";
     import UpSideMenu from "../usables/UpSideMenu.vue";
     document.title = "Funcionários - Clean Natty";
