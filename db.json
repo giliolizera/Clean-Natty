@@ -21,6 +21,28 @@
       "endereco": "Rua Taliotto Figueiredo, 214",
       "gestor": "Matheus",
       "observation": "Apenas chamadas de voz, ele não tem whatsapp."
+    },
+    {
+      "id": 3,
+      "nome": "Augusto44",
+      "email": "oicassiovidaloka93@gmail.com",
+      "telefone": "(54) 99852-6347",
+      "cpf": "543.457.648-76",
+      "cidade": "Veranópolis",
+      "endereco": "Dr. José Montaury, 91",
+      "gestor": "Matheus",
+      "observation": ""
+    },
+    {
+      "id": 4,
+      "nome": "Renan Rastelli",
+      "email": "renantransportadora@rtd.com",
+      "telefone": "(54) 99852-6347",
+      "cpf": "683.768.625-48",
+      "cidade": "Veranópolis",
+      "endereco": "Rua Antônio Chirardia",
+      "gestor": "Rodrigo",
+      "observation": ""
     }
   ],
   "ambientes": [

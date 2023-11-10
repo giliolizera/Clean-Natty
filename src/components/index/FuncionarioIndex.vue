@@ -34,6 +34,7 @@
               @editar="editarFuncionario"
               @trocarRota="editar = !editar"
             ></Edit>  
+            <!-- TODO: ESCONDER LISTA ENQUANTO CRIA OU EDITA -->
         <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
           <div class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
             <table class="min-w-full divide-y divide-neutral-300" >
