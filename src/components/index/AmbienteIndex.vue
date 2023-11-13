@@ -7,15 +7,17 @@
     </div>
     <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
         <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
-          <div v-if="!exibirCreate" class="flex justify-between">
-            <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
-              <p class="font-medium text-xl pb-1">Ambientes</p>
-              <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os ambientes já cadastrados.</p>
-            </div>
-            <div class="p-6">
+          <div v-if="!editar">
+            <div v-if="!exibirCreate" class="flex justify-between">
+              <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
+                <p class="font-medium text-xl pb-1">Ambientes</p>
+                <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os ambientes já cadastrados.</p>
+              </div>
+              <div class="p-6">
                 <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
                   Cadastrar novo Ambiente
                 </button>
+              </div>
             </div>
         </div>
         <CreateAmbiente 

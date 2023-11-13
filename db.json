@@ -29,7 +29,7 @@
       "telefone": "(69) 99969-6234",
       "cpf": "789.653.404-35",
       "cidade": "Venâncio Aires",
-      "endereco": "Av. Paschal Neiyer",
+      "endereco": "Av. Paschal Neiyer, 893",
       "gestor": "Matheus",
       "observation": "Cobra caro, mas executa com excelência."
     },
@@ -42,7 +42,7 @@
       "cidade": "Bento Gonçalves",
       "endereco": "Rua Olavo Bilac, 666",
       "gestor": "Matheus",
-      "observation": "Funcionário muito playboy."
+      "observation": "Funcionário muito playboy, mas trabalha bem."
     }
   ],
   "ambientes": [
@@ -51,7 +51,7 @@
       "nome": "Gilioli Contabilidade",
       "estabelecimento": "Prédio Comercial",
       "andar": "2º",
-      "tipo": "Escritório",
+      "tipo": "Escritório de Informática",
       "endereco": "Av. Júlio de Castilhos, 974",
       "cidade": "Caxias do Sul",
       "observation": "Não precisa levar produtos de limpeza, pois já tem no local"
@@ -59,7 +59,7 @@
     {
       "id": 2,
       "nome": "Tregnago Informática",
-      "estabelecimento": "Casa",
+      "estabelecimento": "Casa Comercial",
       "andar": "1º",
       "tipo": "Sala comercial",
       "endereco": "Av. Osvaldo Aranha, 215",
@@ -69,7 +69,7 @@
     {
       "id": 3,
       "nome": "Thinky SERP",
-      "estabelecimento": "Casa",
+      "estabelecimento": "Casa Comercial",
       "andar": "1º",
       "tipo": "Escritório de Informática",
       "cidade": "Protásio Alves",
