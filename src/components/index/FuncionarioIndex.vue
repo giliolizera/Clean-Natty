@@ -14,11 +14,9 @@
               <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os funcionários já cadastrados.</p>
             </div>
             <div class="p-6">
-              <!-- <router-link to="cadastro-funcionario"> -->
                 <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
                   Cadastrar novo Funcionário
                 </button>
-                <!-- </router-link> -->
               </div>
             </div>
           </div>
@@ -34,7 +32,6 @@
               @editar="editarFuncionario"
               @trocarRota="editar = !editar"
             ></Edit>  
-            <!-- TODO: ESCONDER LISTA ENQUANTO CRIA OU EDITA -->
         <div v-if="!exibirCreate" class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
           <div v-if="!editar" class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
             <table class="min-w-full divide-y divide-neutral-300" >

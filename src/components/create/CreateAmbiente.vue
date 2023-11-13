@@ -4,6 +4,12 @@
    import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline"
 
    export default {
+      props: {
+        ambiente: {
+            type: Object,
+            default: undefined
+        }
+      },
       data: () => ({
          form: {
             id: '',
@@ -17,10 +23,12 @@
          },
          avançar: false,
          exibir: false,
+         exibirCreate: true,
       }),
       methods: {
          trocarRota() {
-               this.$router.push('/dashboard')
+            this.$emit('trocar-rota', this.form)
+            this.form = {}
          },
          salvar(event) {
             this.$emit('criar', this.form)

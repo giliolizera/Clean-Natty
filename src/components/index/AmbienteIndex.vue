@@ -5,7 +5,6 @@
     <div class="lg:hidden">
       <UpSideMenu />
     </div>
-    <!-- TODO: FAZER UM INDEX MAIS CAPRICHADO, ESSE É SO UM TESTE -->
     <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
         <div class="text-slate-800 bg-white rounded dark:bg-slate-800 dark:text-white">
           <div v-if="!exibirCreate" class="flex justify-between">
@@ -22,9 +21,17 @@
         <CreateAmbiente 
           v-if="exibirCreate"
           @criar="criarAmbiente"
+          @trocarRota="exibirCreate = !exibirCreate"
         />
-        <div class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
-          <div class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
+        <Edit 
+          :ambiente="ambientes"
+          :id="ambienteSelecionado"
+          v-if="editar"
+          @editar="editarAmbiente"
+          @trocarRota="editar = !editar"
+        />
+        <div v-if="!exibirCreate" class="grid grid-cols-1 gap-4 p-2 pl-2.5 lg:grid-cols-3 md:grid-cols-3">
+          <div v-if="!editar" class="col-span-3 grid border border-black dark:border-white p-2 mt-5 w-full overflow-auto">
             <table class="min-w-full divide-y divide-neutral-300" >
               <thead>
                 <tr>
@@ -40,7 +47,7 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-neutral-300 dark:divide-neutral-500">
-              <tr v-if=" ambientes.id === 0">
+              <tr v-if=" ambientes === ''">
                 <td class="py-5 text-center" colspan="100%">
                   Não há ambientes cadastrados!
                 </td>
@@ -87,12 +94,10 @@
                 <td
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
-                  <button
-                  >
+                  <button @click="selecionado(ambiente), recarregar(), editar = !editar">
                     <PencilSquareIcon class="w-5" />
                   </button>
-                  <button
-                  >
+                  <button @click="deletarAmbiente(ambiente)">
                     <TrashIcon class="w-5 text-rose-600" />
                   </button>
                 </td>
@@ -110,10 +115,22 @@
   import axios from "axios";
   
   export default {
+    props: {
+      ambiente: {
+        type: Object,
+        default: undefined,
+      },
+      id: {
+        type: Object,
+        default: undefined,
+      }
+    },
     data: () => ({
-      ambientes: {},
+      ambientes: [],
       exibir: true,
+      editar: false,
       exibirCreate: false,
+      ambienteSelecionado: undefined,
       components: {
         Upside,
         UpSideMenu,
@@ -130,8 +147,37 @@
         axios.post(`${config.API_URL}/ambientes`, ambiente)
         .then((response) => {
           this.ambientes.push(response.data);
+          this.exibirCreate = false
         })
       },
+      deletarAmbiente(ambiente){
+        // TODO: CONFIRMAR DELETE
+        console.log(ambiente.id)
+        axios.delete(`${config.API_URL}/ambientes/${ambiente.id}`)
+            .then(response => {
+                const indice = this.ambientes.findIndex(f => f.id === ambiente.id)
+                this.ambientes.splice(indice, 1)
+            })
+      },
+      editarAmbiente(ambiente){
+        console.log(ambiente)
+        axios.put(`${config.API_URL}/ambientes/${ambiente.id}`, ambiente)
+            .then(response => {
+                const indice = this.ambientes.findIndex(f => f.id === ambiente.id)
+                this.ambientes.splice(indice, 1, ambiente)
+                this.exibirCreate = false
+              })
+      },
+      selecionado(ambiente){
+        this.ambienteSelecionado = ambiente.id -1
+        console.log(this.ambienteSelecionado)
+      },
+      recarregar(){
+        axios.get(`${config.API_URL}/ambientes`)
+        .then((response) => {
+          this.ambientes = response.data;
+        })
+      }
     }
   };
   </script>
@@ -139,6 +185,7 @@
   <script setup>
     import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
     import CreateAmbiente from "../create/CreateAmbiente.vue";
+    import Edit from "@/components/edit/EditAmbinete.vue";
     import Upside from "../usables/Upside.vue";
     import UpSideMenu from "../usables/UpSideMenu.vue";
     document.title = "Ambientes - Clean Natty";
