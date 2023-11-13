@@ -2,7 +2,7 @@
   "funcionarios": [
     {
       "id": 1,
-      "nome": "Luis Suarez",
+      "nome": "Douglas Polesello",
       "email": "dougservicos@gmail.com",
       "telefone": "(54) 99974-9301",
       "cpf": "029.664.795-20",
@@ -21,6 +21,28 @@
       "endereco": "Rua Taliotto Figueiredo, 214",
       "gestor": "Matheus",
       "observation": "Apenas chamadas de voz, ele não tem whatsapp."
+    },
+    {
+      "id": 3,
+      "nome": "Lucas Fonturi",
+      "email": "lucasservlimpeza@gmail.com",
+      "telefone": "(69) 99969-6234",
+      "cpf": "789.653.404-35",
+      "cidade": "Venâncio Aires",
+      "endereco": "Av. Paschal Neiyer",
+      "gestor": "Matheus",
+      "observation": "Cobra caro, mas executa com excelência."
+    },
+    {
+      "id": 4,
+      "nome": "Ricard Bregalds",
+      "email": "ricardofaxineiro@yahoo.com",
+      "telefone": "(54) 98745-5209",
+      "cpf": "093.457.483-02",
+      "cidade": "Bento Gonçalves",
+      "endereco": "Rua Olavo Bilac, 666",
+      "gestor": "Matheus",
+      "observation": "Funcionário muito playboy."
     }
   ],
   "ambientes": [
