@@ -65,6 +65,16 @@
       "endereco": "Av. Osvaldo Aranha, 215",
       "cidade": "Caxias do Sul",
       "observation": "SALA 102, não precisa levar panos, pois já tem no local"
+    },
+    {
+      "id": 3,
+      "nome": "Thinky SERP",
+      "estabelecimento": "Casa",
+      "andar": "1º",
+      "tipo": "Escritório de Informática",
+      "cidade": "Protásio Alves",
+      "endereco": "Av. Sinimbu, 1129",
+      "observation": "Levar apenas os panos de microfibra"
     }
   ],
   "produtos": [
