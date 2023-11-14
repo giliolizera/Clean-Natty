@@ -143,13 +143,15 @@
         })
       },
       deletarProduto(produto) {
-        // TODO: CONFIRMAR DELETE
-        console.log(produto.id)
-        axios.delete(`${config.API_URL}/produtos/${produto.id}`)
-            .then(response => {
-                const indice = this.produtos.findIndex(f => f.id === produto.id)
-                this.produtos.splice(indice, 1)
-            })
+        const confirmar = window.confirm(`Deseja deletar o produto "${produto.nome}"?`)
+
+        if(confirmar){
+          const indice = this.produtos.findIndex(f => f.id === produto.id)
+          axios.delete(`${config.API_URL}/produtos/${produto.id}`)
+              .then(response => {
+                  this.produtos.splice(indice, 1)
+              })
+        }
       },
       editarProduto(produto){
         console.log(produto)

@@ -153,13 +153,15 @@
         })
       },
       deletarAmbiente(ambiente){
-        // TODO: CONFIRMAR DELETE
-        console.log(ambiente.id)
-        axios.delete(`${config.API_URL}/ambientes/${ambiente.id}`)
-            .then(response => {
-                const indice = this.ambientes.findIndex(f => f.id === ambiente.id)
-                this.ambientes.splice(indice, 1)
-            })
+        const confirmar = window.confirm(`Deseja deletar o ambiente "${ambiente.nome}"?`)
+
+        if(confirmar){
+          axios.delete(`${config.API_URL}/ambientes/${ambiente.id}`)
+              .then(response => {
+                  const indice = this.ambientes.findIndex(f => f.id === ambiente.id)
+                  this.ambientes.splice(indice, 1)
+              })
+        }
       },
       editarAmbiente(ambiente){
         console.log(ambiente)

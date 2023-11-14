@@ -159,13 +159,15 @@
         })
       },
       deletarFuncionario(funcionario) {
-        // TODO: CONFIRMAR DELETE
-        console.log(funcionario.id)
-        axios.delete(`${config.API_URL}/funcionarios/${funcionario.id}`)
-            .then(response => {
-                const indice = this.funcionarios.findIndex(f => f.id === funcionario.id)
-                this.funcionarios.splice(indice, 1)
-            })
+        const confirmar = window.confirm(`Deseja deletar o funcionário "${funcionario.nome}"?`)
+
+        if(confirmar){
+          axios.delete(`${config.API_URL}/funcionarios/${funcionario.id}`)
+              .then(response => {
+                  const indice = this.funcionarios.findIndex(f => f.id === funcionario.id)
+                  this.funcionarios.splice(indice, 1)
+              })
+        }
       },
       editarFuncionario(funcionario){
         console.log(funcionario)
