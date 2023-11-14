@@ -2,8 +2,9 @@
    <div class="">
       <div class="lg:flex bg-gray-200 dark:bg-slate-900">
          <div class="lg:inline-flex justify-start">
+            <img src="../../../public/Screenshot_2-removebg-preview.png" class="w-10 h-10 mt-3 ml-2" />
             <router-link to="dashboard">
-               <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 justify-start">
+               <button class="text-blue-600 bg-gray-200 dark:bg-slate-900 font-medium text-2xl flex p-4 pl-2 justify-start">
                   Clean Natty
                </button>
             </router-link>
