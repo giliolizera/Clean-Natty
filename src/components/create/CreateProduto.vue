@@ -4,6 +4,12 @@
    import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline"
 
    export default {
+      props: {
+         produto: {
+               type: Object,
+               default: undefined
+         }
+      },
       data: () => ({
          form: {
             id: '',
@@ -11,14 +17,18 @@
             codigo: '',
             tipo: '',
             medida: '',
+            quantidade: '',
             observation: '',
          },
          avançar: false,
+         exibirCreate: true,
          exibir: false,
+         typePassword: true,
       }),
       methods: {
          trocarRota() {
-            this.$router.push('/dashboard')
+            this.$emit('trocar-rota', this.form)
+            this.form = {}
          },
          salvar(event) {
             this.$emit('criar', this.form)
@@ -104,7 +114,7 @@
                   </button>
                </div>
                <div>
-                  <button @click.prevent="salvar()"
+                  <button @click.prevent="salvar(), trocarRota()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>

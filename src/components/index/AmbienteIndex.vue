@@ -97,7 +97,7 @@
                   class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
                   <button @click="selecionado(ambiente), recarregar(), editar = !editar">
-                    <PencilSquareIcon class="w-5" />
+                    <PencilSquareIcon class="w-5 text-blue-600" />
                   </button>
                   <button @click="deletarAmbiente(ambiente)">
                     <TrashIcon class="w-5 text-rose-600" />
