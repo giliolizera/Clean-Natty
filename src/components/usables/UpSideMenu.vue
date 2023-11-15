@@ -34,8 +34,8 @@
             <router-link to="/produtos">
                Produtos
             </router-link>
-            <router-link to="/compra-produto">
-               Compra Produtos
+            <router-link to="/limpeza">
+               Limpeza
             </router-link>
             <div class="inline-flex">
                Switch Theme

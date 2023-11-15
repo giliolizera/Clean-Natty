@@ -26,12 +26,12 @@
       <h2 class="text-lg font-semibold mt-10 px-10">Visão geral do sistema</h2>
     </div>
     <div class="grid grid-cols-3 gap-6 mt-10 p-8">
-        <div class="bg-slate-700 flex justify-start p-28">Serviços Realizados</div>
-        <div class="bg-slate-700 flex justify-start p-28">Próximo Serviço</div>
-        <div class="bg-slate-700 flex justify-start p-28">Produtos em Falta</div>
-        <div class="bg-slate-700 flex justify-start p-28">Produtos em Falta</div>
-        <div class="bg-slate-700 flex justify-start p-28">Produtos em Falta</div>
-        <div class="bg-slate-700 flex justify-start p-28">Produtos em Falta</div>
+        <div class="bg-slate-700 flex justify-start p-28"></div>
+        <div class="bg-slate-700 flex justify-start p-28"></div>
+        <div class="bg-slate-700 flex justify-start p-28"></div>
+        <div class="bg-slate-700 flex justify-start p-28"></div>
+        <div class="bg-slate-700 flex justify-start p-28"></div>
+        <div class="bg-slate-700 flex justify-start p-28"></div>
     </div>
     <!-- <img src="@/assets/Screenshot_1.png" class="absolute mt-12 top-32 inset-0 w-full h-max max-w-xl transform overflow-hidden text-left shadow-xl p-4 space-y-2 items-center mx-auto z-50">  -->
   </div>
