@@ -73,8 +73,8 @@
                   v-model="form.funcionario"
                >
                   <option disabled>Selecione</option>
-                  <option>Gilioli Contabilidade</option>
-                  <option>Tregnago Informática</option>
+                  <option>Douglas Polesello</option>
+                  <option>Ricard Bregalds</option>
                </select>
             </div>
             <div>
@@ -82,12 +82,12 @@
                   <p>Ambiente</p><p class="flex text-red-600">*</p>
                </div>
                <select
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.ambiente"
+               class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
+               v-model="form.ambiente"
                >
-                  <option disabled>Selecione</option>
-                  <option>Rodrigo</option>
-                  <option>Matheus</option>
+               <option disabled>Selecione</option>
+               <option>Gilioli Contabilidade</option>
+               <option>Tregnago Informática</option>
                </select>
             </div>
             <div>
