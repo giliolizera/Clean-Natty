@@ -5,7 +5,7 @@
 
    export default {
       props: {
-        funcionario: {
+        limpeza: {
             type: Object,
             default: undefined
         }
@@ -13,13 +13,11 @@
       data: () => ({
          form: {
             id: '',
-            nome: '',
-            email: '',
-            telefone: '',
-            cpf: '',
-            cidade: '',
-            endereco: '',
-            gestor: '',
+            funcionario: '',
+            ambiente: '',
+            data: '',
+            horario: '',
+            status: '',
             observation: '',
          },
          avançar: false,
@@ -45,7 +43,7 @@
 </script>
 
 <script setup>
-   document.title = "Cadastro de Funcionário - Clean Natty"
+   document.title = "Cadastro de Limpeza - Clean Natty"
 </script>
                      
 <template>
@@ -54,8 +52,8 @@
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">
                <div class="divide-y max-w-md bg-white dark:bg-slate-800">
-                  <p class="font-medium text-xl pb-1">Cadastro de Funcionário</p>
-                  <p class="text-base font-thin py-2">Insira os dados do funcionário como nome, cpf, email, número do telefone...</p>
+                  <p class="font-medium text-xl pb-1">Cadastro de Limpeza</p>
+                  <p class="text-base font-thin py-2">Insira os dados da limpeza, como funcionário, ambiente...</p>
                </div>
             </div>
          </div>
@@ -66,11 +64,11 @@
                </div>
                <select
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.gestor"
+                  v-model="form.funcionario"
                >
                   <option disabled>Selecione</option>
-                  <option>Rodrigo</option>
-                  <option>Matheus</option>
+                  <option>Douglas Polesello</option>
+                  <option>Ricard Bregalds</option>
                </select>
             </div>
             <div>
@@ -79,11 +77,11 @@
                </div>
                <select
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.gestor"
+                  v-model="form.ambiente"
                >
                   <option disabled>Selecione</option>
-                  <option>Rodrigo</option>
-                  <option>Matheus</option>
+                  <option>Gilioli Contabilidade</option>
+                  <option>Tregnago Informática</option>
                </select>
             </div>
             <div>
@@ -109,13 +107,13 @@
                </div>
                <select
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.gestor"
+                  v-model="form.status"
                >
                   <option disabled>Selecione</option>
-                  <option>Não Iniciado CINZA</option> 
-                  <option>Em andamento AMARELO </option>
-                  <option>Finalizado VERDE</option>
-                  <option>Cancelado VERMELHO</option>
+                  <option class="text-gray-600">Não Iniciado</option> 
+                  <option class="text-yellow-600">Em andamento</option>
+                  <option class="text-green-600">Finalizado</option>
+                  <option class="text-red-600">Cancelado</option>
                </select>
             </div>
             <div class="lg:col-span-2  ">

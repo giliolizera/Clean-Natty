@@ -16,8 +16,6 @@ const routes = [
 
    { path: '/limpeza', component: () => import('./components/index/LimpezaIndex.vue')},
 
-   { path: '/compra-produto', component: () => import('./components/pages/CompraProdutos.vue')},
-
    { path: '/dashboard', component: () => import('./components/pages/Dashboard.vue')},
 
    {path: '/agenda', component: () => import('./components/pages/Agenda.vue')},
