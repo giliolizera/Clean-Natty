@@ -117,7 +117,7 @@
       "nome": "Gilioli Contabilidade",
       "estabelecimento": "Prédio Comercial",
       "andar": "2º",
-      "tipo": "Escritório de Informática",
+      "tipo": "Sala comercial",
       "endereco": "Av. Júlio de Castilhos, 974",
       "cidade": "Caxias do Sul",
       "observation": "Não precisa levar produtos de limpeza, pois já tem no local"
@@ -127,20 +127,50 @@
       "nome": "Tregnago Informática",
       "estabelecimento": "Casa Comercial",
       "andar": "1º",
-      "tipo": "Sala comercial",
+      "tipo": "Escritório de Informática",
       "endereco": "Av. Osvaldo Aranha, 215",
       "cidade": "Caxias do Sul",
       "observation": "SALA 102, não precisa levar panos, pois já tem no local"
     },
     {
       "id": 3,
-      "nome": "Thinky SERP",
-      "estabelecimento": "Casa Comercial",
+      "nome": "Breg Microfusão",
+      "estabelecimento": "Garagem",
       "andar": "1º",
-      "tipo": "Escritório de Informática",
+      "tipo": "Maquinários",
       "cidade": "Protásio Alves",
       "endereco": "Av. Sinimbu, 1129",
+      "observation": "Levar produtos abrasivos, muita sujeira."
+    },
+    {
+      "id": 4,
+      "nome": "Gehlen Alimentos",
+      "estabelecimento": "Pavilhão Industrial",
+      "andar": "1º",
+      "tipo": "Escritório",
+      "cidade": "Bento Gonçalves",
+      "endereco": "Av. Paulo Gloss, 832",
       "observation": "Levar apenas os panos de microfibra"
+    },
+    {
+      "id": 5,
+      "nome": "Veigh Transportes",
+      "estabelecimento": "Pavilhão",
+      "andar": "1º",
+      "tipo": "Oficina e Galpões",
+      "cidade": "André da Rocha",
+      "endereco": "Rua Selestino Ambrosi, 328",
+      "observation": "Levar produtos alcalinos, muita lama."
+    },
+    {
+      "id": 6,
+      "nome": "GM Investimentos",
+      "estabelecimento": "Prédio Comercial",
+      "andar": "32º",
+      "tipo": "Escritório e salas",
+      "cidade": "Faria Limers",
+      "endereco": "Condomínio Alphaville, SALA 3206",
+      "observation": "Levar apenas funcionários competentes."
     }
   ],
   "produtos": [
@@ -167,8 +197,8 @@
       "nome": "Desinfetante Pinho",
       "codigo": "003",
       "tipo": "Desinfetante",
-      "medida": "UN",
-      "quantidade": "24",
+      "medida": "ML",
+      "quantidade": "11",
       "observation": "Embalagem de 2L"
     },
     {
@@ -188,6 +218,51 @@
       "medida": "UN",
       "quantidade": "20",
       "observation": "Vassouras de 60cm"
+    },
+    {
+      "id": 6,
+      "nome": "QBoa",
+      "codigo": "006",
+      "tipo": "Água Sanitária ",
+      "medida": "ML",
+      "quantidade": "8",
+      "observation": "Recipiente de 2L cada."
+    },
+    {
+      "id": 7,
+      "nome": "Ajax",
+      "codigo": "007",
+      "tipo": "Limpa Vidros",
+      "medida": "ML",
+      "quantidade": "2",
+      "observation": "Embalagem de 300ml."
+    },
+    {
+      "id": 8,
+      "nome": "Sapólio Líquido",
+      "codigo": "008",
+      "tipo": "Limpador ",
+      "medida": "ML",
+      "quantidade": "10",
+      "observation": "Caixa com 10 unidades de 200ml cada."
+    },
+    {
+      "id": 9,
+      "nome": "Bucha de Louça",
+      "codigo": "009",
+      "tipo": "Esponja Amarela",
+      "medida": "UN",
+      "quantidade": "32",
+      "observation": "Caixas com 8 unidades cada."
+    },
+    {
+      "id": 10,
+      "nome": "Sabão em pó - OMO",
+      "codigo": "010",
+      "tipo": "Sabão em pó",
+      "medida": "UN",
+      "quantidade": "0",
+      "observation": "Caixa com 4 unidades de 1kg cada."
     }
   ],
   "limpezas": [
@@ -234,7 +309,34 @@
       "data": "2023-11-17",
       "horario": "17:40",
       "status": "Finalizado",
-      "observation": "\tLimpeza realizada com sucesso"
+      "observation": "Limpeza realizada com sucesso"
+    },
+    {
+      "id": 6,
+      "funcionario": "Julio dos Santos",
+      "ambiente": "Veigh Transportes",
+      "data": "2023-11-14",
+      "horario": "20:00",
+      "status": "Finalizado",
+      "observation": "Limpeza realizada com sucesso"
+    },
+    {
+      "id": 7,
+      "funcionario": "Eduardo Ransan",
+      "ambiente": "Breg Microfusão",
+      "data": "2023-11-22",
+      "horario": "10:00",
+      "status": "Finalizado",
+      "observation": "Limpeza realizada com sucesso"
+    },
+    {
+      "id": 8,
+      "funcionario": "Leandra Souza",
+      "ambiente": "GM Investimentos",
+      "data": "2023-11-22",
+      "horario": "06:00",
+      "status": "Em Andamento",
+      "observation": "Limpeza "
     }
   ]
 }
