@@ -49,11 +49,11 @@
       "nome": "Renan Rastelli",
       "email": "renantransportadora@rtd.com",
       "telefone": "(54) 99852-6347",
-      "cpf": "",
+      "cpf": "357.345.675-21",
       "cidade": "Veranópolis",
       "endereco": "Rua Antônio Chirardia",
       "gestor": "Rodrigo",
-      "observation": ""
+      "observation": "Atende Veranópolis e região."
     }
   ],
   "ambientes": [
@@ -95,7 +95,7 @@
       "codigo": "001",
       "tipo": "Bebida",
       "medida": "ML",
-      "quantidade": "12",
+      "quantidade": "0",
       "observation": "Cerveja de 473ml"
     },
     {
@@ -151,8 +151,35 @@
       "ambiente": "Gilioli Contabilidade",
       "data": "2023-11-25",
       "horario": "13:15",
-      "status": "Em andamento",
+      "status": "Em Andamento",
       "observation": "Limpeza em andamento."
+    },
+    {
+      "id": 3,
+      "funcionario": "Lucas Fonturi",
+      "ambiente": "Tregnago Informática",
+      "data": "2023-11-30",
+      "horario": "18:57",
+      "status": "Cancelado",
+      "observation": "Matheus pão duro, não aceitou o orçamento."
+    },
+    {
+      "id": 4,
+      "funcionario": "Renan Rastelli",
+      "ambiente": "Gilioli Contabilidade",
+      "data": "2023-11-22",
+      "horario": "17:00",
+      "status": "Não Iniciado",
+      "observation": "Levar Desinfetante Mr Músculo."
+    },
+    {
+      "id": 5,
+      "funcionario": "Douglas Polesello",
+      "ambiente": "Tregnago Informática",
+      "data": "2023-11-17",
+      "horario": "17:40",
+      "status": "Finalizado",
+      "observation": ""
     }
   ]
 }
