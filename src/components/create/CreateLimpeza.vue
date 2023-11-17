@@ -36,8 +36,8 @@
          this.funcionarios = response.data;
          }),
       axios.get(`${config.API_URL}/ambientes`)
-      .then((response) => {
-      this.ambientes = response.data;
+         .then((response) => {
+         this.ambientes = response.data;
       })
       },
       methods: {
@@ -120,33 +120,31 @@
                </div>
                <div class="space-x-10">
                   <button 
-                  @click.prevent="form.status = 'Cancelado'" 
-                  class="p-2 rounded-md border border-black w-60 h-12 bg-red-600"
+                  @click.prevent="form.status = 'Cancelado'"
+                  :class="form.status === 'Cancelado' ? 'p-2 rounded-xl border border-rose-900 font-medium w-44 2xl:w-64 h-12 bg-red-600' : 'p-2 rounded-xl border border-rose-900 font-medium w-44 2xl:w-64 h-12 bg-red-600/30'"
                   >
                   Cancelado
                </button>
                <button 
                   @click.prevent="form.status = 'Não Iniciado'" 
-                  class="p-2 rounded-md border border-black w-60 h-12 bg-gray-600"
+                  :class="form.status === 'Não Iniciado' ? 'p-2 rounded-xl border border-gray-700 font-medium w-44 2xl:w-64 h-12 bg-gray-600' : 'p-2 rounded-xl border border-gray-700 font-medium w-44 2xl:w-64 h-12 bg-gray-600/50'"
                   >
                   Não Iniciado
                </button> 
                <button 
                   @click.prevent="form.status = 'Em andamento'" 
-                  class="p-2 rounded-md border border-black w-60 h-12 bg-yellow-600"
+                  :class="form.status === 'Em andamento' ? 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600' : 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600/30'"
                   >
                   Em andamento
                </button>
                <button 
                   @click.prevent="form.status = 'Finalizado'" 
-                  class="p-2 rounded-md border border-black w-60 h-12 bg-green-600"
+                  :class="form.status === 'Finalizado' ? 'p-2 rounded-xl border border-green-900 font-medium w-44 2xl:w-64 h-12 bg-green-600' : 'p-2 rounded-xl border border-green-900 font-medium w-44 2xl:w-64 h-12 bg-green-600/30'"
                   >
                   Finalizado
                </button>
                </div>
             </div>
-
-
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   Observação
