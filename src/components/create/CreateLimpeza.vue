@@ -2,6 +2,8 @@
    import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline"
    import Switch from '@/components/usables/Switch.vue'
    import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline"
+   import axios from 'axios'
+   import config from '@/components/config/config.js'
 
    export default {
       props: {
@@ -20,11 +22,18 @@
             status: '',
             observation: '',
          },
+         funcionarios: [],
          avançar: false,
          exibir: false,
          exibirCreate: true,
          typePassword: true,
       }),
+      created(){
+      axios.get(`${config.API_URL}/funcionarios`)
+         .then((response) => {
+         this.funcionarios = response.data;
+         })
+      },
       methods: {
          trocarRota() {
             this.$emit('trocar-rota', this.form)
@@ -63,12 +72,10 @@
                   <p>Funcionário</p><p class="flex text-red-600">*</p>
                </div>
                <select
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.funcionario"
+               class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
+               v-model="form.funcionario"
                >
-                  <option disabled>Selecione</option>
-                  <option>Douglas Polesello</option>
-                  <option>Ricard Bregalds</option>
+                  <option v-for="(funcionario, index) in funcionarios" :key="index">{{ funcionario.nome }}</option>
                </select>
             </div>
             <div>

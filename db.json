@@ -43,6 +43,17 @@
       "endereco": "Rua Olavo Bilac, 666",
       "gestor": "Matheus",
       "observation": "Funcionário muito playboy, mas trabalha bem."
+    },
+    {
+      "id": 5,
+      "nome": "Renan Rastelli",
+      "email": "renantransportadora@rtd.com",
+      "telefone": "(54) 99852-6347",
+      "cpf": "",
+      "cidade": "Veranópolis",
+      "endereco": "Rua Antônio Chirardia",
+      "gestor": "Rodrigo",
+      "observation": ""
     }
   ],
   "ambientes": [

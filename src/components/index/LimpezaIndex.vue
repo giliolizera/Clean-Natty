@@ -121,6 +121,7 @@
     },
     data: () => ({
       limpezas: [],
+      funcionarios: [],
       exibir: true,
       editar: false,
       exibirCreate: false,
@@ -131,6 +132,11 @@
       },
     }),
     created(){
+      axios.get(`${config.API_URL}/funcionarios`)
+      .then((response) => {
+        this.funcionarios = response.data;
+        console.log(this.funcionarios)
+      }),
       axios.get(`${config.API_URL}/limpezas`)
       .then((response) => {
         this.limpezas = response.data;
