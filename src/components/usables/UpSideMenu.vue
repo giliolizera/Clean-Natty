@@ -22,9 +22,6 @@
                   <XMarkIcon class="h-4 w-4 text-gray-500" />
                </button>
             </div>
-            <router-link to="agenda">
-               Agenda
-            </router-link>
             <router-link to="funcionarios">
                Funcionário
             </router-link>

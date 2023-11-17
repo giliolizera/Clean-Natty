@@ -18,8 +18,6 @@ const routes = [
 
    { path: '/dashboard', component: () => import('./components/pages/Dashboard.vue')},
 
-   {path: '/agenda', component: () => import('./components/pages/Agenda.vue')},
-
 ]
 
 const router = createRouter({
