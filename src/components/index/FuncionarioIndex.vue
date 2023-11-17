@@ -44,7 +44,6 @@
                   <th class="py-3 pr-5 text-left sm:pr-8">CPF</th>
                   <th class="py-3 pr-5 text-left sm:pr-8">Cidade</th>
                   <th class="py-3 pr-5 text-left sm:pr-8">Endereço</th>
-                  <th class="py-3 pr-5 text-left sm:pr-8">Gestor</th>
                   <th class="py-3 pr-5 text-left sm:pr-8">Observação</th>
                   <th class="py-3 pr-5 text-center sm:pr-8">Ações</th>
                 </tr>
@@ -89,11 +88,7 @@
                 >
                   {{ funcionario.endereco }}
                 </td>
-                <td
-                  class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
-                >
-                  {{ funcionario.gestor }}
-                </td>
+
                 <td
                   class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
