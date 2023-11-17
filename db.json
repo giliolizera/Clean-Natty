@@ -6,54 +6,109 @@
       "email": "dougservicos@gmail.com",
       "telefone": "(54) 99974-9301",
       "cpf": "029.664.795-20",
-      "cidade": "Caxias do Sul",
+      "cidade": "Caxias do Sul, RS",
       "endereco": "Av. Das Flores, 923",
       "gestor": "Rodrigo",
       "observation": "Funcionário bom, mas tem que melhorar"
     },
     {
       "id": 2,
-      "nome": "Ronaldo Bonjovi",
-      "email": "ronaldodelegacia@gmail. com",
+      "nome": "Paulo Bonjovi",
+      "email": "paulodelegacia@gmail. com",
       "telefone": "(54) 99329-2234",
       "cpf": "042.375.785-40",
-      "cidade": "Paraí",
+      "cidade": "Paraí, RS",
       "endereco": "Rua Taliotto Figueiredo, 214",
       "gestor": "Matheus",
-      "observation": "Apenas chamadas de voz, ele não tem whatsapp."
+      "observation": "Apenas chamadas de voz, sem Whats."
     },
     {
       "id": 3,
-      "nome": "Lucas Fonturi",
+      "nome": "Lucas Ambrosi Fontura",
       "email": "lucasservlimpeza@gmail.com",
       "telefone": "(69) 99969-6234",
       "cpf": "789.653.404-35",
-      "cidade": "Venâncio Aires",
+      "cidade": "Venâncio Aires, RS",
       "endereco": "Av. Paschal Neiyer, 893",
       "gestor": "Matheus",
       "observation": "Cobra caro, mas executa com excelência."
     },
     {
       "id": 4,
-      "nome": "Ricard Bregalds",
+      "nome": "Ricardo Bregalds",
       "email": "ricardofaxineiro@yahoo.com",
       "telefone": "(54) 98745-5209",
       "cpf": "093.457.483-02",
-      "cidade": "Bento Gonçalves",
+      "cidade": "Bento Gonçalves, RS",
       "endereco": "Rua Olavo Bilac, 666",
       "gestor": "Matheus",
-      "observation": "Funcionário muito playboy, mas trabalha bem."
+      "observation": "Funcionário muito playboy..."
     },
     {
       "id": 5,
-      "nome": "Renan Rastelli",
+      "nome": "Arthur Rastelli",
       "email": "renantransportadora@rtd.com",
       "telefone": "(54) 99852-6347",
       "cpf": "357.345.675-21",
-      "cidade": "Veranópolis",
+      "cidade": "Veranópolis, RS",
       "endereco": "Rua Antônio Chirardia",
       "gestor": "Rodrigo",
       "observation": "Atende Veranópolis e região."
+    },
+    {
+      "id": 6,
+      "nome": "Carlos Bonatto",
+      "email": "carlosbonatto@gmail.com",
+      "telefone": "(54) 99234-8574",
+      "cpf": "822.345.875-83",
+      "cidade": "Vila Flores, RS",
+      "endereco": "Av. das Flores, 238",
+      "gestor": "Matheus",
+      "observation": "Cobra valor de deslocamento."
+    },
+    {
+      "id": 7,
+      "nome": "Eduardo Ransan",
+      "email": "eduardinhoransao@gmail.com",
+      "telefone": "(51) 99894-3275",
+      "cpf": "758.945.673-42",
+      "cidade": "Arroio do Sal, RS",
+      "endereco": "Rua do Pescador, 77",
+      "gestor": "Matheus",
+      "observation": "Especialista em maresia."
+    },
+    {
+      "id": 8,
+      "nome": "Julio dos Santos",
+      "email": "julinhosantinho@gmail.com",
+      "telefone": "(21) 99894-5378",
+      "cpf": "473.272.018-43",
+      "cidade": "Rio de Janeiro, RJ",
+      "endereco": "Rua Fernando Guimarães, 67",
+      "gestor": "Matheus",
+      "observation": "Atende apenas condomínios."
+    },
+    {
+      "id": 9,
+      "nome": "Leandra Souza",
+      "email": "mcleandrinha@gmail.com",
+      "telefone": "(45) 99437-2892",
+      "cpf": "328.954.735-74",
+      "cidade": "Guarulhos, SP",
+      "endereco": "Av. Alberto Dias, 2138",
+      "gestor": "Rodrigo",
+      "observation": "Limpeza domiciliar apenas."
+    },
+    {
+      "id": 10,
+      "nome": "Vitoria Freddis",
+      "email": "victoriasecrets@only.com",
+      "telefone": "(47) 38873-2823",
+      "cpf": "392.804.324-89",
+      "cidade": "Florianópolis, SC",
+      "endereco": "Av. Carro Branco, 384",
+      "gestor": "Rodrigo",
+      "observation": "Apenas limpezas de apartamentos de luxo."
     }
   ],
   "ambientes": [
@@ -179,7 +234,7 @@
       "data": "2023-11-17",
       "horario": "17:40",
       "status": "Finalizado",
-      "observation": ""
+      "observation": "\tLimpeza realizada com sucesso"
     }
   ]
 }

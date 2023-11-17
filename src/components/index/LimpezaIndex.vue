@@ -11,7 +11,7 @@
             <div v-if="!exibirCreate" class="flex justify-between">
               <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
                 <p class="font-medium text-xl pb-1">Limpezas</p>
-              <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todas as limpezas já cadastradas.</p>
+                <p class="text-base font-light py-2">Aqui você poderá consultar, filtrar e editar todas as limpezas já cadastradas.</p>
             </div>
             <div class="p-6">
                 <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
@@ -56,27 +56,27 @@
               <tr v-for="(limpeza, index) in limpezas" :key="index">
                 <td class="truncate py-3 pr-5 sm:pr-8">{{ limpeza.id }}</td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ limpeza.funcionario }}
                 </td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ limpeza.ambiente }}
                 </td>
                 <td
-                  class="truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-neutral-900 dark:text-neutral-300 sm:pr-8"
                 >
                   {{ limpeza.data }}
                 </td>        
                 <td
-                  class="truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-neutral-900 dark:text-neutral-300 sm:pr-8"
                 >
                   {{ limpeza.horario }}
                 </td>         
                 <td
-                  class="truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   <button v-if="limpeza.status === 'Finalizado'" class="rounded-xl bg-green-600/50 font-medium pl-2 pr-2 p-1 border border-slate-900">
                     {{ limpeza.status }}
@@ -92,12 +92,12 @@
                   </button>
                 </td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ limpeza.observation }}
                 </td>
                 <td
-                  class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-light text-neutral-900 dark:text-neutral-300 sm:pr-8"
                 >
                   <button @click="selecionado(limpeza), recarregar(), editar = !editar">
                     <PencilSquareIcon class="w-5 text-blue-600" />

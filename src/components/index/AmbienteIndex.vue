@@ -11,7 +11,7 @@
             <div v-if="!exibirCreate" class="flex justify-between">
               <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
                 <p class="font-medium text-xl pb-1">Ambientes</p>
-                <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os ambientes já cadastrados.</p>
+                <p class="text-base font-light py-2">Aqui você poderá consultar, filtrar e editar todos os ambientes já cadastrados.</p>
               </div>
               <div class="p-6">
                 <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
@@ -64,37 +64,37 @@
                   </button>
                 </td>
                 <td
-                  class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
                 >
                   {{ ambiente.estabelecimento }}
                 </td>
                 <td
-                  class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
                 >
                   {{ ambiente.andar }}
                 </td>        
                 <td
-                  class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
                 >
                   {{ ambiente.tipo }}
                 </td>         
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ ambiente.cidade }}
                 </td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ ambiente.endereco }}
                 </td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ ambiente.observation }}
                 </td>
                 <td
-                  class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
                 >
                   <button @click="selecionado(ambiente), recarregar(), editar = !editar">
                     <PencilSquareIcon class="w-5 text-blue-600" />
