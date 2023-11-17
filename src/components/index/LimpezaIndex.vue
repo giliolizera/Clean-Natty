@@ -56,37 +56,48 @@
               <tr v-for="(limpeza, index) in limpezas" :key="index">
                 <td class="truncate py-3 pr-5 sm:pr-8">{{ limpeza.id }}</td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ limpeza.funcionario }}
                 </td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ limpeza.ambiente }}
                 </td>
                 <td
-                  class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
                   {{ limpeza.data }}
                 </td>        
                 <td
-                  class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
                   {{ limpeza.horario }}
                 </td>         
                 <td
-                  class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
-                  {{ limpeza.status }}
+                  <button v-if="limpeza.status === 'Finalizado'" class="rounded-xl bg-green-600/50 font-medium pl-2 pr-2 p-1 border border-slate-900">
+                    {{ limpeza.status }}
+                  </button>
+                  <button v-if="limpeza.status === 'Em Andamento'" class="rounded-xl bg-yellow-600/50 font-medium pl-2 pr-2 p-1 border border-slate-900">
+                    {{ limpeza.status }}
+                  </button>
+                  <button v-if="limpeza.status === 'Não Iniciado'" class="rounded-xl bg-gray-600/50 font-medium pl-2 pr-2 p-1 border border-slate-900">
+                    {{ limpeza.status }}
+                  </button>
+                  <button v-if="limpeza.status === 'Cancelado'" class="rounded-xl bg-red-600/50 font-medium pl-2 pr-2 p-1 border border-slate-900">
+                    {{ limpeza.status }}
+                  </button>
                 </td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ limpeza.observation }}
                 </td>
                 <td
-                  class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+                  class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-light text-neutral-700 dark:text-neutral-300 sm:pr-8"
                 >
                   <button @click="selecionado(limpeza), recarregar(), editar = !editar">
                     <PencilSquareIcon class="w-5 text-blue-600" />

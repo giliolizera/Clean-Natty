@@ -135,10 +135,10 @@
                   Não Iniciado
                </button> 
                <button 
-                  @click.prevent="form.status = 'Em andamento'" 
-                  :class="form.status === 'Em andamento' ? 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600' : 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600/30'"
+                  @click.prevent="form.status = 'Em Andamento'" 
+                  :class="form.status === 'Em Andamento' ? 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600' : 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600/30'"
                   >
-                  Em andamento
+                  Em Andamento
                </button>
                <button 
                   @click.prevent="form.status = 'Finalizado'" 
