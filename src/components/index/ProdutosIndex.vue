@@ -71,7 +71,7 @@
               {{ produto.medida }}
             </td>        
             <td
-              class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
+              class="truncate py-3 pr-5 text-sm font-semibold text-black dark:text-neutral-300 sm:pr-8"
             >
               {{ produto.quantidade }}
             </td>         
@@ -154,7 +154,6 @@
         }
       },
       editarProduto(produto){
-        console.log(produto)
         axios.put(`${config.API_URL}/produtos/${produto.id}`, produto)
             .then(response => {
                 const indice = this.produtos.findIndex(f => f.id === produto.id)
@@ -164,7 +163,6 @@
       },
       selecionado(produto){
         this.produtoSelecionado = produto.id -1
-        console.log(this.produtoSelecionado)
       },
       recarregar(){
         axios.get(`${config.API_URL}/produtos`)

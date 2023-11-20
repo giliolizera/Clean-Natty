@@ -146,7 +146,6 @@
       axios.get(`${config.API_URL}/funcionarios`)
       .then((response) => {
         this.funcionarios = response.data;
-        console.log(this.funcionarios)
       }),
       axios.get(`${config.API_URL}/limpezas`)
       .then((response) => {
@@ -173,7 +172,6 @@
         }
       },
       editarLimpeza(limpeza){
-        console.log(limpeza)
         axios.put(`${config.API_URL}/limpezas/${limpeza.id}`, limpeza)
             .then(response => {
                 const indice = this.limpezas.findIndex(f => f.id === limpeza.id)
@@ -183,7 +181,6 @@
       },
       selecionado(limpeza){
         this.limpezaSelecionada = limpeza.id -1
-        console.log(this.limpezaSelecionada)
       },
       recarregar(){
         axios.get(`${config.API_URL}/limpezas`)

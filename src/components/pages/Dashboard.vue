@@ -27,12 +27,12 @@
       <h2 class="text-lg font-semibold mt-10 px-10">Visão geral do sistema</h2>
     </div> -->
     <div class="grid lg:grid-cols-3 gap-8 p-8 mt-10 md:grid-cols-2 sm:grid-cols-1">
-        <div class="bg-gray-100 rounded-md dark:bg-slate-700 font-medium">
+        <div class="bg-gray-100 shadow-xl rounded-md dark:bg-slate-700 font-medium">
           <p class="p-2 text-xl font-semibold">Serviços Realizados</p>
           <p class="p-4 text-3xl font-normal">{{ contaServiços() }}</p>
           <p class="mt-10"></p>
         </div>
-        <div class="bg-gray-100 rounded-md dark:bg-slate-700 font-medium">
+        <div class="bg-gray-100 shadow-xl rounded-md dark:bg-slate-700 font-medium">
           <p class="p-2 text-xl font-semibold">Serviços em Andamento</p>
           <div v-for="(limpeza, index) in limpezas" :key="index">
             <div v-if="limpeza.status === 'Em Andamento'">
@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-gray-100 rounded-md dark:bg-slate-700 font-medium">
+        <div class="bg-gray-100 shadow-xl rounded-md dark:bg-slate-700 font-medium">
           <p class="p-2 text-xl font-semibold">Produtos em Falta</p>
           <div v-for="(produto, index) in produtos" :key="index">
             <div v-if="produto.quantidade < 1">
@@ -48,15 +48,15 @@
             </div>
           </div>
         </div>
-        <div class="bg-gray-100 rounded-md dark:bg-slate-700 font-medium">
+        <div class="bg-gray-100 shadow-xl rounded-md dark:bg-slate-700 font-medium">
           <p class="p-2 text-xl font-semibold">Quantidade de Funcionários</p>
           <p class="p-4 text-3xl font-normal">{{ funcionarios.length }}</p>
         </div>
-        <div class="bg-gray-100 rounded-md dark:bg-slate-700 font-medium">
+        <div class="bg-gray-100 shadow-xl rounded-md dark:bg-slate-700 font-medium">
           <p class="p-2 text-xl font-semibold">Quantidade de Ambientes</p>
           <p class="p-4 text-3xl font-normal">{{ ambientes.length }}</p>
         </div>
-        <div class="bg-gray-100 rounded-md dark:bg-slate-700 font-medium">
+        <div class="bg-gray-100 shadow-xl rounded-md dark:bg-slate-700 font-medium">
           <p class="p-2 text-xl font-semibold">Quantidade de Limpezas</p> 
           <p class="p-4 text-3xl font-normal">{{ limpezas.length }}</p>
           <p class="mt-10"></p>
