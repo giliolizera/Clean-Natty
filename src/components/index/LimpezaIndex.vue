@@ -14,8 +14,9 @@
                 <p class="text-base font-light py-2">Aqui você poderá consultar, filtrar e editar todas as limpezas já cadastradas.</p>
             </div>
             <div class="p-6">
-                <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
-                  Cadastrar nova Limpeza
+                <button @click="exibirCreate = !exibirCreate" class="inline-flex dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-4 rounded-md">
+                  <PlusIcon class="h-5 w-5" />
+                  <p class="px-2">Cadastrar nova Limpeza</p>
                 </button>
               </div>
             </div>
@@ -193,7 +194,7 @@
   </script>
   
   <script setup>
-    import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
+    import { PencilSquareIcon, TrashIcon, PlusIcon } from "@heroicons/vue/24/outline";
     import CreateLimpeza from "../create/CreateLimpeza.vue";
     import Edit from "../edit/EditLimpeza.vue";
     import Upside from "../usables/Upside.vue";
