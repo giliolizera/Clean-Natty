@@ -106,30 +106,6 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.endereco">
             </div>
-            <!-- TODO: Possibilidade de interligar um gestor e funcionarios ao ambiente... 
-            <div>
-               <div class="text-sm font-medium flex pl-1 mt-2">
-                  Gestor
-               </div>
-               <input type="text"
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.gestor">
-            </div> -->
-
-            <!-- <div>
-               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Senha</p><p class="flex text-red-600">*</p>
-               </div>
-               <div class="relative w-full">
-                  <input :type="typePassword ? 'password' : 'text'"
-                     class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
-                     v-model="form.senha">
-                  <button class="absolute inset-y-0 right-0 pt-1 pr-3" @click.prevent.stop="typePassword = !typePassword">
-                     <EyeIcon v-if="typePassword" class="h-5 w-5 text-neutral-500" />
-                     <EyeSlashIcon v-if="!typePassword" class="h-5 w-5 text-neutral-500" />
-                  </button>
-               </div>
-            </div> -->
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   Observação

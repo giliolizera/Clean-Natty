@@ -115,7 +115,6 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.horario">
             </div>
-            <!-- TODO: VER DE REALIZAR BOTÕES DE STATUS ( VERMELHO, AMARELO , VERDE) -->
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   <p>Status</p><p class="flex text-red-600">*</p>
