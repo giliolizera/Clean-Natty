@@ -48,7 +48,7 @@
 </script>
 
 <script setup>
-   document.title = "Editar Funcionário - Clean Natty"
+   document.title = "Editar Produto - Clean Natty"
 </script>
                      
 <template>

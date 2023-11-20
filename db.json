@@ -14,7 +14,7 @@
     {
       "id": 2,
       "nome": "Paulo Bonjovi",
-      "email": "paulodelegacia@gmail. com",
+      "email": "paulodelegacia@gmail.com",
       "telefone": "(54) 99329-2234",
       "cpf": "042.375.785-40",
       "cidade": "Paraí, RS",
@@ -198,7 +198,7 @@
       "codigo": "003",
       "tipo": "Desinfetante",
       "medida": "ML",
-      "quantidade": "11",
+      "quantidade": 4,
       "observation": "Embalagem de 2L"
     },
     {
@@ -207,7 +207,7 @@
       "codigo": "004",
       "tipo": "Esponja de aço",
       "medida": "UN",
-      "quantidade": "12",
+      "quantidade": 18,
       "observation": "Caixa com 3 unidades"
     },
     {
@@ -216,7 +216,7 @@
       "codigo": "005",
       "tipo": "Vassoura",
       "medida": "UN",
-      "quantidade": "20",
+      "quantidade": 8,
       "observation": "Vassouras de 60cm"
     },
     {
@@ -225,7 +225,7 @@
       "codigo": "006",
       "tipo": "Água Sanitária ",
       "medida": "ML",
-      "quantidade": "8",
+      "quantidade": 12,
       "observation": "Recipiente de 2L cada."
     },
     {
