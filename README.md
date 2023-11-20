@@ -1,5 +1,8 @@
 # Clean Natty  
 
+#### Para acessar o site
+- https://clean-natty.vercel.app/dashboard
+
 ## Requisitos Iniciais
 ```
 Ter instalado Node.JS na máquina
