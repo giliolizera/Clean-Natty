@@ -26,7 +26,7 @@
     <!-- <div>
       <h2 class="text-lg font-semibold mt-10 px-10">Visão geral do sistema</h2>
     </div> -->
-    <div class="grid grid-cols-3 gap-8 p-8 mt-10">
+    <div class="grid lg:grid-cols-3 gap-8 p-8 mt-10 md:grid-cols-2 sm:grid-cols-1">
         <div class="bg-gray-100 rounded-md dark:bg-slate-700 font-medium">
           <p class="p-2 text-xl font-semibold">Serviços Realizados</p>
           <p class="p-4 text-3xl font-normal">{{ contaServiços() }}</p>
