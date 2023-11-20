@@ -9,7 +9,7 @@
       "cidade": "Caxias do Sul, RS",
       "endereco": "Av. Das Flores, 923",
       "gestor": "Rodrigo",
-      "observation": "Funcionário bom, mas tem que melhorar"
+      "observation": "Funcionário bom, mas tem que melhorar."
     },
     {
       "id": 2,
@@ -119,7 +119,7 @@
       "andar": "2º",
       "tipo": "Sala comercial",
       "endereco": "Av. Júlio de Castilhos, 974",
-      "cidade": "Caxias do Sul",
+      "cidade": "Caxias do Sul, RS",
       "observation": "Não precisa levar produtos de limpeza, pois já tem no local"
     },
     {
@@ -129,7 +129,7 @@
       "andar": "1º",
       "tipo": "Escritório de Informática",
       "endereco": "Av. Osvaldo Aranha, 215",
-      "cidade": "Caxias do Sul",
+      "cidade": "Caxias do Sul, RS",
       "observation": "SALA 102, não precisa levar panos, pois já tem no local"
     },
     {
@@ -138,7 +138,7 @@
       "estabelecimento": "Garagem",
       "andar": "1º",
       "tipo": "Maquinários",
-      "cidade": "Protásio Alves",
+      "cidade": "Protásio Alves, RS",
       "endereco": "Av. Sinimbu, 1129",
       "observation": "Levar produtos abrasivos, muita sujeira."
     },
@@ -148,7 +148,7 @@
       "estabelecimento": "Pavilhão Industrial",
       "andar": "1º",
       "tipo": "Escritório",
-      "cidade": "Bento Gonçalves",
+      "cidade": "Bento Gonçalves, RS",
       "endereco": "Av. Paulo Gloss, 832",
       "observation": "Levar apenas os panos de microfibra"
     },
@@ -158,7 +158,7 @@
       "estabelecimento": "Pavilhão",
       "andar": "1º",
       "tipo": "Oficina e Galpões",
-      "cidade": "André da Rocha",
+      "cidade": "André da Rocha, RS",
       "endereco": "Rua Selestino Ambrosi, 328",
       "observation": "Levar produtos alcalinos, muita lama."
     },
@@ -168,7 +168,7 @@
       "estabelecimento": "Prédio Comercial",
       "andar": "32º",
       "tipo": "Escritório e salas",
-      "cidade": "Faria Limers",
+      "cidade": "Faria Limers, SP",
       "endereco": "Condomínio Alphaville, SALA 3206",
       "observation": "Levar apenas funcionários competentes."
     }
@@ -234,7 +234,7 @@
       "codigo": "007",
       "tipo": "Limpa Vidros",
       "medida": "ML",
-      "quantidade": 2,
+      "quantidade": 0,
       "observation": "Embalagem de 300ml."
     },
     {
@@ -250,19 +250,37 @@
       "id": 9,
       "nome": "Bucha de Louça",
       "codigo": "009",
-      "tipo": "Esponja Amarela",
+      "tipo": "Esponja ",
       "medida": "UN",
-      "quantidade": "32",
+      "quantidade": 16,
       "observation": "Caixas com 8 unidades cada."
     },
     {
       "id": 10,
-      "nome": "Sabão em pó - OMO",
+      "nome": "Sabão em pó OMO",
       "codigo": "010",
       "tipo": "Sabão em pó",
       "medida": "UN",
-      "quantidade": "0",
+      "quantidade": 4,
       "observation": "Caixa com 4 unidades de 1kg cada."
+    },
+    {
+      "id": 11,
+      "nome": "Papel Toalha",
+      "codigo": "011",
+      "tipo": "Papel Toalha",
+      "medida": "ML",
+      "quantidade": 6,
+      "observation": "Compras realizadas no Caitá."
+    },
+    {
+      "id": 12,
+      "nome": "Sabonete Líquido Lavanda",
+      "codigo": "012",
+      "tipo": "Sabonete Líquido",
+      "medida": "ML",
+      "quantidade": 2,
+      "observation": "Cada embalagem contém 5L."
     }
   ],
   "limpezas": [
