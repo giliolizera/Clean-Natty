@@ -165,7 +165,6 @@
         }
       },
       editarFuncionario(funcionario){
-        console.log(funcionario)
         axios.put(`${config.API_URL}/funcionarios/${funcionario.id}`, funcionario)
             .then(response => {
                 const indice = this.funcionarios.findIndex(f => f.id === funcionario.id)
@@ -175,7 +174,6 @@
       },
       selecionado(funcionario){
         this.funcionarioSelecionado = funcionario.id -1
-        console.log(this.funcionarioSelecionado)
       },
       recarregar(){
         axios.get(`${config.API_URL}/funcionarios`)

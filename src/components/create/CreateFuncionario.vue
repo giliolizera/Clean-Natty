@@ -65,7 +65,8 @@
                </div>
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md mt-1 pl-3 p-2"
-                  v-model="form.nome">
+                  v-model="form.nome"
+                  required>
             </div>
             <div>
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
@@ -124,6 +125,7 @@
                </div>
                <div>
                   <button @click.prevent="salvar(), trocarRota()"
+                     type="submit"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>

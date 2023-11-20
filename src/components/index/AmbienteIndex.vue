@@ -164,7 +164,6 @@
         }
       },
       editarAmbiente(ambiente){
-        console.log(ambiente)
         axios.put(`${config.API_URL}/ambientes/${ambiente.id}`, ambiente)
             .then(response => {
                 const indice = this.ambientes.findIndex(f => f.id === ambiente.id)
@@ -174,7 +173,6 @@
       },
       selecionado(ambiente){
         this.ambienteSelecionado = ambiente.id -1
-        console.log(this.ambienteSelecionado)
       },
       recarregar(){
         axios.get(`${config.API_URL}/ambientes`)

@@ -29,7 +29,6 @@
          typePassword: true,
       }),
       created(){
-         console.log(this.funcionario[this.id])
          this.form = this.funcionario[this.id]
       },
       methods: {

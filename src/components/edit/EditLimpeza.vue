@@ -32,7 +32,6 @@
          typePassword: true,
       }),
       created(){
-         console.log(this.limpeza[this.id])
          this.form = this.limpeza[this.id]
          axios.get(`${config.API_URL}/funcionarios`)
             .then((response) => {
@@ -130,7 +129,7 @@
                </button>
                <button 
                   @click.prevent="form.status = 'Não Iniciado'" 
-                  :class="form.status === 'Não Iniciado' ? 'p-2 rounded-xl border border-gray-700 font-medium w-44 2xl:w-64 h-12 bg-gray-600' : 'p-2 rounded-xl border border-gray-700 font-medium w-44 2xl:w-64 h-12 bg-gray-600/50'"
+                  :class="form.status === 'Não Iniciado' ? 'p-2 rounded-xl border border-black font-medium w-44 2xl:w-64 h-12 bg-gray-600' : 'p-2 rounded-xl border border-black font-medium w-44 2xl:w-64 h-12 bg-gray-600/50'"
                   >
                   Não Iniciado
                </button> 

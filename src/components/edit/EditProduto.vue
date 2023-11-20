@@ -28,7 +28,6 @@
          typePassword: true,
       }),
       created(){
-         console.log(this.produto[this.id])
          this.form = this.produto[this.id]
       },
       methods: {
@@ -100,7 +99,7 @@
                <div class="text-sm font-medium flex pl-1 mt-2">
                   Quantidade
                </div>
-               <input type="text"
+               <input type="number"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.quantidade">
             </div>

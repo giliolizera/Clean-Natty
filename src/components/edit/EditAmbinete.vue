@@ -29,7 +29,6 @@
          typePassword: true,
       }),
       created(){
-         console.log(this.ambiente[this.id])
          this.form = this.ambiente[this.id]
       },
       methods: {
