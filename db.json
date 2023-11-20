@@ -234,7 +234,7 @@
       "codigo": "007",
       "tipo": "Limpa Vidros",
       "medida": "ML",
-      "quantidade": "2",
+      "quantidade": 2,
       "observation": "Embalagem de 300ml."
     },
     {
@@ -268,8 +268,8 @@
   "limpezas": [
     {
       "id": 1,
-      "funcionario": "Ronaldo Bonjovi",
-      "ambiente": "Thinky SERP",
+      "funcionario": "Paulo Bonjovi",
+      "ambiente": "Gehlen Alimentos",
       "data": "2020-10-10",
       "horario": "08:00",
       "status": "Finalizado",
@@ -286,7 +286,7 @@
     },
     {
       "id": 3,
-      "funcionario": "Lucas Fonturi",
+      "funcionario": "Ricardo Bregalds",
       "ambiente": "Tregnago Informática",
       "data": "2023-11-30",
       "horario": "18:57",
@@ -295,7 +295,7 @@
     },
     {
       "id": 4,
-      "funcionario": "Renan Rastelli",
+      "funcionario": "Carlos Bonatto",
       "ambiente": "Gilioli Contabilidade",
       "data": "2023-11-22",
       "horario": "17:00",
@@ -336,7 +336,7 @@
       "data": "2023-11-22",
       "horario": "06:00",
       "status": "Em Andamento",
-      "observation": "Limpeza "
+      "observation": "Limpeza em andamento."
     }
   ]
 }
