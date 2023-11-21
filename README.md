@@ -1,6 +1,6 @@
 # Clean Natty  
 
-#### Para acessar o site
+#### Para acessar o site ( apenas parte visual )
 - https://clean-natty.vercel.app/dashboard
 
 ## Requisitos Iniciais
@@ -20,7 +20,7 @@ npm install axios
 npm run serve
 ```
 
-## Compilar Json Server na localhost:3000
+## Compilar Json Server (API) na localhost:3000
 ```
 json-server --watch db.json
 ``` 
