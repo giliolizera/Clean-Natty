@@ -189,7 +189,7 @@
       "codigo": "002",
       "tipo": "Desingrachante",
       "medida": "ML",
-      "quantidade": "6",
+      "quantidade": 0,
       "observation": "Embalagem de 500ml"
     },
     {
@@ -234,7 +234,7 @@
       "codigo": "007",
       "tipo": "Limpa Vidros",
       "medida": "ML",
-      "quantidade": 0,
+      "quantidade": 1,
       "observation": "Embalagem de 300ml."
     },
     {
