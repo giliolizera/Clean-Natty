@@ -34,6 +34,27 @@
          salvar(event) {
             this.$emit('criar', this.form)
             this.form = {}
+         },
+         validar(){
+            if(this.form.nome === '' && this.form.email === '' && this.form.telefone === '' && this.form.cpf === ''){
+               alert("Todos os campos são obrigatórios")
+            }
+            else if(this.form.nome === ''){
+               alert("O campo Nome é obrigatório")
+            }
+            else if(this.form.email === ''){
+               alert("O campo Email é obrigatório")
+            }
+            else if(this.form.telefone === ''){
+               alert("O campo Telefone é obrigatório")
+            }
+            else if(this.form.cpf === ''){
+               alert("O campo CPF é obrigatório")
+            }
+            if(this.form.nome != '' && this.form.email != '' && this.form.telefone != '' && this.form.cpf != ''){
+               this.salvar()
+               this.trocarRota()
+            }
          }
       },
       components: {
@@ -124,7 +145,7 @@
                   </button>
                </div>
                <div>
-                  <button @click.prevent="salvar(), trocarRota()"
+                  <button @click.prevent="validar()"
                      type="submit"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR

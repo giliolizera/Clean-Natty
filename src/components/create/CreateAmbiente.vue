@@ -33,6 +33,27 @@
          salvar(event) {
             this.$emit('criar', this.form)
             this.form = {}
+         },
+         validar(){
+            if(this.form.nome === '' && this.form.estabelecimento === '' && this.form.andar === '' && this.form.tipo === ''){
+               alert("Todos os campos são obrigatórios")
+            }
+            else if(this.form.nome === ''){
+               alert("O campo Nome é obrigatório")
+            }
+            else if(this.form.estabelecimento === ''){
+               alert("O campo Estabelecimento é obrigatório")
+            }
+            else if(this.form.andar === ''){
+               alert("O campo Andar é obrigatório")
+            }
+            else if(this.form.tipo === ''){
+               alert("O campo Tipo é obrigatório")
+            }
+            if(this.form.nome != '' && this.form.estabelecimento != '' && this.form.andar != '' && this.form.tipo != ''){
+               this.salvar()
+               this.trocarRota()
+            }
          }
       },
       components: {
@@ -122,7 +143,7 @@
                   </button>
                </div>
                <div>
-                  <button @click.prevent="salvar()"
+                  <button @click.prevent="validar()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>

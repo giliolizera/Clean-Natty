@@ -48,6 +48,27 @@
          salvar(event) {
             this.$emit('criar', this.form)
             this.form = {}
+         },
+         validar(){
+            if(this.form.funcionario === '' && this.form.ambiente === '' && this.form.data === '' && this.form.horario === ''){
+               alert("Todos os campos são obrigatórios")
+            }
+            else if(this.form.funcionario === ''){
+               alert("O campo Funcionario é obrigatório")
+            }
+            else if(this.form.ambiente === ''){
+               alert("O campo Ambiente é obrigatório")
+            }
+            else if(this.form.data === ''){
+               alert("O campo Data é obrigatório")
+            }
+            else if(this.form.horario === ''){
+               alert("O campo Horario é obrigatório")
+            }
+            if(this.form.funcionario != '' && this.form.ambiente != '' && this.form.data != '' && this.form.horario != ''){
+               this.salvar()
+               this.trocarRota()
+            }
          }
       },
       components: {
@@ -166,7 +187,7 @@
                   </button>
                </div>
                <div>
-                  <button @click.prevent="salvar(), trocarRota()"
+                  <button @click.prevent="validar()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>
