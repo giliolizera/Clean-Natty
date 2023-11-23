@@ -176,12 +176,12 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "Cerveja Heineken",
+      "nome": "Desinfetante Pato",
       "codigo": "001",
-      "tipo": "Bebida",
+      "tipo": "Desinfetante",
       "medida": "ML",
       "quantidade": "0",
-      "observation": "Cerveja de 473ml"
+      "observation": "Embalagem de 1.5L"
     },
     {
       "id": 2,
