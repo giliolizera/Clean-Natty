@@ -119,32 +119,35 @@
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   <p>Status</p><p class="flex text-red-600">*</p>
                </div>
-               <div class="space-x-10">
+               <div class="flex justify-between space-x-2 mt-4">
                   <button 
                   @click.prevent="form.status = 'Cancelado'"
-                  :class="form.status === 'Cancelado' ? 'p-2 rounded-xl border border-rose-900 font-medium w-44 2xl:w-64 h-12 bg-red-600' : 'p-2 rounded-xl border border-rose-900 font-medium w-44 2xl:w-64 h-12 bg-red-600/30'"
+                  :class="form.status === 'Cancelado' ? 'p-2 rounded-xl border border-rose-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-red-600' : 'p-2 rounded-xl border border-rose-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-red-600/30'"
                   >
                   Cancelado
                </button>
                <button 
                   @click.prevent="form.status = 'Não Iniciado'" 
-                  :class="form.status === 'Não Iniciado' ? 'p-2 rounded-xl border border-black font-medium w-44 2xl:w-64 h-12 bg-gray-600' : 'p-2 rounded-xl border border-black font-medium w-44 2xl:w-64 h-12 bg-gray-600/50'"
+                  :class="form.status === 'Não Iniciado' ? 'p-2 rounded-xl border border-black font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-gray-600' : 'p-2 rounded-xl border border-black font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-gray-600/50'"
                   >
                   Não Iniciado
                </button> 
-               <button 
-                  @click.prevent="form.status = 'Em Andamento'" 
-                  :class="form.status === 'Em Andamento' ? 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600' : 'p-2 rounded-xl border border-yellow-900 font-medium w-44 2xl:w-64 h-12 bg-yellow-600/30'"
-                  >
-                  Em Andamento
-               </button>
-               <button 
-                  @click.prevent="form.status = 'Finalizado'" 
-                  :class="form.status === 'Finalizado' ? 'p-2 rounded-xl border border-green-900 font-medium w-44 2xl:w-64 h-12 bg-green-600' : 'p-2 rounded-xl border border-green-900 font-medium w-44 2xl:w-64 h-12 bg-green-600/30'"
-                  >
-                  Finalizado
-               </button>
                </div>
+               <div class="flex justify-between space-x-2 mt-4">
+                  <button 
+                     @click.prevent="form.status = 'Em Andamento'" 
+                     :class="form.status === 'Em Andamento' ? 'p-2 rounded-xl border border-yellow-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-yellow-600' : 'p-2 rounded-xl border border-yellow-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-yellow-600/30'"
+                     >
+                     Em Andamento
+                  </button>
+                  <button 
+                     @click.prevent="form.status = 'Finalizado'" 
+                     :class="form.status === 'Finalizado' ? 'p-2 rounded-xl border border-green-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-green-600' : 'p-2 rounded-xl border border-green-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-green-600/30'"
+                     >
+                     Finalizado
+                  </button>
+               </div>
+
             </div>
             <div class="lg:col-span-2  ">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
