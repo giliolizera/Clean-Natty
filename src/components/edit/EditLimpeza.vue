@@ -143,8 +143,6 @@
                      Finalizado
                   </button>
                </div>
-
-            </div>
             <div class="lg:col-span-2  ">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   Observação
