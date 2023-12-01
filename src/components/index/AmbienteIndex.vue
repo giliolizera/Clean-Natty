@@ -60,7 +60,7 @@
                 <td
                   class="max-w-[10rem] truncate py-3 pr-5 font-semibold dark:text-white sm:max-w-xs sm:pr-8"
                 >
-                  <button>
+                  <button @click="selecionado(ambiente), exibirPreview = !exibirPreview">
                     {{ ambiente.nome }}
                   </button>
                 </td>
@@ -75,11 +75,11 @@
                   {{ ambiente.andar }}
                 </td>        
                 <td
-                  class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
+                class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
                 >
-                  {{ ambiente.tipo }}
-                </td>         
-                <td
+                {{ ambiente.tipo }}
+              </td>         
+              <td
                   class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
                   {{ ambiente.cidade }}
@@ -91,13 +91,13 @@
                 </td>
                 <td
                   class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
-                >
+                  >
                   {{ ambiente.observation }}
                 </td>
                 <td
-                  class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
+                class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
                 >
-                  <button @click="selecionado(ambiente), recarregar(), editar = !editar">
+                <button @click="selecionado(ambiente), recarregar(), editar = !editar">
                     <PencilSquareIcon class="w-5 text-blue-600" />
                   </button>
                   <button @click="deletarAmbiente(ambiente)">
@@ -111,6 +111,13 @@
       </div>
       </div>
     </div>
+    
+    <PreviewAmbiente 
+      :ambiente="ambientes"
+      :id="ambienteSelecionado"
+      v-if="exibirPreview"
+      @closePreview="exibirPreview = !exibirPreview" 
+    />
   </template>
   
   <script>
@@ -133,6 +140,7 @@
       exibir: true,
       editar: false,
       exibirCreate: false,
+      exibirPreview: false,
       ambienteSelecionado: undefined,
       components: {
         Upside,
@@ -192,6 +200,7 @@
     import Edit from "@/components/edit/EditAmbinete.vue";
     import Upside from "../usables/Upside.vue";
     import UpSideMenu from "../usables/UpSideMenu.vue";
+    import PreviewAmbiente from "../preview/PreviewAmbiente.vue";
     document.title = "Ambientes - Clean Natty";
   </script>
   
