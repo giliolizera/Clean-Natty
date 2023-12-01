@@ -15,7 +15,7 @@
                         </div>
                         <div class="flex p-4">
                             <p class="mr-4 font-semibold">Estabelecimento:</p>
-                            {{ form.estabelecimento  }}
+                            {{ form.estabelecimento }}
                         </div>
                         <div class="flex p-4">
                             <p class="mr-4 font-semibold">Andar:</p>

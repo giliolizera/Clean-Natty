@@ -60,7 +60,7 @@
                 <td
                   class="max-w-[10rem] truncate py-3 pr-5 font-semibold dark:text-white sm:max-w-xs sm:pr-8"
                 >
-                  <button>
+                  <button @click="selecionado(funcionario), exibirPreview = !exibirPreview">
                     {{ funcionario.nome }}
                   </button>
                 </td>
@@ -112,11 +112,20 @@
       </div>
       </div>
     </div>
+
+    <PreviewFuncionario 
+      v-if="exibirPreview"
+      :funcionario="funcionarios"
+      :id="funcionarioSelecionado"
+      @closePreview="exibirPreview = !exibirPreview"
+    />
+
   </template>
   
   <script>
   import config from "@/components/config/config";
   import axios from "axios";
+  import PreviewFuncionario from "../preview/PreviewFuncionario.vue";
   
   export default {
     props: {
@@ -134,6 +143,7 @@
       exibir: true,
       editar: false,
       exibirCreate: false,
+      exibirPreview: false,
       funcionarioSelecionado: undefined,
       components: {
         Upside,
