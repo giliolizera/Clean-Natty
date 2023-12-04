@@ -33,6 +33,30 @@
          salvar(event) {
             this.$emit('criar', this.form)
             this.form = {}
+         },
+         validar(){
+            if(this.form.nome === '' && this.form.codigo === '' && this.form.tipo === '' && this.form.medida === '' && this.form.quantidade === ''){
+               alert("Todos os campos são obrigatórios")
+            }
+            else if(this.form.nome === ''){
+               alert("O campo Nome é obrigatório")
+            }
+            else if(this.form.codigo === ''){
+               alert("O campo Codigo é obrigatório")
+            }
+            else if(this.form.tipo === ''){
+               alert("O campo Tipo é obrigatório")
+            }
+            else if(this.form.medida === ''){
+               alert("O campo Medida é obrigatório")
+            }
+            else if(this.form.quantidade === ''){
+               alert("O campo Quantidade é obrigatório")
+            }
+            if(this.form.nome != '' && this.form.codigo != '' && this.form.tipo != '' && this.form.medida != '' && this.form.quantidade != ''){
+               this.salvar()
+               this.trocarRota()
+            }
          }
       },
       components: {
@@ -94,7 +118,7 @@
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   <p>Quantidade</p><p class="flex text-red-600">*</p>
                </div>
-               <input type="text"
+               <input type="number"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 mt-1"
                   v-model="form.quantidade">
             </div>
@@ -114,7 +138,7 @@
                   </button>
                </div>
                <div>
-                  <button @click.prevent="salvar(), trocarRota()"
+                  <button @click.prevent="validar()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>

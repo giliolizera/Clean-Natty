@@ -10,11 +10,12 @@
       <div v-if="!exibirCreate" class="flex justify-between">
         <div class="divide-y max-w-md bg-white dark:bg-slate-800 p-6">
           <p class="font-medium text-xl pb-1">Estoque de Produtos</p>
-          <p class="text-base font-thin py-2">Aqui você poderá consultar, filtrar e editar todos os produtos em estoque.</p>
+          <p class="text-base font-light py-2">Aqui você poderá consultar, filtrar e editar todos os produtos em estoque.</p>
         </div>
         <div class="p-6">
-            <button @click="exibirCreate = !exibirCreate" class="dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-7 rounded-md">
-              Cadastrar novo Produto
+            <button @click="exibirCreate = !exibirCreate" class="inline-flex dark:bg-slate-800 dark:hover:bg-slate-700 hover:bg-gray-200 bg-white border border-gray-400 text-black dark:text-white text-sm font-medium py-2 px-4 rounded-md">
+              <PlusIcon class="h-5 w-5" />
+                  <p class="px-2">Cadastrar novo Produto</p>
             </button>
         </div>
       </div>
@@ -46,7 +47,7 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-neutral-300 dark:divide-neutral-500">
-          <tr v-if="produtos === ''">
+          <tr v-if="produtos.length === 0">
             <td class="py-5 text-center" colspan="100%">
               Não há produtos cadastrados!
             </td>
@@ -61,27 +62,27 @@
               </button>
             </td>
             <td
-              class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+              class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
             >
               {{ produto.tipo }}
             </td>
             <td
-              class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+              class="truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
             >
               {{ produto.medida }}
             </td>        
             <td
-              class="truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+              class="truncate py-3 pr-5 text-sm font-semibold text-black dark:text-neutral-300 sm:pr-8"
             >
               {{ produto.quantidade }}
             </td>         
             <td
-              class="max-w-[10rem] truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+              class="max-w-[10rem] truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:max-w-xs sm:pr-8"
             >
               {{ produto.observation }}
             </td>
             <td
-              class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-extralight text-neutral-700 dark:text-neutral-300 sm:pr-8"
+              class="flex items-center justify-center space-x-2 truncate py-3 pr-5 text-sm font-light text-black dark:text-neutral-300 sm:pr-8"
             >
               <button @click="selecionado(produto), recarregar(), editar = !editar">
                 <PencilSquareIcon class="w-5 text-blue-600" />
@@ -103,7 +104,7 @@
   import Upside from "../usables/Upside.vue";
   import UpSideMenu from "../usables/UpSideMenu.vue";
   import Edit from "../edit/EditProduto.vue";
-  import { PencilSquareIcon, TrashIcon } from "@heroicons/vue/24/outline";
+  import { PencilSquareIcon, TrashIcon, PlusIcon } from "@heroicons/vue/24/outline";
   import config from "@/components/config/config";
   import axios from "axios";
 
@@ -154,7 +155,6 @@
         }
       },
       editarProduto(produto){
-        console.log(produto)
         axios.put(`${config.API_URL}/produtos/${produto.id}`, produto)
             .then(response => {
                 const indice = this.produtos.findIndex(f => f.id === produto.id)
@@ -164,7 +164,6 @@
       },
       selecionado(produto){
         this.produtoSelecionado = produto.id -1
-        console.log(this.produtoSelecionado)
       },
       recarregar(){
         axios.get(`${config.API_URL}/produtos`)

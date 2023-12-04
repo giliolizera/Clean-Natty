@@ -1,10 +1,12 @@
 # Clean Natty  
 
-### IMPORTAR AGENDA DE EVENTOS 
-### VER DO COMPRA PRODUTO / LISTA DE PRODUTOS...
-### VER CADASTRO DE GERENTE/GESTOR
-### VER DO USUARIO PARA CONTROLE DOS PRODUTOS E FUNCIONARIOS OU NAO, DEPENDE DO LOGIN  
-### FAZER DASHBOARD
+Um software desenvolvido com o objetivo de suprir a demanda de gerentes que coordenam equipes de limpeza, 
+afim de controlar seus funcionários, ambientes de limpeza, produtos em estoque e o progresso das limpezas.
+Em Clean Natty, você encontra tudo isso funcionando em perfeita harmonia, de maneira intuitiva e com um 
+design moderno e 100% responsivo. 
+
+#### Para acessar o site ( Banco de dados estático )
+- https://clean-natty.vercel.app/dashboard
 
 ## Requisitos Iniciais
 ```
@@ -23,7 +25,9 @@ npm install axios
 npm run serve
 ```
 
-## Compilar Json Server na localhost:3000
+## Compilar Json Server (API) na localhost:3000
+- Descomentar o código na config.js onde está escrito localhost:3000.
+- Comentar o código na config.js onde está escrito api.vercel
 ```
 json-server --watch db.json
 ``` 

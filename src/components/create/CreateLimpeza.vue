@@ -2,10 +2,12 @@
    import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline"
    import Switch from '@/components/usables/Switch.vue'
    import { EllipsisVerticalIcon } from "@heroicons/vue/24/outline"
+   import axios from 'axios'
+   import config from '@/components/config/config.js'
 
    export default {
       props: {
-        funcionario: {
+        limpeza: {
             type: Object,
             default: undefined
         }
@@ -13,20 +15,31 @@
       data: () => ({
          form: {
             id: '',
-            nome: '',
-            email: '',
-            telefone: '',
-            cpf: '',
-            cidade: '',
-            endereco: '',
-            gestor: '',
+            funcionario: '',
+            ambiente: '',
+            data: '',
+            horario: '',
+            status: '',
             observation: '',
          },
+         funcionarios: [],
+         ambientes: [],
          avançar: false,
          exibir: false,
          exibirCreate: true,
          typePassword: true,
+         selected: 'Não Iniciado',
       }),
+      created(){
+      axios.get(`${config.API_URL}/funcionarios`)
+         .then((response) => {
+         this.funcionarios = response.data;
+         }),
+      axios.get(`${config.API_URL}/ambientes`)
+         .then((response) => {
+         this.ambientes = response.data;
+      })
+      },
       methods: {
          trocarRota() {
             this.$emit('trocar-rota', this.form)
@@ -35,6 +48,27 @@
          salvar(event) {
             this.$emit('criar', this.form)
             this.form = {}
+         },
+         validar(){
+            if(this.form.funcionario === '' && this.form.ambiente === '' && this.form.data === '' && this.form.horario === ''){
+               alert("Todos os campos são obrigatórios")
+            }
+            else if(this.form.funcionario === ''){
+               alert("O campo Funcionario é obrigatório")
+            }
+            else if(this.form.ambiente === ''){
+               alert("O campo Ambiente é obrigatório")
+            }
+            else if(this.form.data === ''){
+               alert("O campo Data é obrigatório")
+            }
+            else if(this.form.horario === ''){
+               alert("O campo Horario é obrigatório")
+            }
+            if(this.form.funcionario != '' && this.form.ambiente != '' && this.form.data != '' && this.form.horario != ''){
+               this.salvar()
+               this.trocarRota()
+            }
          }
       },
       components: {
@@ -45,7 +79,7 @@
 </script>
 
 <script setup>
-   document.title = "Cadastro de Funcionário - Clean Natty"
+   document.title = "Cadastro de Limpeza - Clean Natty"
 </script>
                      
 <template>
@@ -54,8 +88,8 @@
          <div class="col-span-1 ml-4 mt-2 text-lg font-medium">
             <div class="bg-white dark:bg-slate-800">
                <div class="divide-y max-w-md bg-white dark:bg-slate-800">
-                  <p class="font-medium text-xl pb-1">Cadastro de Funcionário</p>
-                  <p class="text-base font-thin py-2">Insira os dados do funcionário como nome, cpf, email, número do telefone...</p>
+                  <p class="font-medium text-xl pb-1">Cadastro de Limpeza</p>
+                  <p class="text-base font-thin py-2">Insira os dados da limpeza, como funcionário, ambiente...</p>
                </div>
             </div>
          </div>
@@ -65,12 +99,11 @@
                   <p>Funcionário</p><p class="flex text-red-600">*</p>
                </div>
                <select
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.gestor"
+               class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
+               v-model="form.funcionario"
                >
                   <option disabled>Selecione</option>
-                  <option>Rodrigo</option>
-                  <option>Matheus</option>
+                  <option v-for="(funcionario, index) in funcionarios" :key="index">{{ funcionario.nome }}</option>
                </select>
             </div>
             <div>
@@ -79,11 +112,10 @@
                </div>
                <select
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.gestor"
+                  v-model="form.ambiente"
                >
                   <option disabled>Selecione</option>
-                  <option>Rodrigo</option>
-                  <option>Matheus</option>
+                  <option v-for="(ambiente, index) in ambientes" :key="index">{{ ambiente.nome }}</option>
                </select>
             </div>
             <div>
@@ -102,23 +134,44 @@
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.horario">
             </div>
-            <!-- TODO: VER DE REALIZAR BOTÕES DE STATUS ( VERMELHO, AMARELO , VERDE) -->
-            <div>
-               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Status</p><p class="flex text-red-600">*</p>
+            <!-- <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
+               <p>Status</p><p class="flex text-red-600">*</p>
+            </div> -->
+
+
+
+               <div class="flex justify-between space-x-2 mt-4">
+                  <button 
+                  @click.prevent="form.status = 'Cancelado'"
+                  :class="form.status === 'Cancelado' ? 'p-2 rounded-xl border border-rose-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-red-600' : 'p-2 rounded-xl border border-rose-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-red-600/30'"
+                  >
+                  Cancelado
+               </button>
+               <button 
+                  @click.prevent="form.status = 'Não Iniciado'" 
+                  :class="form.status === 'Não Iniciado' ? 'p-2 rounded-xl border border-black font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-gray-600' : 'p-2 rounded-xl border border-black font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-gray-600/50'"
+                  >
+                  Não Iniciado
+               </button> 
                </div>
-               <select
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2.5 pl-3 mt-1"
-                  v-model="form.gestor"
-               >
-                  <option disabled>Selecione</option>
-                  <option>Não Iniciado CINZA</option> 
-                  <option>Em andamento AMARELO </option>
-                  <option>Finalizado VERDE</option>
-                  <option>Cancelado VERMELHO</option>
-               </select>
-            </div>
-            <div class="lg:col-span-2  ">
+               <div class="flex justify-between space-x-2 mt-4">
+                  <button 
+                     @click.prevent="form.status = 'Em Andamento'" 
+                     :class="form.status === 'Em Andamento' ? 'p-2 rounded-xl border border-yellow-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-yellow-600' : 'p-2 rounded-xl border border-yellow-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-yellow-600/30'"
+                     >
+                     Em Andamento
+                  </button>
+                  <button 
+                     @click.prevent="form.status = 'Finalizado'" 
+                     :class="form.status === 'Finalizado' ? 'p-2 rounded-xl border border-green-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-green-600' : 'p-2 rounded-xl border border-green-900 font-medium w-36 md:w-40 lg:w-60 2xl:w-72 h-12 bg-green-600/30'"
+                     >
+                     Finalizado
+                  </button>
+               </div>
+
+
+
+            <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
                   Observação
                </div>
@@ -134,7 +187,7 @@
                   </button>
                </div>
                <div>
-                  <button @click.prevent="salvar(), trocarRota()"
+                  <button @click.prevent="validar()"
                      class="dark:bg-gray-200 bg-sky-600 text-white max-md:24 dark:text-gray-900 font-medium text-sm py-2 px-6 rounded mt-3">
                      ENVIAR
                   </button>

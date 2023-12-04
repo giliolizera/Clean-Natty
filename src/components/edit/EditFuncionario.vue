@@ -21,7 +21,6 @@
             cpf: '',
             cidade: '',
             endereco: '',
-            gestor: '',
             observation: '',
          },
          avançar: false,
@@ -30,7 +29,6 @@
          typePassword: true,
       }),
       created(){
-         console.log(this.funcionario[this.id])
          this.form = this.funcionario[this.id]
       },
       methods: {
@@ -113,19 +111,6 @@
                <input type="text"
                   class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
                   v-model="form.endereco">
-            </div>
-            <div>
-               <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
-                  <p>Gestor</p><p class="flex text-red-600">*</p>
-               </div>
-               <select
-                  class="w-full dark:text-gray-200 dark:border-blue-600 border-black border dark:bg-slate-700 bg-white rounded-md p-2 pl-3 mt-1"
-                  v-model="form.gestor"
-               >
-                  <option disabled>Selecione</option>
-                  <option>Rodrigo</option>
-                  <option>Matheus</option>
-               </select>
             </div>
             <div class="lg:col-span-2">
                <div class="text-sm font-medium flex space-x-1 pl-1 mt-2">
