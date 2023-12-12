@@ -57,7 +57,7 @@
             <td
               class="max-w-[10rem] truncate py-3 pr-5 font-semibold dark:text-white sm:max-w-xs sm:pr-8"
             >
-              <button>
+              <button @click="selecionado(produto), exibirPreview = !exibirPreview">
                 {{ produto.nome }}
               </button>
             </td>
@@ -97,10 +97,18 @@
     </div>
   </div>
   </div>
+
+  <PreviewProduto 
+      v-if="exibirPreview"
+      :produto="produtos"
+      :id="produtoSelecionado"
+      @closePreview="exibirPreview = !exibirPreview"
+    />
 </template>
 
 <script>
   import CreateProduto from "../create/CreateProduto.vue";
+  import PreviewProduto from "../preview/PreviewProduto.vue";
   import Upside from "../usables/Upside.vue";
   import UpSideMenu from "../usables/UpSideMenu.vue";
   import Edit from "../edit/EditProduto.vue";
@@ -124,6 +132,7 @@
       exibir: true,
       editar: false,
       exibirCreate: false, 
+      exibirPreview: false,
       produtoSelecionado: undefined,
       components: {
         Upside,

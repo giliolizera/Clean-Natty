@@ -57,14 +57,18 @@
               <tr v-for="(limpeza, index) in limpezas" :key="index">
                 <td class="truncate py-3 pr-5 sm:pr-8">{{ limpeza.id }}</td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 font-base text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
-                  {{ limpeza.funcionario }}
+                  <button @click="selecionado(limpeza), exibirPreview = !exibirPreview">
+                    {{ limpeza.funcionario }}
+                  </button>
                 </td>
                 <td
-                  class="max-w-[10rem] truncate py-3 pr-5 font-light text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
+                  class="max-w-[10rem] truncate py-3 pr-5 font-base text-neutral-900 dark:text-neutral-300 sm:max-w-xs sm:pr-8"
                 >
-                  {{ limpeza.ambiente }}
+                  <button @click="selecionado(limpeza), exibirPreview = !exibirPreview">
+                    {{ limpeza.ambiente }}
+                  </button>
                 </td>
                 <td
                   class="truncate py-3 pr-5 text-sm font-light text-neutral-900 dark:text-neutral-300 sm:pr-8"
@@ -114,6 +118,13 @@
       </div>
       </div>
     </div>
+    
+    <PreviewLimpeza 
+      v-if="exibirPreview"
+      :limpeza="limpezas"
+      :id="limpezaSelecionada"
+      @closePreview="exibirPreview = !exibirPreview"
+    />
   </template>
   
   <script>
@@ -137,6 +148,7 @@
       exibir: true,
       editar: false,
       exibirCreate: false,
+      exibirPreview: false,
       limpezaSelecionada: undefined,
       components: {
         Upside,
@@ -196,6 +208,7 @@
   <script setup>
     import { PencilSquareIcon, TrashIcon, PlusIcon } from "@heroicons/vue/24/outline";
     import CreateLimpeza from "../create/CreateLimpeza.vue";
+    import PreviewLimpeza from "../preview/PreviewLimpeza.vue";
     import Edit from "../edit/EditLimpeza.vue";
     import Upside from "../usables/Upside.vue";
     import UpSideMenu from "../usables/UpSideMenu.vue";
