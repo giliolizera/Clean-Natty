@@ -20,12 +20,12 @@ npm install -g json-server
 npm install axios
 ```
 
-## Compilar na localhost:8080
+## Rodar no terminal para Compilar na localhost:8080
 ```
 npm run serve
 ```
 
-## Compilar Json Server (API) na localhost:3000
+## Rodar no terminal para Compilar Json Server (API) na localhost:3000
 - Descomentar o código na config.js onde está escrito localhost:3000.
 - Comentar o código na config.js onde está escrito api.vercel
 ```
